@@ -1,0 +1,19 @@
+# 管理员登录 type=0
+admin: "15152134577"
+admin_pwd: "00025678"
+
+# 普通会员登录，投资人  type=1
+investor: "13504936561"
+investor_pwd: "12chyfghkll"
+
+# 普通会员登录，借款人 type=1
+loan: "13504936561"
+loan_pwd: "12chyfghkll"
+
+
+MYSQL:
+  HOST: "8.129.91.152"
+  PORT: 3306
+  USER: "future"
+  PWD: "123456"
+  NAME: "futureloan"

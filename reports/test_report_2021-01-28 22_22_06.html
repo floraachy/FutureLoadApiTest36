@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test Report</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function find_all(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sort_column(elem) {
+    toggle_sort_states(elem);
+    var colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    var key;
+    if (elem.classList.contains('numeric')) {
+        key = key_num;
+    } else if (elem.classList.contains('result')) {
+        key = key_result;
+    } else {
+        key = key_alpha;
+    }
+    sort_table(elem, key(colIndex));
+}
+
+function show_all_extras() {
+    find_all('.col-result').forEach(show_extras);
+}
+
+function hide_all_extras() {
+    find_all('.col-result').forEach(hide_extras);
+}
+
+function show_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.remove("collapsed");
+    expandcollapse.classList.remove("expander");
+    expandcollapse.classList.add("collapser");
+}
+
+function hide_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.add("collapsed");
+    expandcollapse.classList.remove("collapser");
+    expandcollapse.classList.add("expander");
+}
+
+function show_filters() {
+    var filter_items = document.getElementsByClassName('filter');
+    for (var i = 0; i < filter_items.length; i++)
+        filter_items[i].hidden = false;
+}
+
+function add_collapse() {
+    // Add links for show/hide all
+    var resulttable = find('table#results-table');
+    var showhideall = document.createElement("p");
+    showhideall.innerHTML = '<a href="javascript:show_all_extras()">Show all details</a> / ' +
+                            '<a href="javascript:hide_all_extras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    find_all('.col-result').forEach(function(elem) {
+        var collapsed = get_query_parameter('collapsed') || 'Passed';
+        var extras = elem.parentNode.nextElementSibling;
+        var expandcollapse = document.createElement("span");
+        if (collapsed.includes(elem.innerHTML)) {
+            extras.classList.add("collapsed");
+            expandcollapse.classList.add("expander");
+        } else {
+            expandcollapse.classList.add("collapser");
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener("click", function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains("collapsed")) {
+                show_extras(event.currentTarget);
+            } else {
+                hide_extras(event.currentTarget);
+            }
+        });
+    })
+}
+
+function get_query_parameter(name) {
+    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function init () {
+    reset_sort_headers();
+
+    add_collapse();
+
+    show_filters();
+
+    sort_column(find('.initial-sort'));
+
+    find_all('.sortable').forEach(function(elem) {
+        elem.addEventListener("click",
+                              function(event) {
+                                  sort_column(elem);
+                              }, false)
+    });
+
+};
+
+function sort_table(clicked, key_func) {
+    var rows = find_all('.results-table-row');
+    var reversed = !clicked.classList.contains('asc');
+    var sorted_rows = sort(rows, key_func, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    var thead = document.getElementById("results-table-head");
+    document.getElementById('results-table').remove();
+    var parent = document.createElement("table");
+    parent.id = "results-table";
+    parent.appendChild(thead);
+    sorted_rows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName("BODY")[0].appendChild(parent);
+}
+
+function sort(items, key_func, reversed) {
+    var sort_array = items.map(function(item, i) {
+        return [key_func(item), i];
+    });
+
+    sort_array.sort(function(a, b) {
+        var key_a = a[0];
+        var key_b = b[0];
+
+        if (key_a == key_b) return 0;
+
+        if (reversed) {
+            return (key_a < key_b ? 1 : -1);
+        } else {
+            return (key_a > key_b ? 1 : -1);
+        }
+    });
+
+    return sort_array.map(function(item) {
+        var index = item[1];
+        return items[index];
+    });
+}
+
+function key_alpha(col_index) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[col_index].firstChild.data.toLowerCase();
+    };
+}
+
+function key_num(col_index) {
+    return function(elem) {
+        return parseFloat(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function key_result(col_index) {
+    return function(elem) {
+        var strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+                       'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function reset_sort_headers() {
+    find_all('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    find_all('.sortable').forEach(function(elem) {
+        var icon = document.createElement("div");
+        icon.className = "sort-icon";
+        icon.textContent = "vvv";
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove("desc", "active");
+        elem.classList.add("asc", "inactive");
+    });
+}
+
+function toggle_sort_states(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        reset_sort_headers();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function is_all_rows_hidden(value) {
+  return value.hidden == false;
+}
+
+function filter_table(elem) {
+    var outcome_att = "data-test-result";
+    var outcome = elem.getAttribute(outcome_att);
+    class_outcome = outcome + " results-table-row";
+    var outcome_rows = document.getElementsByClassName(class_outcome);
+
+    for(var i = 0; i < outcome_rows.length; i++){
+        outcome_rows[i].hidden = !elem.checked;
+    }
+
+    var rows = find_all('.results-table-row').filter(is_all_rows_hidden);
+    var all_rows_hidden = rows.length == 0 ? true : false;
+    var not_found_message = document.getElementById("not-found-message");
+    not_found_message.hidden = !all_rows_hidden;
+}
+</script>
+    <h1>test_report_2021-01-28 22_22_06.html</h1>
+    <p>Report generated on 28-Jan-2021 at 22:22:12 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.0.1</p>
+    <h2>Environment</h2>
+    <table id="environment">
+      <tr>
+        <td>Packages</td>
+        <td>{&apos;pytest&apos;: &apos;5.4.0&apos;, &apos;py&apos;: &apos;1.10.0&apos;, &apos;pluggy&apos;: &apos;0.13.1&apos;}</td></tr>
+      <tr>
+        <td>Platform</td>
+        <td>Windows-10-10.0.18362-SP0</td></tr>
+      <tr>
+        <td>Plugins</td>
+        <td>{&apos;allure-pytest&apos;: &apos;2.8.11&apos;, &apos;Faker&apos;: &apos;5.6.5&apos;, &apos;html&apos;: &apos;2.0.1&apos;, &apos;metadata&apos;: &apos;1.8.0&apos;, &apos;parallel&apos;: &apos;0.0.10&apos;, &apos;rerunfailures&apos;: &apos;8.0&apos;}</td></tr>
+      <tr>
+        <td>Python</td>
+        <td>3.8.1</td></tr></table>
+    <h2>Summary</h2>
+    <p>29 tests ran in 5.74 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">29 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="rerun">0 rerun</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable numeric" col="duration">Duration</th>
+          <th>Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::test_login[data0]</td>
+          <td class="col-duration">0.11</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_login.py:64 
+caseid: 1, title: 正确手机号和密码登录成功（管理员登录）
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;15152134577&quot;, &quot;pwd&quot;: &quot;00025678&quot;}
+response: {&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;OK&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: 866, &#x27;leave_amount&#x27;: 0.0, &#x27;mobile_phone&#x27;: &#x27;15152134577&#x27;, &#x27;reg_name&#x27;: &#x27;flora&#x27;, &#x27;reg_time&#x27;: &#x27;2021-01-28 21:59:59.0&#x27;, &#x27;type&#x27;: 0}, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::test_login[data1]</td>
+          <td class="col-duration">0.05</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_login.py:64 
+caseid: 2, title: 正确手机号和密码登录成功（普通会员登录）
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;13504936561&quot;, &quot;pwd&quot;: &quot;12chyfghkll&quot;}
+response: {&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;OK&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: 867, &#x27;leave_amount&#x27;: 0.0, &#x27;mobile_phone&#x27;: &#x27;13504936561&#x27;, &#x27;reg_name&#x27;: &#x27;007&#x27;, &#x27;reg_time&#x27;: &#x27;2021-01-28 21:59:59.0&#x27;, &#x27;type&#x27;: 1}, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::test_login[data2]</td>
+          <td class="col-duration">0.06</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_login.py:64 
+caseid: 3, title: 手机号为空，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: None, &quot;pwd&quot;: &quot;12dfgdfg!##$%&quot;}
+response: {&#x27;code&#x27;: 1, &#x27;msg&#x27;: &#x27;手机号码为空&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::test_login[data3]</td>
+          <td class="col-duration">0.05</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_login.py:64 
+caseid: 4, title: 密码为空，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;13504936561&quot;, &quot;pwd&quot;: None}
+response: {&#x27;code&#x27;: 1, &#x27;msg&#x27;: &#x27;密码为空&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::test_login[data4]</td>
+          <td class="col-duration">0.06</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_login.py:64 
+caseid: 5, title: 手机号码和密码均为空，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: None, &quot;pwd&quot;: None}
+response: {&#x27;code&#x27;: 1, &#x27;msg&#x27;: &#x27;手机号码为空&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::test_login[data5]</td>
+          <td class="col-duration">0.07</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_login.py:64 
+caseid: 6, title: 手机号错误，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;15500001234&quot;, &quot;pwd&quot;: &quot;@$?&gt;&lt;@#$*()&quot;}
+response: {&#x27;code&#x27;: 1001, &#x27;msg&#x27;: &#x27;账号信息错误&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::test_login[data6]</td>
+          <td class="col-duration">0.08</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_login.py:64 
+caseid: 7, title: 密码错误，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;13504936561&quot;, &quot;pwd&quot;: &quot;12345678900&quot;}
+response: {&#x27;code&#x27;: 1001, &#x27;msg&#x27;: &#x27;账号信息错误&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::test_login[data7]</td>
+          <td class="col-duration">0.06</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_login.py:64 
+caseid: 8, title: 手机号和密码错误，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;15512341234&quot;, &quot;pwd&quot;: &quot;12@$?&gt;1234&quot;}
+response: {&#x27;code&#x27;: 1001, &#x27;msg&#x27;: &#x27;账号信息错误&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::test_login[data8]</td>
+          <td class="col-duration">0.05</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_login.py:64 
+caseid: 9, title: 手机号码正确但是前面有空格，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot; 13504936561&quot;, &quot;pwd&quot;: &quot;00005678&quot;}
+response: {&#x27;code&#x27;: 2, &#x27;msg&#x27;: &#x27;无效的手机格式&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::test_login[data9]</td>
+          <td class="col-duration">0.05</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_login.py:64 
+caseid: 10, title: 手机号码正确但是后面有空格，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;13504936561 &quot;, &quot;pwd&quot;: &quot;00005678&quot;}
+response: {&#x27;code&#x27;: 2, &#x27;msg&#x27;: &#x27;无效的手机格式&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::test_login[data10]</td>
+          <td class="col-duration">0.07</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_login.py:64 
+caseid: 11, title: 密码正确但是前面有空格，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;13504936561&quot;, &quot;pwd&quot;: &quot; 00005678&quot;}
+response: {&#x27;code&#x27;: 1001, &#x27;msg&#x27;: &#x27;账号信息错误&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login.py::TestLogin::test_login[data11]</td>
+          <td class="col-duration">0.05</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_login.py:64 
+caseid: 12, title: 密码正确但是后面有空格，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;13504936561&quot;, &quot;pwd&quot;: &quot;00005678 &quot;}
+response: {&#x27;code&#x27;: 1001, &#x27;msg&#x27;: &#x27;账号信息错误&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_register.py::TestRegister::test_register[data0]</td>
+          <td class="col-duration">0.27</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_register.py:72 
+caseid: 1, title: 管理员注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;15654803750&quot;,&quot;pwd&quot;: &quot;00025678&quot;, &quot;type&quot;:  0, &quot;reg_name&quot;:  &quot;flora&quot;}
+response: {&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;OK&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: 942, &#x27;reg_name&#x27;: &#x27;flora&#x27;, &#x27;mobile_phone&#x27;: &#x27;15654803750&#x27;}, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_register.py::TestRegister::test_register[data1]</td>
+          <td class="col-duration">0.26</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_register.py:72 
+caseid: 2, title: 普通会员注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;13499411782&quot;,&quot;pwd&quot;: &quot;12chyfghkll&quot;, &quot;type&quot;:  1, &quot;reg_name&quot;:  &quot;007&quot;}
+response: {&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;OK&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: 943, &#x27;reg_name&#x27;: &#x27;007&#x27;, &#x27;mobile_phone&#x27;: &#x27;13499411782&#x27;}, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_register.py::TestRegister::test_register[data2]</td>
+          <td class="col-duration">0.23</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_register.py:72 
+caseid: 3, title: 默认普通会员注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;13508354330&quot;,&quot;pwd&quot;: &quot;12dfgdfg!##$%&quot;,  &quot;type&quot;: None, &quot;reg_name&quot;:  &quot;花儿&quot;}
+response: {&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;OK&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: 944, &#x27;reg_name&#x27;: &#x27;花儿&#x27;, &#x27;mobile_phone&#x27;: &#x27;13508354330&#x27;}, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_register.py::TestRegister::test_register[data3]</td>
+          <td class="col-duration">0.20</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_register.py:72 
+caseid: 4, title: 小柠檬普通会员注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;15297569509&quot;,&quot;pwd&quot;: &quot;!@3435fdg&quot;, &quot;type&quot;: None, &quot;reg_name&quot;:  None}
+response: {&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;OK&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: 945, &#x27;reg_name&#x27;: &#x27;小柠檬&#x27;, &#x27;mobile_phone&#x27;: &#x27;15297569509&#x27;}, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_register.py::TestRegister::test_register[data4]</td>
+          <td class="col-duration">0.21</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_register.py:72 
+caseid: 5, title: 小柠檬管理员注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;15093196917&quot;,&quot;pwd&quot;: &quot;@$?&gt;&lt;@#$*()&quot;, &quot;type&quot;:  0, &quot;reg_name&quot;:  None}
+response: {&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;OK&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: 946, &#x27;reg_name&#x27;: &#x27;小柠檬&#x27;, &#x27;mobile_phone&#x27;: &#x27;15093196917&#x27;}, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_register.py::TestRegister::test_register[data5]</td>
+          <td class="col-duration">0.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_register.py:72 
+caseid: 6, title: 密码包含空格注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;13265164720&quot;,&quot;pwd&quot;: &quot;  @$?&gt;&lt;@#$*()&quot;, &quot;type&quot;:  0, &quot;reg_name&quot;:  None}
+response: {&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;OK&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: 947, &#x27;reg_name&#x27;: &#x27;小柠檬&#x27;, &#x27;mobile_phone&#x27;: &#x27;13265164720&#x27;}, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_register.py::TestRegister::test_register[data6]</td>
+          <td class="col-duration">0.27</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_register.py:72 
+caseid: 7, title: 昵称包含空格注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;15526871909&quot;,&quot;pwd&quot;: &quot;12@$?&gt;&lt;@#$*()&quot;, &quot;type&quot;:  0, &quot;reg_name&quot;:  &quot;小柠檬  &quot;}
+response: {&#x27;code&#x27;: 0, &#x27;msg&#x27;: &#x27;OK&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: 948, &#x27;reg_name&#x27;: &#x27;小柠檬  &#x27;, &#x27;mobile_phone&#x27;: &#x27;15526871909&#x27;}, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_register.py::TestRegister::test_register[data7]</td>
+          <td class="col-duration">0.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_register.py:72 
+caseid: 8, title: 手机号码长度不够，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;130002056&quot;,&quot;pwd&quot;: &quot;00as5678&quot;, &quot;type&quot;:  0, &quot;reg_name&quot;:  &quot;flora01&quot;}
+response: {&#x27;code&#x27;: 2, &#x27;msg&#x27;: &#x27;无效的手机格式&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_register.py::TestRegister::test_register[data8]</td>
+          <td class="col-duration">0.22</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_register.py:72 
+caseid: 9, title: 手机号码不合法，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;10002000200&quot;,&quot;pwd&quot;: &quot;zx005678&quot;, &quot;type&quot;:  0, &quot;reg_name&quot;:  &quot;flora02&quot;}
+response: {&#x27;code&#x27;: 2, &#x27;msg&#x27;: &#x27;无效的手机格式&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_register.py::TestRegister::test_register[data9]</td>
+          <td class="col-duration">0.20</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_register.py:72 
+caseid: 10, title: 手机号码为空，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;:  None, &quot;pwd&quot;: &quot;00025678&quot;, &quot;type&quot;:  1, &quot;reg_name&quot;:  &quot;flora002&quot;}
+response: {&#x27;code&#x27;: 1, &#x27;msg&#x27;: &#x27;手机号为空&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_register.py::TestRegister::test_register[data10]</td>
+          <td class="col-duration">0.23</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_register.py:72 
+caseid: 11, title: 手机号码超过11位，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;:  187749700650, &quot;pwd&quot;: &quot;01105678&quot;, &quot;type&quot;:  1, &quot;reg_name&quot;:  &quot;flora002a&quot;}
+response: {&#x27;code&#x27;: 2, &#x27;msg&#x27;: &#x27;无效的手机格式&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_register.py::TestRegister::test_register[data11]</td>
+          <td class="col-duration">0.21</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_register.py:72 
+caseid: 12, title: 密码长度小于8位，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;13126179960&quot;,&quot;pwd&quot;: &quot;0002567&quot;, &quot;type&quot;:  1, &quot;reg_name&quot;:  &quot;flora03&quot;}
+response: {&#x27;code&#x27;: 2, &#x27;msg&#x27;: &#x27;密码格式为8到16位&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_register.py::TestRegister::test_register[data12]</td>
+          <td class="col-duration">0.20</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_register.py:72 
+caseid: 13, title: 密码长度大于16位，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;15215638437&quot;,&quot;pwd&quot;: &quot;000256123ASD345677&quot;, &quot;type&quot;:  1, &quot;reg_name&quot;:  &quot;flora04&quot;}
+response: {&#x27;code&#x27;: 2, &#x27;msg&#x27;: &#x27;密码格式为8到16位&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_register.py::TestRegister::test_register[data13]</td>
+          <td class="col-duration">0.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_register.py:72 
+caseid: 14, title: 密码为空，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;13396449980&quot;,&quot;pwd&quot;: None, &quot;type&quot;:  0, &quot;reg_name&quot;:  &quot;flora004&quot;}
+response: {&#x27;code&#x27;: 1, &#x27;msg&#x27;: &#x27;密码为空&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_register.py::TestRegister::test_register[data14]</td>
+          <td class="col-duration">0.26</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_register.py:72 
+caseid: 15, title: 昵称长度大于10，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;13340221618&quot;,&quot;pwd&quot;: &quot;sdfsdfdsfsdf&quot;, &quot;type&quot;:  10, &quot;reg_name&quot;:  &quot;flora0900025678&quot;}
+response: {&#x27;code&#x27;: 2, &#x27;msg&#x27;: &#x27;不支持的用户类型&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_register.py::TestRegister::test_register[data15]</td>
+          <td class="col-duration">0.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_register.py:72 
+caseid: 16, title: 已注册管理员重复注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;#exist_phone#&quot;,&quot;pwd&quot;: &quot;00025678&quot;, &quot;type&quot;:  0, &quot;reg_name&quot;:  &quot;flora&quot;}
+response: {&#x27;code&#x27;: 2, &#x27;msg&#x27;: &#x27;无效的手机格式&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_register.py::TestRegister::test_register[data16]</td>
+          <td class="col-duration">0.25</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_register.py:72 
+caseid: 17, title: 已注册普通会员重复注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {&#x27;X-Lemonban-Media-Type&#x27;: &#x27;lemonban.v1&#x27;, &#x27;Content - Type&#x27;: &#x27;application / json&#x27;}
+case_data: {&quot;mobile_phone&quot;: &quot;#exist_phone#&quot;,&quot;pwd&quot;: &quot;12chyfghkll&quot;, &quot;type&quot;:  1, &quot;reg_name&quot;:  &quot;007&quot;}
+response: {&#x27;code&#x27;: 2, &#x27;msg&#x27;: &#x27;无效的手机格式&#x27;, &#x27;data&#x27;: None, &#x27;copyright&#x27;: &#x27;Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved&#x27;}
+result: Passed<br/></div></td></tr></tbody></table></body></html>

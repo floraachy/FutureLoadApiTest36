@@ -1,0 +1,996 @@
+2021-02-01 15:42:05,457 ---root--- [test_withdraw.py-->line:84] - INFO: 
+caseid: 1, title: 会员id正确，提现金额为0且大于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTY1NjI1fQ.T6ajo6gzOHLcWfNFhcwK4fNIDGg_WNH1CtvigD48o8NaWqG6RO7Z7bmaLPVRZN7NxK4NRuvY1PLdBQQ0SYOosA'}
+case_data: {"member_id": "867", "amount":0}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 1.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 15:42:05,700 ---root--- [test_withdraw.py-->line:84] - INFO: 
+caseid: 2, title: 会员id正确，提现金额为500000且大于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTY1NjI1fQ.T6ajo6gzOHLcWfNFhcwK4fNIDGg_WNH1CtvigD48o8NaWqG6RO7Z7bmaLPVRZN7NxK4NRuvY1PLdBQQ0SYOosA'}
+case_data: {"member_id": "867", "amount":500000}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 1.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 15:42:05,963 ---root--- [test_withdraw.py-->line:84] - INFO: 
+caseid: 3, title: 会员id正确，提现金额为499999且大于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTY1NjI1fQ.T6ajo6gzOHLcWfNFhcwK4fNIDGg_WNH1CtvigD48o8NaWqG6RO7Z7bmaLPVRZN7NxK4NRuvY1PLdBQQ0SYOosA'}
+case_data: {"member_id": "867", "amount":499999}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 1.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 15:42:06,242 ---root--- [test_withdraw.py-->line:84] - INFO: 
+caseid: 4, title: 会员id正确，提现金额为500000.00且大于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTY1NjI2fQ.dvdoxV7thxsA0rMt9H8TNVGgWwihGJ1vF8We--UvWTlFdT8EFXxvmnp0zwoZQBC8AEvYZyWKB945Bg9YrNv-nQ'}
+case_data: {"member_id": "867", "amount":500000.00}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 1.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 15:42:06,567 ---root--- [test_withdraw.py-->line:84] - INFO: 
+caseid: 5, title: 会员id正确，提现金额为499999.99且大于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTY1NjI2fQ.dvdoxV7thxsA0rMt9H8TNVGgWwihGJ1vF8We--UvWTlFdT8EFXxvmnp0zwoZQBC8AEvYZyWKB945Bg9YrNv-nQ'}
+case_data: {"member_id": "867", "amount":499999.99}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 1.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 15:42:06,917 ---root--- [test_withdraw.py-->line:84] - INFO: 
+caseid: 6, title: 会员id正确，提现金额为500且大于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTY1NjI2fQ.dvdoxV7thxsA0rMt9H8TNVGgWwihGJ1vF8We--UvWTlFdT8EFXxvmnp0zwoZQBC8AEvYZyWKB945Bg9YrNv-nQ'}
+case_data: {"member_id": "867", "amount":500}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 1.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 15:42:07,210 ---root--- [test_withdraw.py-->line:84] - INFO: 
+caseid: 7, title: 会员id正确，提现金额为501.12且大于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTY1NjI2fQ.dvdoxV7thxsA0rMt9H8TNVGgWwihGJ1vF8We--UvWTlFdT8EFXxvmnp0zwoZQBC8AEvYZyWKB945Bg9YrNv-nQ'}
+case_data: {"member_id": "867", "amount":501.12}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 1.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 15:42:07,537 ---root--- [test_withdraw.py-->line:84] - INFO: 
+caseid: 8, title: 会员id正确，提现金额为1000， 等于用户可用余额，提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTY1NjI3fQ.MOeSa_6pUOcdTXkgetkR9n08r8zMlXl0xCdjYm927vXPJLc0cqhptr77bkpjbvTKzRo5CF9DAoKu6INlX8tgEA'}
+case_data: {"member_id": "867", "amount":1000}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 0.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 15:42:07,819 ---root--- [test_withdraw.py-->line:84] - INFO: 
+caseid: 9, title: 会员id为空，提现金额符合要求， 提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTY1NjI3fQ.MOeSa_6pUOcdTXkgetkR9n08r8zMlXl0xCdjYm927vXPJLc0cqhptr77bkpjbvTKzRo5CF9DAoKu6INlX8tgEA'}
+case_data: {"member_id": "",  "amount":501.13}
+response: {'code': 1, 'msg': '会员id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 15:42:08,080 ---root--- [test_withdraw.py-->line:84] - INFO: 
+caseid: 10, title: 会员id正确，提现金额为空，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTY1NjI3fQ.MOeSa_6pUOcdTXkgetkR9n08r8zMlXl0xCdjYm927vXPJLc0cqhptr77bkpjbvTKzRo5CF9DAoKu6INlX8tgEA'}
+case_data: {"member_id": "867", "amount": ""}
+response: {'code': 1, 'msg': '余额为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 15:42:08,355 ---root--- [test_withdraw.py-->line:84] - INFO: 
+caseid: 11, title: 会员id正确，提现金额为900， 小于用户可用余额，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTY1NjI4fQ.UctVKxExGBY7ZHpYVtEZ5JZIh9W_89poyrDTZxEAu1vM3geEvvNVAOz6jHIfHNm1QbRRB2lvqFEjRRwJt5FkbQ'}
+case_data: {"member_id": "867", "amount":900}
+response: {'code': 1002, 'msg': '余额不足', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 15:42:08,586 ---root--- [test_withdraw.py-->line:84] - INFO: 
+caseid: 12, title: 会员id正确，提现金额负整数，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTY1NjI4fQ.UctVKxExGBY7ZHpYVtEZ5JZIh9W_89poyrDTZxEAu1vM3geEvvNVAOz6jHIfHNm1QbRRB2lvqFEjRRwJt5FkbQ'}
+case_data: {"member_id": "867", "amount":-901}
+response: {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 15:42:08,850 ---root--- [test_withdraw.py-->line:84] - INFO: 
+caseid: 13, title: 会员id正确，提现金额非数字，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTY1NjI4fQ.UctVKxExGBY7ZHpYVtEZ5JZIh9W_89poyrDTZxEAu1vM3geEvvNVAOz6jHIfHNm1QbRRB2lvqFEjRRwJt5FkbQ'}
+case_data: {"member_id": "867", "amount":"s"}
+response: {'code': 2, 'msg': '数值参数格式不正确', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 15:42:09,073 ---root--- [test_withdraw.py-->line:84] - INFO: 
+caseid: 14, title: 会员id正确，提现金额负小数，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTY1NjI4fQ.UctVKxExGBY7ZHpYVtEZ5JZIh9W_89poyrDTZxEAu1vM3geEvvNVAOz6jHIfHNm1QbRRB2lvqFEjRRwJt5FkbQ'}
+case_data: {"member_id": "867", "amount": -902.1}
+response: {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 15:42:09,330 ---root--- [test_withdraw.py-->line:84] - INFO: 
+caseid: 15, title: 会员id正确，提现金额超2位小数的正数，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTY1NjI5fQ.TBrFLnORQCeikkEy6Rlcg2VMYwJVPuVAbIKXnl9NuOx1WDXSA3ZKPEq7rcdREd-zsWjALIbvjk6VHMuGSSIubw'}
+case_data: {"member_id": "867", "amount":903.123}
+response: {'code': 2, 'msg': '余额小数超过两位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 15:42:09,620 ---root--- [test_withdraw.py-->line:84] - INFO: 
+caseid: 16, title: 会员id正确，提现金额大于50W，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTY1NjI5fQ.TBrFLnORQCeikkEy6Rlcg2VMYwJVPuVAbIKXnl9NuOx1WDXSA3ZKPEq7rcdREd-zsWjALIbvjk6VHMuGSSIubw'}
+case_data: {"member_id": "867", "amount":500001}
+response: {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 20:34:55,403 ---root--- [test_withdraw.py-->line:79] - INFO: 
+caseid: 1, title: 会员id正确，提现金额为0且大于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTgzMTk1fQ.21HZGkb5Xo8haH5lIOndKZ3nny9A5hoqaDevrzIoL4IcMMvakONcpdgi-ZeA0eQqDMWJThUS5mfbFM5fZUI7kA'}
+case_data: {"member_id": "867", "amount":0}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 20:34:55,792 ---root--- [test_withdraw.py-->line:79] - INFO: 
+caseid: 2, title: 会员id正确，提现金额为500000且大于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTgzMTk2fQ.FVqHPAZUgOJKCzu4qFwgzE3lXzMhQ5FcG94ljQNTOCGbgUc7WZHkP8VpIwaSbD_X7F02TNttkXn_ibS5TciA1g'}
+case_data: {"member_id": "867", "amount":500000}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 20:34:56,162 ---root--- [test_withdraw.py-->line:79] - INFO: 
+caseid: 3, title: 会员id正确，提现金额为499999且大于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTgzMTk2fQ.FVqHPAZUgOJKCzu4qFwgzE3lXzMhQ5FcG94ljQNTOCGbgUc7WZHkP8VpIwaSbD_X7F02TNttkXn_ibS5TciA1g'}
+case_data: {"member_id": "867", "amount":499999}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 20:34:56,430 ---root--- [test_withdraw.py-->line:79] - INFO: 
+caseid: 4, title: 会员id正确，提现金额为500000.00且大于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTgzMTk2fQ.FVqHPAZUgOJKCzu4qFwgzE3lXzMhQ5FcG94ljQNTOCGbgUc7WZHkP8VpIwaSbD_X7F02TNttkXn_ibS5TciA1g'}
+case_data: {"member_id": "867", "amount":500000.00}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 20:34:56,755 ---root--- [test_withdraw.py-->line:79] - INFO: 
+caseid: 5, title: 会员id正确，提现金额为499999.99且大于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTgzMTk3fQ.32WaaKUk1TGogHUSVbg2wphDZ_DopoZmJwIL-aOAZW142wj6M5kNxF6bseH0-5EcyXzzJKai7nTc1PkVgwIpnQ'}
+case_data: {"member_id": "867", "amount":499999.99}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 20:34:57,049 ---root--- [test_withdraw.py-->line:79] - INFO: 
+caseid: 6, title: 会员id正确，提现金额为500且大于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTgzMTk3fQ.32WaaKUk1TGogHUSVbg2wphDZ_DopoZmJwIL-aOAZW142wj6M5kNxF6bseH0-5EcyXzzJKai7nTc1PkVgwIpnQ'}
+case_data: {"member_id": "867", "amount":500}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 20:34:57,412 ---root--- [test_withdraw.py-->line:79] - INFO: 
+caseid: 7, title: 会员id正确，提现金额为501.12且大于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTgzMTk3fQ.32WaaKUk1TGogHUSVbg2wphDZ_DopoZmJwIL-aOAZW142wj6M5kNxF6bseH0-5EcyXzzJKai7nTc1PkVgwIpnQ'}
+case_data: {"member_id": "867", "amount":501.12}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 20:34:57,781 ---root--- [test_withdraw.py-->line:79] - INFO: 
+caseid: 8, title: 会员id正确，提现金额为1000， 等于用户可用余额，提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTgzMTk4fQ.vZe_d12JI3BIV74LZgvfbpewo8AMFwmt-Y63DfDDapO285Z1icH4KTq14DkvrhbBQT-5k8keCRUhIfwudPoJIg'}
+case_data: {"member_id": "867", "amount":1000}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 0.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 20:34:58,064 ---root--- [test_withdraw.py-->line:79] - INFO: 
+caseid: 9, title: 会员id为空，提现金额符合要求， 提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTgzMTk4fQ.vZe_d12JI3BIV74LZgvfbpewo8AMFwmt-Y63DfDDapO285Z1icH4KTq14DkvrhbBQT-5k8keCRUhIfwudPoJIg'}
+case_data: {"member_id": "",  "amount":501.13}
+response: {'code': 1, 'msg': '会员id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 20:34:58,372 ---root--- [test_withdraw.py-->line:79] - INFO: 
+caseid: 10, title: 会员id正确，提现金额为空，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTgzMTk4fQ.vZe_d12JI3BIV74LZgvfbpewo8AMFwmt-Y63DfDDapO285Z1icH4KTq14DkvrhbBQT-5k8keCRUhIfwudPoJIg'}
+case_data: {"member_id": "867", "amount": ""}
+response: {'code': 1, 'msg': '余额为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 20:34:58,639 ---root--- [test_withdraw.py-->line:79] - INFO: 
+caseid: 11, title: 会员id正确，提现金额为900， 小于用户可用余额，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTgzMTk5fQ.jPwDC1rf3WVW76haAZZ9GuhspbLJ_GN1h63HMU4VC3uhxnOraarhHs7jDbWnCkG-g9v_nImlsSQDmr114T-Tvw'}
+case_data: {"member_id": "867", "amount":900}
+response: {'code': 1002, 'msg': '余额不足', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 20:34:58,947 ---root--- [test_withdraw.py-->line:79] - INFO: 
+caseid: 12, title: 会员id正确，提现金额负整数，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTgzMTk5fQ.jPwDC1rf3WVW76haAZZ9GuhspbLJ_GN1h63HMU4VC3uhxnOraarhHs7jDbWnCkG-g9v_nImlsSQDmr114T-Tvw'}
+case_data: {"member_id": "867", "amount":-901}
+response: {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 20:34:59,224 ---root--- [test_withdraw.py-->line:79] - INFO: 
+caseid: 13, title: 会员id正确，提现金额非数字，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTgzMTk5fQ.jPwDC1rf3WVW76haAZZ9GuhspbLJ_GN1h63HMU4VC3uhxnOraarhHs7jDbWnCkG-g9v_nImlsSQDmr114T-Tvw'}
+case_data: {"member_id": "867", "amount":"s"}
+response: {'code': 2, 'msg': '数值参数格式不正确', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 20:34:59,520 ---root--- [test_withdraw.py-->line:79] - INFO: 
+caseid: 14, title: 会员id正确，提现金额负小数，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTgzMTk5fQ.jPwDC1rf3WVW76haAZZ9GuhspbLJ_GN1h63HMU4VC3uhxnOraarhHs7jDbWnCkG-g9v_nImlsSQDmr114T-Tvw'}
+case_data: {"member_id": "867", "amount": -902.1}
+response: {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 20:34:59,859 ---root--- [test_withdraw.py-->line:79] - INFO: 
+caseid: 15, title: 会员id正确，提现金额超2位小数的正数，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTgzMjAwfQ.esotRM3EPTlmgQqM1hk66BCR4Lnlwjd58if7eNNMxTiHKQYDkGglYRzPw_JkEJpuqKXemvAomVLOsxI8RTN0QQ'}
+case_data: {"member_id": "867", "amount":903.123}
+response: {'code': 2, 'msg': '余额小数超过两位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-01 20:35:00,172 ---root--- [test_withdraw.py-->line:79] - INFO: 
+caseid: 16, title: 会员id正确，提现金额大于50W，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMTgzMjAwfQ.esotRM3EPTlmgQqM1hk66BCR4Lnlwjd58if7eNNMxTiHKQYDkGglYRzPw_JkEJpuqKXemvAomVLOsxI8RTN0QQ'}
+case_data: {"member_id": "867", "amount":500001}
+response: {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-02 22:16:45,900 ---root--- [test_login.py-->line:60] - INFO: 
+caseid: 1, title: 正确手机号和密码登录成功（管理员登录）
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "15152134577", "pwd": "00025678"}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 866, 'leave_amount': 0.0, 'mobile_phone': '15152134577', 'reg_name': 'flora', 'reg_time': '2021-01-28 21:59:59.0', 'type': 0, 'token_info': {'token_type': 'Bearer', 'expires_in': '2021-02-02 22:21:47', 'token': 'eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjEyMjc1NzA3fQ.6HipVf32LZTUF4czRbtdZDEyZdNeIpozy5EGJX-nqAzCYSmQAm-7W74Zs9hjIkY1yojVj41SoIugDyKJbslApQ'}}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-02 22:16:45,957 ---root--- [test_login.py-->line:60] - INFO: 
+caseid: 2, title: 正确手机号和密码登录成功（普通会员登录）
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "13504936561", "pwd": "12chyfghkll"}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 500.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1, 'token_info': {'token_type': 'Bearer', 'expires_in': '2021-02-02 22:21:47', 'token': 'eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMjc1NzA3fQ.ss6s7H2yzxrcLRjPnqp3SRhDdubC2H-330B5WHzlQZzqDfKCVAHbiy2l-BTPtQTQ5Xia94ObdD_UX2op1Jhq9A'}}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-02 22:16:46,004 ---root--- [test_login.py-->line:60] - INFO: 
+caseid: 3, title: 手机号为空，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": None, "pwd": "12dfgdfg!##$%"}
+response: {'code': 1, 'msg': '手机号码为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-02 22:16:46,082 ---root--- [test_login.py-->line:60] - INFO: 
+caseid: 4, title: 密码为空，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "13504936561", "pwd": None}
+response: {'code': 1, 'msg': '密码为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-02 22:16:46,129 ---root--- [test_login.py-->line:60] - INFO: 
+caseid: 5, title: 手机号码和密码均为空，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": None, "pwd": None}
+response: {'code': 1, 'msg': '手机号码为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-02 22:16:46,191 ---root--- [test_login.py-->line:60] - INFO: 
+caseid: 6, title: 手机号错误，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "15500001234", "pwd": "@$?><@#$*()"}
+response: {'code': 1001, 'msg': '账号信息错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-02 22:16:46,254 ---root--- [test_login.py-->line:60] - INFO: 
+caseid: 7, title: 密码错误，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "13504936561", "pwd": "12345678900"}
+response: {'code': 1001, 'msg': '账号信息错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-02 22:16:46,316 ---root--- [test_login.py-->line:60] - INFO: 
+caseid: 8, title: 手机号和密码错误，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "15512341234", "pwd": "12@$?>1234"}
+response: {'code': 1001, 'msg': '账号信息错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-02 22:16:46,378 ---root--- [test_login.py-->line:60] - INFO: 
+caseid: 9, title: 手机号码正确但是前面有空格，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": " 13504936561", "pwd": "00005678"}
+response: {'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-02 22:16:46,441 ---root--- [test_login.py-->line:60] - INFO: 
+caseid: 10, title: 手机号码正确但是后面有空格，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "13504936561 ", "pwd": "00005678"}
+response: {'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-02 22:16:46,488 ---root--- [test_login.py-->line:60] - INFO: 
+caseid: 11, title: 密码正确但是前面有空格，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "13504936561", "pwd": " 00005678"}
+response: {'code': 1001, 'msg': '账号信息错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-02 22:16:46,566 ---root--- [test_login.py-->line:60] - INFO: 
+caseid: 12, title: 密码正确但是后面有空格，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "13504936561", "pwd": "00005678 "}
+response: {'code': 1001, 'msg': '账号信息错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-02 22:16:57,769 ---root--- [test_recharge.py-->line:70] - ERROR: assert 2 == 1
+2021-02-02 22:16:57,769 ---root--- [test_recharge.py-->line:71] - INFO: 
+caseid: 7, title: 会员id为空，充值金额正确，充值失败
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMjc1NzE5fQ.GJASnk7xKjL9wAi2PviErpChlnU0ro4urwlks-re7KqczaIChQJFDqdP_1vxZWNYA1KULA7FRXkQsIRYFv8_Uw'}
+case_data: {"member_id": "", "amount": 20}
+response: {'code': 1, 'msg': '用户id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-02 22:16:57,956 ---root--- [test_recharge.py-->line:70] - ERROR: assert 1001 == 1007
+2021-02-02 22:16:57,956 ---root--- [test_recharge.py-->line:71] - INFO: 
+caseid: 9, title: 会员id错误，充值失败
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMjc1NzE5fQ.GJASnk7xKjL9wAi2PviErpChlnU0ro4urwlks-re7KqczaIChQJFDqdP_1vxZWNYA1KULA7FRXkQsIRYFv8_Uw'}
+case_data: {"member_id": "0012", "amount": "20"}
+response: {'code': 1007, 'msg': '无权限访问，请检查参数', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-02 22:18:41,302 ---root--- [test_recharge.py-->line:68] - ERROR: assert 2 == 1
+2021-02-02 22:18:41,302 ---root--- [test_recharge.py-->line:69] - INFO: 
+caseid: 7, title: 会员id为空，充值金额正确，充值失败
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMjc1ODIyfQ.xPe1Vx513cU_hnTiQ9_887_YCBX8CAGOciN3iEEeGVHLK0SRc1UBP3SufGYp3x6geS5Ptz10HVsQabHYmtjWBg'}
+case_data: {"member_id": "", "amount": 20}
+response: {'code': 1, 'msg': '用户id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-02 22:18:41,489 ---root--- [test_recharge.py-->line:68] - ERROR: assert 1001 == 1007
+2021-02-02 22:18:41,489 ---root--- [test_recharge.py-->line:69] - INFO: 
+caseid: 9, title: 会员id错误，充值失败
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMjc1ODIyfQ.xPe1Vx513cU_hnTiQ9_887_YCBX8CAGOciN3iEEeGVHLK0SRc1UBP3SufGYp3x6geS5Ptz10HVsQabHYmtjWBg'}
+case_data: {"member_id": "0012", "amount": "20"}
+response: {'code': 1007, 'msg': '无权限访问，请检查参数', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-03 20:20:56,719 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 8, title: 手机号码长度不够，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "130002056","pwd": "00as5678", "type":  0, "reg_name":  "flora01"}
+response: {'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:20:57,031 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 9, title: 手机号码不合法，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "10002000200","pwd": "zx005678", "type":  0, "reg_name":  "flora02"}
+response: {'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:20:57,297 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 10, title: 手机号码为空，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone":  None, "pwd": "00025678", "type":  1, "reg_name":  "flora002"}
+response: {'code': 1, 'msg': '手机号为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:20:57,546 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 11, title: 手机号码超过11位，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone":  187749700650, "pwd": "01105678", "type":  1, "reg_name":  "flora002a"}
+response: {'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:20:58,624 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 16, title: 已注册管理员重复注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "#exist_phone#","pwd": "00025678", "type":  0, "reg_name":  "flora"}
+response: {'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:20:58,874 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 17, title: 已注册普通会员重复注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "#exist_phone#","pwd": "12chyfghkll", "type":  1, "reg_name":  "007"}
+response: {'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:21:29,095 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 1, title: 管理员注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "13271517118","pwd": "00025678", "type":  0, "reg_name":  "flora"}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 1906907, 'reg_name': 'flora', 'mobile_phone': '13271517118'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:21:29,407 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 2, title: 普通会员注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "15311639130","pwd": "12chyfghkll", "type":  1, "reg_name":  "007"}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 1906908, 'reg_name': '007', 'mobile_phone': '15311639130'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:21:29,688 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 3, title: 默认普通会员注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "14719391986","pwd": "12dfgdfg!##$%",  "type": None, "reg_name":  "花儿"}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 1906909, 'reg_name': '花儿', 'mobile_phone': '14719391986'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:21:29,954 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 4, title: 小柠檬普通会员注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "13354948751","pwd": "!@3435fdg", "type": None, "reg_name":  None}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 1906910, 'reg_name': '小柠檬', 'mobile_phone': '13354948751'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:21:30,250 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 5, title: 小柠檬管理员注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "15814293377","pwd": "@$?><@#$*()", "type":  0, "reg_name":  None}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 1906911, 'reg_name': '小柠檬', 'mobile_phone': '15814293377'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:21:30,547 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 6, title: 密码包含空格注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "15252243181","pwd": "  @$?><@#$*()", "type":  0, "reg_name":  None}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 1906912, 'reg_name': '小柠檬', 'mobile_phone': '15252243181'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:21:30,844 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 7, title: 昵称包含空格注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "18745984721","pwd": "12@$?><@#$*()", "type":  0, "reg_name":  "小柠檬  "}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 1906913, 'reg_name': '小柠檬  ', 'mobile_phone': '18745984721'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:21:31,085 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 8, title: 手机号码长度不够，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "130002056","pwd": "00as5678", "type":  0, "reg_name":  "flora01"}
+response: {'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:21:31,351 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 9, title: 手机号码不合法，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "10002000200","pwd": "zx005678", "type":  0, "reg_name":  "flora02"}
+response: {'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:21:31,640 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 10, title: 手机号码为空，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone":  None, "pwd": "00025678", "type":  1, "reg_name":  "flora002"}
+response: {'code': 1, 'msg': '手机号为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:21:31,937 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 11, title: 手机号码超过11位，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone":  187749700650, "pwd": "01105678", "type":  1, "reg_name":  "flora002a"}
+response: {'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:21:32,218 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 12, title: 密码长度小于8位，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "13516161159","pwd": "0002567", "type":  1, "reg_name":  "flora03"}
+response: {'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:21:32,468 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 13, title: 密码长度大于16位，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "18736671634","pwd": "000256123ASD345677", "type":  1, "reg_name":  "flora04"}
+response: {'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:21:32,733 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 14, title: 密码为空，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "18088910113","pwd": None, "type":  0, "reg_name":  "flora004"}
+response: {'code': 1, 'msg': '密码为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:21:32,999 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 15, title: 昵称长度大于10，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "18522796115","pwd": "sdfsdfdsfsdf", "type":  10, "reg_name":  "flora0900025678"}
+response: {'code': 2, 'msg': '不支持的用户类型', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:21:33,264 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 16, title: 已注册管理员重复注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "#exist_phone#","pwd": "00025678", "type":  0, "reg_name":  "flora"}
+response: {'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:21:33,483 ---root--- [test_register.py-->line:58] - INFO: 
+caseid: 17, title: 已注册普通会员重复注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "#exist_phone#","pwd": "12chyfghkll", "type":  1, "reg_name":  "007"}
+response: {'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:23:22,187 ---root--- [test_recharge.py-->line:68] - ERROR: assert 2 == 1
+2021-02-03 20:23:22,187 ---root--- [test_recharge.py-->line:69] - INFO: 
+caseid: 7, title: 会员id为空，充值金额正确，充值失败
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU1MzA0fQ.AwIDd8kWWa9S9UtQifGcuNQvrOY3j65RPebw7PJykFGTMGPYuxFykGbIgs2y-kF5JKySweQCoHD2gSERmuClkw'}
+case_data: {"member_id": "", "amount": 20}
+response: {'code': 1, 'msg': '用户id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-03 20:23:22,407 ---root--- [test_recharge.py-->line:68] - ERROR: assert 1001 == 1007
+2021-02-03 20:23:22,407 ---root--- [test_recharge.py-->line:69] - INFO: 
+caseid: 9, title: 会员id错误，充值失败
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU1MzA0fQ.AwIDd8kWWa9S9UtQifGcuNQvrOY3j65RPebw7PJykFGTMGPYuxFykGbIgs2y-kF5JKySweQCoHD2gSERmuClkw'}
+case_data: {"member_id": "0012", "amount": "20"}
+response: {'code': 1007, 'msg': '无权限访问，请检查参数', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-03 20:26:38,375 ---root--- [test_recharge.py-->line:68] - ERROR: assert 2 == 1
+2021-02-03 20:26:38,375 ---root--- [test_recharge.py-->line:69] - INFO: 
+caseid: 7, title: 会员id为空，充值金额正确，充值失败
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU1NTAwfQ._530Nf0t5Ak-GBDOR1LfTO-x1KAc9Y-alJA87b4B0dKjFUWKu5xyUZd1q9wQZY8l76E9MxqIyYR3M43vtBoFMA'}
+case_data: {"member_id": "", "amount": 20}
+response: {'code': 1, 'msg': '用户id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-03 20:26:38,546 ---root--- [test_recharge.py-->line:68] - ERROR: assert 1001 == 1007
+2021-02-03 20:26:38,546 ---root--- [test_recharge.py-->line:69] - INFO: 
+caseid: 9, title: 会员id错误，充值失败
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU1NTAxfQ.W0tXNc0J42liceveYCPxAOwvbY2YesDpxKSTwohcGLoKcPoX4Muq4zSSJAUc9KYwUJArBoZ3Tm49FRic-ZtLLQ'}
+case_data: {"member_id": "0012", "amount": "20"}
+response: {'code': 1007, 'msg': '无权限访问，请检查参数', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-03 20:31:07,189 ---root--- [test_recharge.py-->line:75] - INFO: 
+caseid: 1, title: 充值金额为500000，充值成功
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU1NzY5fQ.LYFw1qMiBdqQzalMtWyzOaoGmbs9n7GqwG-PQNQRP00CU-zSZ_17gCGtAM_MDpPJto6X2yNnrnLZVG1O-BHJBQ'}
+case_data: {"member_id": "867", "amount": 500000}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 500500.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:31:08,016 ---root--- [test_recharge.py-->line:68] - ERROR: assert 2 == 1
+2021-02-03 20:31:08,016 ---root--- [test_recharge.py-->line:69] - INFO: 
+caseid: 7, title: 会员id为空，充值金额正确，充值失败
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU1NzcwfQ.vgv3iBmoAVCl0Jdhv-QBdI8iZpqpXsulD-9x788TJEw-LEXT9OeQovXH_5hPwJPz_cyU3hpt1cI09XpuoLVhiA'}
+case_data: {"member_id": "", "amount": 20}
+response: {'code': 1, 'msg': '用户id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-03 20:31:08,282 ---root--- [test_recharge.py-->line:68] - ERROR: assert 1001 == 1007
+2021-02-03 20:31:08,282 ---root--- [test_recharge.py-->line:69] - INFO: 
+caseid: 9, title: 会员id错误，充值失败
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU1NzcwfQ.vgv3iBmoAVCl0Jdhv-QBdI8iZpqpXsulD-9x788TJEw-LEXT9OeQovXH_5hPwJPz_cyU3hpt1cI09XpuoLVhiA'}
+case_data: {"member_id": "0012", "amount": "20"}
+response: {'code': 1007, 'msg': '无权限访问，请检查参数', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-03 20:54:57,477 ---root--- [test_withdraw.py-->line:74] - INFO: 
+caseid: 1, title: 会员id正确，提现金额为0且小于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MTk5fQ.syl8oO33q9pqA-EYrNM5ETTD8xU71akb4YAMq_RGn1lcJ-4lMnBEmTt1iHe8PuNS5Gj-gi-dR-keZBI1YSpKLA'}
+case_data: {"member_id": "867", "amount":0}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:54:57,844 ---root--- [test_withdraw.py-->line:74] - INFO: 
+caseid: 2, title: 会员id正确，提现金额为500000且小于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjAwfQ.sZJtUAIh8po29oxp2DsYlcJPb1Skx6xP0BHnLphOr1HVpDqJvdlMWawCWqvmVt22FPYXQPJCfjq4CTp2uBxJYg'}
+case_data: {"member_id": "867", "amount":500000}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:54:58,236 ---root--- [test_withdraw.py-->line:74] - INFO: 
+caseid: 3, title: 会员id正确，提现金额为499999且小于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjAwfQ.sZJtUAIh8po29oxp2DsYlcJPb1Skx6xP0BHnLphOr1HVpDqJvdlMWawCWqvmVt22FPYXQPJCfjq4CTp2uBxJYg'}
+case_data: {"member_id": "867", "amount":499999}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:54:58,670 ---root--- [test_withdraw.py-->line:74] - INFO: 
+caseid: 4, title: 会员id正确，提现金额为500000.00且小于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjAwfQ.sZJtUAIh8po29oxp2DsYlcJPb1Skx6xP0BHnLphOr1HVpDqJvdlMWawCWqvmVt22FPYXQPJCfjq4CTp2uBxJYg'}
+case_data: {"member_id": "867", "amount":500000.00}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:54:59,083 ---root--- [test_withdraw.py-->line:74] - INFO: 
+caseid: 5, title: 会员id正确，提现金额为499999.99且小于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjAxfQ.f5TflskvlRPXSYnqVug2qebEX-Buq41SnEezL4Js7vW0EKQQTGdBLAtHta4pp5GiDTwudMcecWj-TnQHEZzqVA'}
+case_data: {"member_id": "867", "amount":499999.99}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:54:59,493 ---root--- [test_withdraw.py-->line:74] - INFO: 
+caseid: 6, title: 会员id正确，提现金额为500且小于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjAxfQ.f5TflskvlRPXSYnqVug2qebEX-Buq41SnEezL4Js7vW0EKQQTGdBLAtHta4pp5GiDTwudMcecWj-TnQHEZzqVA'}
+case_data: {"member_id": "867", "amount":500}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:54:59,880 ---root--- [test_withdraw.py-->line:74] - INFO: 
+caseid: 7, title: 会员id正确，提现金额为501.12且小于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjAyfQ.OUwNgXUY_BdLJdUE8zT6iU-11lahGpEliZ5QdU6yYWzpDrjXA8rHOLmhE-9jsUbRjG8XoqRfsab5XUT4WzbZ8g'}
+case_data: {"member_id": "867", "amount":501.12}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:55:00,256 ---root--- [test_withdraw.py-->line:74] - INFO: 
+caseid: 8, title: 会员id正确，提现金额为1000， 等于用户可用余额，提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjAyfQ.OUwNgXUY_BdLJdUE8zT6iU-11lahGpEliZ5QdU6yYWzpDrjXA8rHOLmhE-9jsUbRjG8XoqRfsab5XUT4WzbZ8g'}
+case_data: {"member_id": "867", "amount":1000}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 0.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:55:00,591 ---root--- [test_withdraw.py-->line:74] - INFO: 
+caseid: 9, title: 会员id为空，提现金额符合要求， 提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjAyfQ.OUwNgXUY_BdLJdUE8zT6iU-11lahGpEliZ5QdU6yYWzpDrjXA8rHOLmhE-9jsUbRjG8XoqRfsab5XUT4WzbZ8g'}
+case_data: {"member_id": "",  "amount":501.13}
+response: {'code': 1, 'msg': '会员id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:55:00,916 ---root--- [test_withdraw.py-->line:74] - INFO: 
+caseid: 10, title: 会员id正确，提现金额为空，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjAzfQ.buWJpit4qLZpuwHMfa0L-BW7B8Sdip_zEci_7Nf_iQnbBTDjkk2mBBdj1O8TWs5T5K9V6pLeNcx-vJtJIQNFGA'}
+case_data: {"member_id": "867", "amount": ""}
+response: {'code': 1, 'msg': '余额为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:55:01,221 ---root--- [test_withdraw.py-->line:74] - INFO: 
+caseid: 11, title: 会员id正确，提现金额为900， 大于用户可用余额，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjAzfQ.buWJpit4qLZpuwHMfa0L-BW7B8Sdip_zEci_7Nf_iQnbBTDjkk2mBBdj1O8TWs5T5K9V6pLeNcx-vJtJIQNFGA'}
+case_data: {"member_id": "867", "amount":900}
+response: {'code': 1002, 'msg': '余额不足', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:55:01,534 ---root--- [test_withdraw.py-->line:74] - INFO: 
+caseid: 12, title: 会员id正确，提现金额负整数，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjAzfQ.buWJpit4qLZpuwHMfa0L-BW7B8Sdip_zEci_7Nf_iQnbBTDjkk2mBBdj1O8TWs5T5K9V6pLeNcx-vJtJIQNFGA'}
+case_data: {"member_id": "867", "amount":-901}
+response: {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:55:01,848 ---root--- [test_withdraw.py-->line:74] - INFO: 
+caseid: 13, title: 会员id正确，提现金额非数字，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjA0fQ.7gAg_JyuXZnLNQYaUi2Ejrufnh0AlbXZJacuvgAlDghP12GvE3ZAYWCVyJgH8ca7N7JM3_pXSx2L4Jxr7UiIfQ'}
+case_data: {"member_id": "867", "amount":"s"}
+response: {'code': 2, 'msg': '数值参数格式不正确', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:55:02,147 ---root--- [test_withdraw.py-->line:74] - INFO: 
+caseid: 14, title: 会员id正确，提现金额负小数，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjA0fQ.7gAg_JyuXZnLNQYaUi2Ejrufnh0AlbXZJacuvgAlDghP12GvE3ZAYWCVyJgH8ca7N7JM3_pXSx2L4Jxr7UiIfQ'}
+case_data: {"member_id": "867", "amount": -902.1}
+response: {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:55:02,470 ---root--- [test_withdraw.py-->line:74] - INFO: 
+caseid: 15, title: 会员id正确，提现金额超2位小数的正数，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjA0fQ.7gAg_JyuXZnLNQYaUi2Ejrufnh0AlbXZJacuvgAlDghP12GvE3ZAYWCVyJgH8ca7N7JM3_pXSx2L4Jxr7UiIfQ'}
+case_data: {"member_id": "867", "amount":903.123}
+response: {'code': 2, 'msg': '余额小数超过两位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:55:02,768 ---root--- [test_withdraw.py-->line:74] - INFO: 
+caseid: 16, title: 会员id正确，提现金额大于50W，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjA1fQ.4N930OxdJXmQAL_JY-hGZgYSa2KOCUgMpBnCjgCgvJ8B1LztC_IymiMLg7zGedUJglfRbj8_QYKp0UBmSyN_rA'}
+case_data: {"member_id": "867", "amount":500001}
+response: {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:55:08,378 ---root--- [test_recharge.py-->line:75] - INFO: 
+caseid: 1, title: 充值金额为500000，充值成功
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjEwfQ.ZaGhkrvi_UVrK8GcgOIFVzdOKc2SZmXkFpYeKuEO_r6Fbx72d4U7zU4_grARagl7ydRx4EMFNJLAexKgvIdDFg'}
+case_data: {"member_id": "867", "amount": 500000}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 500000.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:55:08,684 ---root--- [test_recharge.py-->line:75] - INFO: 
+caseid: 2, title: 充值金额为499999，充值成功
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjEwfQ.ZaGhkrvi_UVrK8GcgOIFVzdOKc2SZmXkFpYeKuEO_r6Fbx72d4U7zU4_grARagl7ydRx4EMFNJLAexKgvIdDFg'}
+case_data: {"member_id": "867", "amount": 499999}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 999999.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:55:08,989 ---root--- [test_recharge.py-->line:75] - INFO: 
+caseid: 3, title: 充值金额为1，充值成功
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjExfQ.UlEH_AaPJaS0SmROpM5tTqhoNhyncyKZA01Se0jrk16VEMlexo_Fzr5WQXSdZ6oWgrcG7UAsVnMJhdGjBTSWHw'}
+case_data: {"member_id": "867", "amount": 1}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 1000000.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:55:09,271 ---root--- [test_recharge.py-->line:68] - ERROR: assert (1000001.12 - 1000000.0) == 1.12
+2021-02-03 20:55:09,271 ---root--- [test_recharge.py-->line:69] - INFO: 
+caseid: 4, title: 充值金额为1.12，充值成功
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjExfQ.UlEH_AaPJaS0SmROpM5tTqhoNhyncyKZA01Se0jrk16VEMlexo_Fzr5WQXSdZ6oWgrcG7UAsVnMJhdGjBTSWHw'}
+case_data: {"member_id": "867", "amount": 1.12}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 1000001.12, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-03 20:55:09,698 ---root--- [test_recharge.py-->line:68] - ERROR: assert (1500001.11 - 1000001.12) == 499999.99
+2021-02-03 20:55:09,698 ---root--- [test_recharge.py-->line:69] - INFO: 
+caseid: 5, title: 充值金额为499999.99，充值成功
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjEyfQ.ojSyRCBy02VNi2H0zjBulGBtKUgE2gmx8LXsBOH8-7aSzAuHdh-ft__21VFXJ6Ap7pmzuSVqe7Fnwnbdw6DH_w'}
+case_data: {"member_id": "867", "amount": 499999.99}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 1500001.11, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-03 20:55:09,979 ---root--- [test_recharge.py-->line:75] - INFO: 
+caseid: 6, title: 充值金额为500000.00，充值成功
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjEyfQ.ojSyRCBy02VNi2H0zjBulGBtKUgE2gmx8LXsBOH8-7aSzAuHdh-ft__21VFXJ6Ap7pmzuSVqe7Fnwnbdw6DH_w'}
+case_data: {"member_id": "867", "amount": 500000.00}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 2000001.11, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:55:10,206 ---root--- [test_recharge.py-->line:68] - ERROR: assert 2 == 1
+2021-02-03 20:55:10,206 ---root--- [test_recharge.py-->line:69] - INFO: 
+caseid: 7, title: 会员id为空，充值金额正确，充值失败
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjEyfQ.ojSyRCBy02VNi2H0zjBulGBtKUgE2gmx8LXsBOH8-7aSzAuHdh-ft__21VFXJ6Ap7pmzuSVqe7Fnwnbdw6DH_w'}
+case_data: {"member_id": "", "amount": 20}
+response: {'code': 1, 'msg': '用户id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-03 20:55:10,725 ---root--- [test_recharge.py-->line:68] - ERROR: assert 1001 == 1007
+2021-02-03 20:55:10,725 ---root--- [test_recharge.py-->line:69] - INFO: 
+caseid: 9, title: 会员id错误，充值失败
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjEzfQ.xGvT3pH4xlpZabG5_6nv1hhcyn1ZY36c0J5qzBSCqlX2iC9MA9r2K3LqY13V3poOpc9mw2uUx09xDulBKqajLg'}
+case_data: {"member_id": "0012", "amount": "20"}
+response: {'code': 1007, 'msg': '无权限访问，请检查参数', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-03 20:55:11,030 ---root--- [test_recharge.py-->line:75] - INFO: 
+caseid: 10, title: 会员id正确，充值金额为负整数，充值失败
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjEzfQ.xGvT3pH4xlpZabG5_6nv1hhcyn1ZY36c0J5qzBSCqlX2iC9MA9r2K3LqY13V3poOpc9mw2uUx09xDulBKqajLg'}
+case_data: {"member_id": "867", "amount": -20}
+response: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:55:11,318 ---root--- [test_recharge.py-->line:75] - INFO: 
+caseid: 11, title: 会员id正确，充值金额为负小数，充值失败
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjEzfQ.xGvT3pH4xlpZabG5_6nv1hhcyn1ZY36c0J5qzBSCqlX2iC9MA9r2K3LqY13V3poOpc9mw2uUx09xDulBKqajLg'}
+case_data: {"member_id": "867", "amount": -12.2}
+response: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:55:11,574 ---root--- [test_recharge.py-->line:68] - ERROR: assert 2 == 0
+2021-02-03 20:55:11,575 ---root--- [test_recharge.py-->line:69] - INFO: 
+caseid: 12, title: 会员id和充值金额为0，充值失败
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjEzfQ.xGvT3pH4xlpZabG5_6nv1hhcyn1ZY36c0J5qzBSCqlX2iC9MA9r2K3LqY13V3poOpc9mw2uUx09xDulBKqajLg'}
+case_data: {"member_id": "867", "amount": 0}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 2000001.11, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-03 20:55:11,843 ---root--- [test_recharge.py-->line:75] - INFO: 
+caseid: 13, title: 会员id正确，充值金额大于50W，充值失败
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjE0fQ.23GnsxWd35wyZy01Gg4ExFICEhYf4ylavYgKIXRUaYyR2q8L5fH1bgDBySYnOFY-RXmb_8xT6QdjY4uS7ZMFzw'}
+case_data: {"member_id": "867", "amount": 500001}
+response: {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:55:12,116 ---root--- [test_recharge.py-->line:75] - INFO: 
+caseid: 14, title: 会员id正确，充值金额为0~50万之间的小数，有3位小数，充值失败
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjE0fQ.23GnsxWd35wyZy01Gg4ExFICEhYf4ylavYgKIXRUaYyR2q8L5fH1bgDBySYnOFY-RXmb_8xT6QdjY4uS7ZMFzw'}
+case_data: {"member_id": "867", "amount": 100.123}
+response: {'code': 2, 'msg': '余额小数超过两位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:55:12,371 ---root--- [test_recharge.py-->line:75] - INFO: 
+caseid: 15, title: 会员id正确，充值金额为非数字（字母），充值失败
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjE0fQ.23GnsxWd35wyZy01Gg4ExFICEhYf4ylavYgKIXRUaYyR2q8L5fH1bgDBySYnOFY-RXmb_8xT6QdjY4uS7ZMFzw'}
+case_data: {"member_id": "867", "amount": "a"}
+response: {'code': 2, 'msg': '余额必须为数值型', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-03 20:55:12,650 ---root--- [test_recharge.py-->line:75] - INFO: 
+caseid: 16, title: 会员id正确，充值金额为非数字（特殊字符），充值失败
+url: http://api.lemonban.com/futureloan/member/recharge
+method: POST
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEyMzU3MjE0fQ.23GnsxWd35wyZy01Gg4ExFICEhYf4ylavYgKIXRUaYyR2q8L5fH1bgDBySYnOFY-RXmb_8xT6QdjY4uS7ZMFzw'}
+case_data: {"member_id": "867", "amount": "$"}
+response: {'code': 2, 'msg': '余额必须为数值型', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
