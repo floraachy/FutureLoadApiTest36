@@ -34,6 +34,7 @@ def login(user, pwd):
         "leave_amount": response["data"]["leave_amount"]
     }
 
+
 @pytest.fixture()
 def admin_login():
     """
@@ -46,6 +47,7 @@ def admin_login():
     }
 
     return login(user["mobile_phone"], user["pwd"])
+
 
 @pytest.fixture()
 def investor_login():
@@ -60,6 +62,7 @@ def investor_login():
 
     return login(user["mobile_phone"], user["pwd"])
 
+
 @pytest.fixture()
 def loan_login():
     """
@@ -73,6 +76,7 @@ def loan_login():
 
     return login(user["mobile_phone"], user["pwd"])
 
+@pytest.fixture()
 def add_loan(loan_login):
     url = MidHandler.conf_data["ENV"]["BASE_URL"] + MidHandler.conf_data["LOAN"]["URL"]
     method = MidHandler.conf_data["LOAN"]["METHOD"]
@@ -91,6 +95,7 @@ def add_loan(loan_login):
     return {
         "id": response["data"]["id"]
     }
+
 
 @pytest.fixture()
 def recharge(amount, investor_login):
@@ -131,7 +136,6 @@ if __name__ == "__main__":
     # if "#user_member_id#" in test:
     #     print("ok")
     print(recharge(500))
-
 
 """
 {'code': 0, 'msg': 'OK', 

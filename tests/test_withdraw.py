@@ -28,7 +28,7 @@ class TestWithdraw:
         request_header["Authorization"] = authorization
         request_data = data["data"]
 
-        member_id = db.query_one("select id from member where mobile_phone={};".format(MidHandler.security_data["user"]))["id"]
+        member_id = investor_login["id"]
 
         if "#user_member_id#" in request_data:
             request_data = request_data.replace("#user_member_id#", str(member_id))

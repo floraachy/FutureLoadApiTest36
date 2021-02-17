@@ -994,3 +994,963 @@ case_data: {"member_id": "867", "amount": "$"}
 response: {'code': 2, 'msg': '余额必须为数值型', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
 result: Passed
 
+2021-02-17 19:36:27,820 ---root--- [test_withdraw.py-->line:76] - INFO: 
+caseid: 1, title: 会员id正确，提现金额为0且小于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMDgxfQ.AgLxdaMenjTa-HOuVZD_Jt-tzjrBfW1sQxjLRiVscLgPysuGoaonEyflLFsNqfpkiCLoaqBX7maD9fpCe-eIZQ'}
+case_data: {"member_id": "867", "amount":0}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:36:28,273 ---root--- [test_withdraw.py-->line:76] - INFO: 
+caseid: 2, title: 会员id正确，提现金额为500000且小于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMDgyfQ.kSuPanb8byt5HCIWdubV6PfSsp0JwRRuPpVk3hOEg2lFT_2y5xu_YVpBokBBsi7BoLAIL0yeJVIP-jq5va9HnQ'}
+case_data: {"member_id": "867", "amount":500000}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:36:28,726 ---root--- [test_withdraw.py-->line:76] - INFO: 
+caseid: 3, title: 会员id正确，提现金额为499999且小于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMDgyfQ.kSuPanb8byt5HCIWdubV6PfSsp0JwRRuPpVk3hOEg2lFT_2y5xu_YVpBokBBsi7BoLAIL0yeJVIP-jq5va9HnQ'}
+case_data: {"member_id": "867", "amount":499999}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:36:29,117 ---root--- [test_withdraw.py-->line:76] - INFO: 
+caseid: 4, title: 会员id正确，提现金额为500000.00且小于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMDgzfQ.RQqWaE5ZVa_LCCEO0g_X7GOyC2uLiGsJW_eT9Ck7x_vkbqApJ6sXRKwpmw_mlQknqS_pnqZb87abuVxgXcugtg'}
+case_data: {"member_id": "867", "amount":500000.00}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:36:29,492 ---root--- [test_withdraw.py-->line:76] - INFO: 
+caseid: 5, title: 会员id正确，提现金额为499999.99且小于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMDgzfQ.RQqWaE5ZVa_LCCEO0g_X7GOyC2uLiGsJW_eT9Ck7x_vkbqApJ6sXRKwpmw_mlQknqS_pnqZb87abuVxgXcugtg'}
+case_data: {"member_id": "867", "amount":499999.99}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:36:29,945 ---root--- [test_withdraw.py-->line:76] - INFO: 
+caseid: 6, title: 会员id正确，提现金额为500且小于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMDgzfQ.RQqWaE5ZVa_LCCEO0g_X7GOyC2uLiGsJW_eT9Ck7x_vkbqApJ6sXRKwpmw_mlQknqS_pnqZb87abuVxgXcugtg'}
+case_data: {"member_id": "867", "amount":500}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:36:30,335 ---root--- [test_withdraw.py-->line:76] - INFO: 
+caseid: 7, title: 会员id正确，提现金额为501.12且小于用户可用余额， 提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMDg0fQ._FdbmBw1MJlmgURmXjTVNjOfi9WBy5nxtUqJxpnt5QwENAcfO4WqwhbPkmf-VqUs6hamYhFDYD_swTmqtuErWg'}
+case_data: {"member_id": "867", "amount":501.12}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 100.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:36:30,710 ---root--- [test_withdraw.py-->line:76] - INFO: 
+caseid: 8, title: 会员id正确，提现金额为1000， 等于用户可用余额，提现成功
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMDg0fQ._FdbmBw1MJlmgURmXjTVNjOfi9WBy5nxtUqJxpnt5QwENAcfO4WqwhbPkmf-VqUs6hamYhFDYD_swTmqtuErWg'}
+case_data: {"member_id": "867", "amount":1000}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 0.0, 'mobile_phone': '13504936561', 'reg_name': '007', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:36:31,101 ---root--- [test_withdraw.py-->line:76] - INFO: 
+caseid: 9, title: 会员id为空，提现金额符合要求， 提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMDg1fQ.8IpgaXDlJp8CCh3hI7TO9LxZR-DRVdnh71feuxYdfmE0V58wXMozSJdcptM3k65bZASogankoOKugZXu1UR_0Q'}
+case_data: {"member_id": "",  "amount":501.13}
+response: {'code': 1, 'msg': '会员id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:36:31,382 ---root--- [test_withdraw.py-->line:76] - INFO: 
+caseid: 10, title: 会员id正确，提现金额为空，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMDg1fQ.8IpgaXDlJp8CCh3hI7TO9LxZR-DRVdnh71feuxYdfmE0V58wXMozSJdcptM3k65bZASogankoOKugZXu1UR_0Q'}
+case_data: {"member_id": "867", "amount": ""}
+response: {'code': 1, 'msg': '余额为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:36:31,679 ---root--- [test_withdraw.py-->line:76] - INFO: 
+caseid: 11, title: 会员id正确，提现金额为900， 大于用户可用余额，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMDg1fQ.8IpgaXDlJp8CCh3hI7TO9LxZR-DRVdnh71feuxYdfmE0V58wXMozSJdcptM3k65bZASogankoOKugZXu1UR_0Q'}
+case_data: {"member_id": "867", "amount":900}
+response: {'code': 1002, 'msg': '余额不足', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:36:31,976 ---root--- [test_withdraw.py-->line:76] - INFO: 
+caseid: 12, title: 会员id正确，提现金额负整数，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMDg1fQ.8IpgaXDlJp8CCh3hI7TO9LxZR-DRVdnh71feuxYdfmE0V58wXMozSJdcptM3k65bZASogankoOKugZXu1UR_0Q'}
+case_data: {"member_id": "867", "amount":-901}
+response: {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:36:32,288 ---root--- [test_withdraw.py-->line:76] - INFO: 
+caseid: 13, title: 会员id正确，提现金额非数字，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMDg2fQ.TJNeGrh9Ix-gvub4WyW9-1B50OJnc46RU8-v26Qs-hogmnHjgaf7jspg5N5g7S3resCi51rP9sy2JpJcq8Ljaw'}
+case_data: {"member_id": "867", "amount":"s"}
+response: {'code': 2, 'msg': '数值参数格式不正确', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:36:32,585 ---root--- [test_withdraw.py-->line:76] - INFO: 
+caseid: 14, title: 会员id正确，提现金额负小数，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMDg2fQ.TJNeGrh9Ix-gvub4WyW9-1B50OJnc46RU8-v26Qs-hogmnHjgaf7jspg5N5g7S3resCi51rP9sy2JpJcq8Ljaw'}
+case_data: {"member_id": "867", "amount": -902.1}
+response: {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:36:32,913 ---root--- [test_withdraw.py-->line:76] - INFO: 
+caseid: 15, title: 会员id正确，提现金额超2位小数的正数，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMDg2fQ.TJNeGrh9Ix-gvub4WyW9-1B50OJnc46RU8-v26Qs-hogmnHjgaf7jspg5N5g7S3resCi51rP9sy2JpJcq8Ljaw'}
+case_data: {"member_id": "867", "amount":903.123}
+response: {'code': 2, 'msg': '余额小数超过两位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:36:33,225 ---root--- [test_withdraw.py-->line:76] - INFO: 
+caseid: 16, title: 会员id正确，提现金额大于50W，提现失败
+url: http://api.lemonban.com/futureloan/member/withdraw
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMDg3fQ.phFs8CuS08E0ApZUgdNS7AtBJ8DFtXUz6k46YyE4E1Iy5HZj-L0b3rR_Lvr-p7nfOja39wuvdcbKNrv-9ShK9w'}
+case_data: {"member_id": "867", "amount":500001}
+response: {'code': 2, 'msg': '余额必须大于0并且小于或者等于5000000', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:00,359 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 1, title: 普通会员新增项目成功， 借款期限单位为按月
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE0fQ.iouv5v0_agJ0AVWti49AJVaVYPKFAnxvXvoC2jnB4_ROyBh3Z8JC6Ft0-KeJUv1eQgEbEDiNl-iYgu_Zq3rFuw'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17437, 'member_id': 867, 'title': 'flora借款项目', 'amount': 120000.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-02-17 19:36:54.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:00,672 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 2, title: 普通会员新增项目成功， 借款期限单位为按天
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE0fQ.iouv5v0_agJ0AVWti49AJVaVYPKFAnxvXvoC2jnB4_ROyBh3Z8JC6Ft0-KeJUv1eQgEbEDiNl-iYgu_Zq3rFuw'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 18.0, "loan_term": 30, "loan_date_type": 1, "bidding_days": 2}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17438, 'member_id': 867, 'title': 'flora借款项目', 'amount': 120000.0, 'loan_rate': 18.0, 'loan_term': 30, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-02-17 19:36:54.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:00,922 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 3, title: 普通会员新增项目成功， 年利率为24%
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE0fQ.iouv5v0_agJ0AVWti49AJVaVYPKFAnxvXvoC2jnB4_ROyBh3Z8JC6Ft0-KeJUv1eQgEbEDiNl-iYgu_Zq3rFuw'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 24.0, "loan_term": 30, "loan_date_type": 2, "bidding_days": 5}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17439, 'member_id': 867, 'title': 'flora借款项目', 'amount': 120000.0, 'loan_rate': 24.0, 'loan_term': 30, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-02-17 19:36:55.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:01,265 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 4, title: 普通会员新增项目成功，竞标天数为1天
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE1fQ.dhbrqdbqrulP677I4fr4XnjQq3qExXMtSU8FqR3Ov63OQx7PX86CQxt-N0zYMPqe3L98pLsPpEzwlHEOIYU_Rw'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 12.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 1}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17440, 'member_id': 867, 'title': 'flora借款项目', 'amount': 120000.0, 'loan_rate': 12.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-02-17 19:36:55.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:01,562 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 5, title: 普通会员新增项目成功，竞标天数为10天
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE1fQ.dhbrqdbqrulP677I4fr4XnjQq3qExXMtSU8FqR3Ov63OQx7PX86CQxt-N0zYMPqe3L98pLsPpEzwlHEOIYU_Rw'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 24.0, "loan_term": 30, "loan_date_type": 2, "bidding_days": 10}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17441, 'member_id': 867, 'title': 'flora借款项目', 'amount': 120000.0, 'loan_rate': 24.0, 'loan_term': 30, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-02-17 19:36:55.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:02,203 ---root--- [test_add.py-->line:52] - ERROR: assert 2 == 0
+2021-02-17 19:37:02,203 ---root--- [test_add.py-->line:56] - INFO: 
+caseid: 7, title: 项目标题为非字符串，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE2fQ.7AYDELavYw-hWm9MOHJ4TYSB2NOB_V5wt9odQX5Gzus-EYEiNrQejFlgUXVg6AzShPVRoxLrXxR1TsNyXT8I2Q'}
+case_data: {"member_id": 867, "title": 123, "amount": 120000, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17442, 'member_id': 867, 'title': '123', 'amount': 120000.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-02-17 19:36:56.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-17 19:37:02,499 ---root--- [test_add.py-->line:52] - ERROR: assert 2 == 1005
+2021-02-17 19:37:02,499 ---root--- [test_add.py-->line:56] - INFO: 
+caseid: 8, title: 项目标题长度大于50， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE2fQ.7AYDELavYw-hWm9MOHJ4TYSB2NOB_V5wt9odQX5Gzus-EYEiNrQejFlgUXVg6AzShPVRoxLrXxR1TsNyXT8I2Q'}
+case_data: {"member_id": 867, "title": "新增项目一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七", "amount": 120000, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 1005, 'msg': "\n### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'title' at row 1\n### The error may involve com.lemon.mapper.LoanMapper.add-Inline\n### The error occurred while setting parameters\n### SQL: insert into loan   ( member_id      ,title      ,amount      ,loan_rate      ,loan_term      ,loan_date_type      ,bidding_days      ,status   )  values   ( ?      ,?      ,?      ,?      ,?      ,?      ,bidding_days      ,?   )\n### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'title' at row 1\n; Data truncation: Data too long for column 'title' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'title' at row 1", 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-17 19:37:02,734 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 9, title: 项目标题为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE2fQ.7AYDELavYw-hWm9MOHJ4TYSB2NOB_V5wt9odQX5Gzus-EYEiNrQejFlgUXVg6AzShPVRoxLrXxR1TsNyXT8I2Q'}
+case_data: {"member_id": 867, "title": "", "amount": 120000, "loan_rate": 18.0, "loan_term": 30, "loan_date_type": 1, "bidding_days": 2}
+response: {'code': 1, 'msg': '标题为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:02,999 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 10, title: 借款金额为负数，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE3fQ.GmzslgaQ0qK9T20AvpH-nCAH6FISX7C22pQG5VuKU-6mH6Huy4i72tb4THI6vZKKRL_lKL2vQIM60nRsxMppGQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": -100, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款金额范围错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:03,265 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 11, title: 借款金额为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE3fQ.GmzslgaQ0qK9T20AvpH-nCAH6FISX7C22pQG5VuKU-6mH6Huy4i72tb4THI6vZKKRL_lKL2vQIM60nRsxMppGQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": "", "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 1, 'msg': '借款金额为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:03,515 ---root--- [test_add.py-->line:52] - ERROR: assert 2 == 1005
+2021-02-17 19:37:03,515 ---root--- [test_add.py-->line:56] - INFO: 
+caseid: 12, title: 借款金额大于1000000000000000000， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE3fQ.GmzslgaQ0qK9T20AvpH-nCAH6FISX7C22pQG5VuKU-6mH6Huy4i72tb4THI6vZKKRL_lKL2vQIM60nRsxMppGQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 1000000000000000000, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 1005, 'msg': "\n### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Out of range value for column 'amount' at row 1\n### The error may involve com.lemon.mapper.LoanMapper.add-Inline\n### The error occurred while setting parameters\n### SQL: insert into loan   ( member_id      ,title      ,amount      ,loan_rate      ,loan_term      ,loan_date_type      ,bidding_days      ,status   )  values   ( ?      ,?      ,?      ,?      ,?      ,?      ,bidding_days      ,?   )\n### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Out of range value for column 'amount' at row 1\n; Data truncation: Out of range value for column 'amount' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Out of range value for column 'amount' at row 1", 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-17 19:37:03,843 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 13, title: 年利率小于0，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE3fQ.GmzslgaQ0qK9T20AvpH-nCAH6FISX7C22pQG5VuKU-6mH6Huy4i72tb4THI6vZKKRL_lKL2vQIM60nRsxMppGQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": -1.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款利率范围错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:04,108 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 14, title: 年利率为0， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE4fQ.rJAAOy-n0dHGN-L0wlbRbKOrGgttWbxQXJGEK8DYuqEqgEQDhO5UPPWvFLikCwwV2h9S5UPIh7TgLwCaWz5iNg'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 12000, "loan_rate": 0.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款利率范围错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:04,358 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 15, title: 年利率大于24%，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE4fQ.rJAAOy-n0dHGN-L0wlbRbKOrGgttWbxQXJGEK8DYuqEqgEQDhO5UPPWvFLikCwwV2h9S5UPIh7TgLwCaWz5iNg'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 24.1, "loan_term": 30, "loan_date_type": 1, "bidding_days": 2}
+response: {'code': 2, 'msg': '借款利率范围错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:04,624 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 16, title: 年利率为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE4fQ.rJAAOy-n0dHGN-L0wlbRbKOrGgttWbxQXJGEK8DYuqEqgEQDhO5UPPWvFLikCwwV2h9S5UPIh7TgLwCaWz5iNg'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": "", "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 1, 'msg': '利率为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:04,858 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 17, title: 借款期限类型为非1， 2数字，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE4fQ.rJAAOy-n0dHGN-L0wlbRbKOrGgttWbxQXJGEK8DYuqEqgEQDhO5UPPWvFLikCwwV2h9S5UPIh7TgLwCaWz5iNg'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 20.0, "loan_term": 30, "loan_date_type": 3, "bidding_days": 2}
+response: {'code': 2, 'msg': '借款类型不存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:05,139 ---root--- [test_add.py-->line:52] - ERROR: assert 2 == 1004
+2021-02-17 19:37:05,139 ---root--- [test_add.py-->line:56] - INFO: 
+caseid: 18, title: 借款期限类型为非数字，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE5fQ.frxb_wqmRpjl-4iYf40WPmpBQnXWc5LbhQIwGSzXrbBXxaXMvKfhpOtOwM52G1xFtxgwrb_6qRErBZOzb_KmPg'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 20.0, "loan_term": 30, "loan_date_type": "A", "bidding_days": 2}
+response: {'code': 1004, 'msg': 'JSON parse error: Cannot deserialize value of type `java.lang.Integer` from String "A": not a valid Integer value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.lang.Integer` from String "A": not a valid Integer value\n at [Source: (PushbackInputStream); line: 1, column: 134] (through reference chain: com.lemon.pojo.Loan["loan_date_type"])', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-17 19:37:05,421 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 19, title: 借款期限类型为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE5fQ.frxb_wqmRpjl-4iYf40WPmpBQnXWc5LbhQIwGSzXrbBXxaXMvKfhpOtOwM52G1xFtxgwrb_6qRErBZOzb_KmPg'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 15, "loan_term": 6, "loan_date_type": "", "bidding_days": 5}
+response: {'code': 1, 'msg': '借款日期类型为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:05,702 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 20, title: 借款期限类型为按月，借款期限为负数，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE5fQ.frxb_wqmRpjl-4iYf40WPmpBQnXWc5LbhQIwGSzXrbBXxaXMvKfhpOtOwM52G1xFtxgwrb_6qRErBZOzb_KmPg'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 15, "loan_term": -1, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款期限单位为月的项目,期限范围为1到36个月(包含1个月和36个月)', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:05,951 ---root--- [test_add.py-->line:52] - ERROR: assert 2 == 0
+2021-02-17 19:37:05,951 ---root--- [test_add.py-->line:56] - INFO: 
+caseid: 21, title: 借款期限类型为按月，借款期限为小数，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTE5fQ.frxb_wqmRpjl-4iYf40WPmpBQnXWc5LbhQIwGSzXrbBXxaXMvKfhpOtOwM52G1xFtxgwrb_6qRErBZOzb_KmPg'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 15, "loan_term": 1.1, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17443, 'member_id': 867, 'title': 'flora借款项目', 'amount': 120000.0, 'loan_rate': 15.0, 'loan_term': 1, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-02-17 19:37:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-17 19:37:06,264 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 22, title: 借款期限类型为按月，借款期限大于36月，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTIwfQ.g5PoIb-H3eaf331vs8k9SbhQ_XXBMqbIzGkRf_2YCnZdnBy3KJQXOk59Rp7fRuABWeatnOn8zKBYC5keI-fjIw'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 15, "loan_term": 37, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款期限单位为月的项目,期限范围为1到36个月(包含1个月和36个月)', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:06,514 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 23, title: 借款期限类型为按天，借款期限为负数，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTIwfQ.g5PoIb-H3eaf331vs8k9SbhQ_XXBMqbIzGkRf_2YCnZdnBy3KJQXOk59Rp7fRuABWeatnOn8zKBYC5keI-fjIw'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 15, "loan_term": -1, "loan_date_type": 2, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款期限单位为天的项目,期限范围为10到45天(包含10天和45天)', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:06,764 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 24, title: 借款期限类型为按天，借款期限大于45天，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTIwfQ.g5PoIb-H3eaf331vs8k9SbhQ_XXBMqbIzGkRf_2YCnZdnBy3KJQXOk59Rp7fRuABWeatnOn8zKBYC5keI-fjIw'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 11, "loan_term": 46, "loan_date_type": 2, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款期限单位为天的项目,期限范围为10到45天(包含10天和45天)', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:07,029 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 25, title: 借款期限类型为按天，借款期限为小数，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTIxfQ.6IipvmC_1Lw-WvASVLmkM2hB6EnlLMpmH-8NARd4lV9L-1pdTgwppFYcmszBcBZqW572BmPHgIRhMtjBO-KnrA'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 8, "loan_term": 2.2, "loan_date_type": 2, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款期限单位为天的项目,期限范围为10到45天(包含10天和45天)', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:07,279 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 26, title: 借款期限类型为按月，借款期限为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTIxfQ.6IipvmC_1Lw-WvASVLmkM2hB6EnlLMpmH-8NARd4lV9L-1pdTgwppFYcmszBcBZqW572BmPHgIRhMtjBO-KnrA'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 5, "loan_term": "", "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 1, 'msg': '借款期限为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:07,529 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 27, title: 借款期限类型为按天，借款期限为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTIxfQ.6IipvmC_1Lw-WvASVLmkM2hB6EnlLMpmH-8NARd4lV9L-1pdTgwppFYcmszBcBZqW572BmPHgIRhMtjBO-KnrA'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 7, "loan_term": "", "loan_date_type": 2, "bidding_days": 5}
+response: {'code': 1, 'msg': '借款期限为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:07,826 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 28, title: 竞标天数小于1， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTIxfQ.6IipvmC_1Lw-WvASVLmkM2hB6EnlLMpmH-8NARd4lV9L-1pdTgwppFYcmszBcBZqW572BmPHgIRhMtjBO-KnrA'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 0}
+response: {'code': 2, 'msg': '竞标期限为1-10天', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:08,092 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 29, title: 竞标天数大于10， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTIyfQ.L_B6TGxoGJSaegAttwwDVeH9I_7QyZ4Z37m9EgOLsPKhedXjwyzeZbSJaLp_xvWPUs1XJt3x8uZXz8FpCkdYAg'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 18.0, "loan_term": 30, "loan_date_type": 1, "bidding_days": 11}
+response: {'code': 2, 'msg': '竞标期限为1-10天', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:37:08,357 ---root--- [test_add.py-->line:52] - ERROR: assert 2 == 0
+2021-02-17 19:37:08,357 ---root--- [test_add.py-->line:56] - INFO: 
+caseid: 30, title: 竞标天数为1-10之间的小数， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTIyfQ.L_B6TGxoGJSaegAttwwDVeH9I_7QyZ4Z37m9EgOLsPKhedXjwyzeZbSJaLp_xvWPUs1XJt3x8uZXz8FpCkdYAg'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5.5}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17444, 'member_id': 867, 'title': 'flora借款项目', 'amount': 120000.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-02-17 19:37:02.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-17 19:37:08,623 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 31, title: 竞标天数为空， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMTIyfQ.L_B6TGxoGJSaegAttwwDVeH9I_7QyZ4Z37m9EgOLsPKhedXjwyzeZbSJaLp_xvWPUs1XJt3x8uZXz8FpCkdYAg'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 18.0, "loan_term": 30, "loan_date_type": 1, "bidding_days": ""}
+response: {'code': 1, 'msg': '竞标期限为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:15,246 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 1, title: 普通会员新增项目成功， 借款期限单位为按月
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjQ5fQ.fZzA3uwGlaawo4F2hvJFgm0CLgSoOUKNZ2K-IaKZYxP9V-1qZM9KM_MtTr01TTfB5-mXkBMYY_llRjFlqpYOvQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17445, 'member_id': 867, 'title': 'flora借款项目', 'amount': 120000.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-02-17 19:39:09.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:15,511 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 2, title: 普通会员新增项目成功， 借款期限单位为按天
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjQ5fQ.fZzA3uwGlaawo4F2hvJFgm0CLgSoOUKNZ2K-IaKZYxP9V-1qZM9KM_MtTr01TTfB5-mXkBMYY_llRjFlqpYOvQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 18.0, "loan_term": 30, "loan_date_type": 1, "bidding_days": 2}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17446, 'member_id': 867, 'title': 'flora借款项目', 'amount': 120000.0, 'loan_rate': 18.0, 'loan_term': 30, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-02-17 19:39:09.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:15,777 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 3, title: 普通会员新增项目成功， 年利率为24%
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjQ5fQ.fZzA3uwGlaawo4F2hvJFgm0CLgSoOUKNZ2K-IaKZYxP9V-1qZM9KM_MtTr01TTfB5-mXkBMYY_llRjFlqpYOvQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 24.0, "loan_term": 30, "loan_date_type": 2, "bidding_days": 5}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17447, 'member_id': 867, 'title': 'flora借款项目', 'amount': 120000.0, 'loan_rate': 24.0, 'loan_term': 30, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-02-17 19:39:09.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:16,058 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 4, title: 普通会员新增项目成功，竞标天数为1天
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjUwfQ.60_aeZ3ZUM_MUdnWpRLEvE5SFV0VkVqFmPj7AKV8__pqpiffQcHQ4EKUqpdplq1kWVqT83Kvx_kj2NhjpNezXQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 12.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 1}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17448, 'member_id': 867, 'title': 'flora借款项目', 'amount': 120000.0, 'loan_rate': 12.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-02-17 19:39:10.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:16,324 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 5, title: 普通会员新增项目成功，竞标天数为10天
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjUwfQ.60_aeZ3ZUM_MUdnWpRLEvE5SFV0VkVqFmPj7AKV8__pqpiffQcHQ4EKUqpdplq1kWVqT83Kvx_kj2NhjpNezXQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 24.0, "loan_term": 30, "loan_date_type": 2, "bidding_days": 10}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17449, 'member_id': 867, 'title': 'flora借款项目', 'amount': 120000.0, 'loan_rate': 24.0, 'loan_term': 30, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-02-17 19:39:10.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:16,589 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 6, title: 用户id为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjUwfQ.60_aeZ3ZUM_MUdnWpRLEvE5SFV0VkVqFmPj7AKV8__pqpiffQcHQ4EKUqpdplq1kWVqT83Kvx_kj2NhjpNezXQ'}
+case_data: {"member_id": "", "title": "flora借款项目", "amount": 120000, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 1, 'msg': '用户id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:16,855 ---root--- [test_add.py-->line:52] - ERROR: assert 2 == 0
+2021-02-17 19:39:16,855 ---root--- [test_add.py-->line:56] - INFO: 
+caseid: 7, title: 项目标题为非字符串，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjUwfQ.60_aeZ3ZUM_MUdnWpRLEvE5SFV0VkVqFmPj7AKV8__pqpiffQcHQ4EKUqpdplq1kWVqT83Kvx_kj2NhjpNezXQ'}
+case_data: {"member_id": 867, "title": 123, "amount": 120000, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17450, 'member_id': 867, 'title': '123', 'amount': 120000.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-02-17 19:39:11.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-17 19:39:17,167 ---root--- [test_add.py-->line:52] - ERROR: assert 2 == 1005
+2021-02-17 19:39:17,167 ---root--- [test_add.py-->line:56] - INFO: 
+caseid: 8, title: 项目标题长度大于50， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjUxfQ.gxie9drdH4IwEWgardHLk0sq8XbCoM_EgmynoAxSCo_oaXRhLZuMCeT7SkklBt9bTz4lRLq0l1otWlAiho_ezA'}
+case_data: {"member_id": 867, "title": "新增项目一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七", "amount": 120000, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 1005, 'msg': "\n### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'title' at row 1\n### The error may involve com.lemon.mapper.LoanMapper.add-Inline\n### The error occurred while setting parameters\n### SQL: insert into loan   ( member_id      ,title      ,amount      ,loan_rate      ,loan_term      ,loan_date_type      ,bidding_days      ,status   )  values   ( ?      ,?      ,?      ,?      ,?      ,?      ,bidding_days      ,?   )\n### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'title' at row 1\n; Data truncation: Data too long for column 'title' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'title' at row 1", 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-17 19:39:17,417 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 9, title: 项目标题为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjUxfQ.gxie9drdH4IwEWgardHLk0sq8XbCoM_EgmynoAxSCo_oaXRhLZuMCeT7SkklBt9bTz4lRLq0l1otWlAiho_ezA'}
+case_data: {"member_id": 867, "title": "", "amount": 120000, "loan_rate": 18.0, "loan_term": 30, "loan_date_type": 1, "bidding_days": 2}
+response: {'code': 1, 'msg': '标题为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:17,683 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 10, title: 借款金额为负数，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjUxfQ.gxie9drdH4IwEWgardHLk0sq8XbCoM_EgmynoAxSCo_oaXRhLZuMCeT7SkklBt9bTz4lRLq0l1otWlAiho_ezA'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": -100, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款金额范围错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:17,933 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 11, title: 借款金额为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjUxfQ.gxie9drdH4IwEWgardHLk0sq8XbCoM_EgmynoAxSCo_oaXRhLZuMCeT7SkklBt9bTz4lRLq0l1otWlAiho_ezA'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": "", "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 1, 'msg': '借款金额为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:18,183 ---root--- [test_add.py-->line:52] - ERROR: assert 2 == 1005
+2021-02-17 19:39:18,183 ---root--- [test_add.py-->line:56] - INFO: 
+caseid: 12, title: 借款金额大于1000000000000000000， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjUyfQ.hje5O-v3eEL658Pm8AoK_Gk0Xds0m69MyAz1jX37H_fq7kDfPcVBGFCjDWsuhG0jjuE-UhGO-njstR38RrkXEQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 1000000000000000000, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 1005, 'msg': "\n### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Out of range value for column 'amount' at row 1\n### The error may involve com.lemon.mapper.LoanMapper.add-Inline\n### The error occurred while setting parameters\n### SQL: insert into loan   ( member_id      ,title      ,amount      ,loan_rate      ,loan_term      ,loan_date_type      ,bidding_days      ,status   )  values   ( ?      ,?      ,?      ,?      ,?      ,?      ,bidding_days      ,?   )\n### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Out of range value for column 'amount' at row 1\n; Data truncation: Out of range value for column 'amount' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Out of range value for column 'amount' at row 1", 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-17 19:39:18,495 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 13, title: 年利率小于0，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjUyfQ.hje5O-v3eEL658Pm8AoK_Gk0Xds0m69MyAz1jX37H_fq7kDfPcVBGFCjDWsuhG0jjuE-UhGO-njstR38RrkXEQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": -1.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款利率范围错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:18,745 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 14, title: 年利率为0， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjUyfQ.hje5O-v3eEL658Pm8AoK_Gk0Xds0m69MyAz1jX37H_fq7kDfPcVBGFCjDWsuhG0jjuE-UhGO-njstR38RrkXEQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 12000, "loan_rate": 0.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款利率范围错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:19,011 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 15, title: 年利率大于24%，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjUyfQ.hje5O-v3eEL658Pm8AoK_Gk0Xds0m69MyAz1jX37H_fq7kDfPcVBGFCjDWsuhG0jjuE-UhGO-njstR38RrkXEQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 24.1, "loan_term": 30, "loan_date_type": 1, "bidding_days": 2}
+response: {'code': 2, 'msg': '借款利率范围错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:19,292 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 16, title: 年利率为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjUzfQ.3poaRd4rNrBribfB0-xLZm_uafeD3CU0f2gPeevSUkvL-CFX4rLSbBS_vvPOUlnnSwvEfvuXZlq6ANoVAS34EQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": "", "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 1, 'msg': '利率为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:19,589 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 17, title: 借款期限类型为非1， 2数字，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjUzfQ.3poaRd4rNrBribfB0-xLZm_uafeD3CU0f2gPeevSUkvL-CFX4rLSbBS_vvPOUlnnSwvEfvuXZlq6ANoVAS34EQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 20.0, "loan_term": 30, "loan_date_type": 3, "bidding_days": 2}
+response: {'code': 2, 'msg': '借款类型不存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:19,839 ---root--- [test_add.py-->line:52] - ERROR: assert 2 == 1004
+2021-02-17 19:39:19,839 ---root--- [test_add.py-->line:56] - INFO: 
+caseid: 18, title: 借款期限类型为非数字，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjUzfQ.3poaRd4rNrBribfB0-xLZm_uafeD3CU0f2gPeevSUkvL-CFX4rLSbBS_vvPOUlnnSwvEfvuXZlq6ANoVAS34EQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 20.0, "loan_term": 30, "loan_date_type": "A", "bidding_days": 2}
+response: {'code': 1004, 'msg': 'JSON parse error: Cannot deserialize value of type `java.lang.Integer` from String "A": not a valid Integer value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.lang.Integer` from String "A": not a valid Integer value\n at [Source: (PushbackInputStream); line: 1, column: 134] (through reference chain: com.lemon.pojo.Loan["loan_date_type"])', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-17 19:39:20,104 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 19, title: 借款期限类型为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjU0fQ.gELe4CS9U8POun-iw4MYIVJHE5V6hCwNWuL0kKrWo0pM51WGbDd95rSgJP0zAfVuUjv3cCz5yHBUGeqg-OdGLQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 15, "loan_term": 6, "loan_date_type": "", "bidding_days": 5}
+response: {'code': 1, 'msg': '借款日期类型为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:20,354 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 20, title: 借款期限类型为按月，借款期限为负数，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjU0fQ.gELe4CS9U8POun-iw4MYIVJHE5V6hCwNWuL0kKrWo0pM51WGbDd95rSgJP0zAfVuUjv3cCz5yHBUGeqg-OdGLQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 15, "loan_term": -1, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款期限单位为月的项目,期限范围为1到36个月(包含1个月和36个月)', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:20,573 ---root--- [test_add.py-->line:52] - ERROR: assert 2 == 0
+2021-02-17 19:39:20,573 ---root--- [test_add.py-->line:56] - INFO: 
+caseid: 21, title: 借款期限类型为按月，借款期限为小数，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjU0fQ.gELe4CS9U8POun-iw4MYIVJHE5V6hCwNWuL0kKrWo0pM51WGbDd95rSgJP0zAfVuUjv3cCz5yHBUGeqg-OdGLQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 15, "loan_term": 1.1, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17451, 'member_id': 867, 'title': 'flora借款项目', 'amount': 120000.0, 'loan_rate': 15.0, 'loan_term': 1, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-02-17 19:39:14.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-17 19:39:20,838 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 22, title: 借款期限类型为按月，借款期限大于36月，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjU0fQ.gELe4CS9U8POun-iw4MYIVJHE5V6hCwNWuL0kKrWo0pM51WGbDd95rSgJP0zAfVuUjv3cCz5yHBUGeqg-OdGLQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 15, "loan_term": 37, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款期限单位为月的项目,期限范围为1到36个月(包含1个月和36个月)', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:21,088 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 23, title: 借款期限类型为按天，借款期限为负数，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjU1fQ.skLT9fwpQ4u-rojU9RIJgXq1QV75XYAAaa-OM7W5JiV24MSsKc1iHlFDY2z8J6reChovmkw5vLtXekdoN0kMKw'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 15, "loan_term": -1, "loan_date_type": 2, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款期限单位为天的项目,期限范围为10到45天(包含10天和45天)', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:21,323 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 24, title: 借款期限类型为按天，借款期限大于45天，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjU1fQ.skLT9fwpQ4u-rojU9RIJgXq1QV75XYAAaa-OM7W5JiV24MSsKc1iHlFDY2z8J6reChovmkw5vLtXekdoN0kMKw'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 11, "loan_term": 46, "loan_date_type": 2, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款期限单位为天的项目,期限范围为10到45天(包含10天和45天)', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:21,619 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 25, title: 借款期限类型为按天，借款期限为小数，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjU1fQ.skLT9fwpQ4u-rojU9RIJgXq1QV75XYAAaa-OM7W5JiV24MSsKc1iHlFDY2z8J6reChovmkw5vLtXekdoN0kMKw'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 8, "loan_term": 2.2, "loan_date_type": 2, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款期限单位为天的项目,期限范围为10到45天(包含10天和45天)', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:21,916 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 26, title: 借款期限类型为按月，借款期限为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjU1fQ.skLT9fwpQ4u-rojU9RIJgXq1QV75XYAAaa-OM7W5JiV24MSsKc1iHlFDY2z8J6reChovmkw5vLtXekdoN0kMKw'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 5, "loan_term": "", "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 1, 'msg': '借款期限为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:22,197 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 27, title: 借款期限类型为按天，借款期限为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjU2fQ.6a6MGMtIDBoxk0hkqGztuNMH_f6x2eE_jk7XQa09WW1SHgGdiwzXHDkFweBnzJZkxi30rvcav9F5N7ZoK3JRgQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 7, "loan_term": "", "loan_date_type": 2, "bidding_days": 5}
+response: {'code': 1, 'msg': '借款期限为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:22,470 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 28, title: 竞标天数小于1， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjU2fQ.6a6MGMtIDBoxk0hkqGztuNMH_f6x2eE_jk7XQa09WW1SHgGdiwzXHDkFweBnzJZkxi30rvcav9F5N7ZoK3JRgQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 0}
+response: {'code': 2, 'msg': '竞标期限为1-10天', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:22,689 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 29, title: 竞标天数大于10， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjU2fQ.6a6MGMtIDBoxk0hkqGztuNMH_f6x2eE_jk7XQa09WW1SHgGdiwzXHDkFweBnzJZkxi30rvcav9F5N7ZoK3JRgQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 18.0, "loan_term": 30, "loan_date_type": 1, "bidding_days": 11}
+response: {'code': 2, 'msg': '竞标期限为1-10天', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:39:22,939 ---root--- [test_add.py-->line:52] - ERROR: assert 2 == 0
+2021-02-17 19:39:22,939 ---root--- [test_add.py-->line:56] - INFO: 
+caseid: 30, title: 竞标天数为1-10之间的小数， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjU2fQ.6a6MGMtIDBoxk0hkqGztuNMH_f6x2eE_jk7XQa09WW1SHgGdiwzXHDkFweBnzJZkxi30rvcav9F5N7ZoK3JRgQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5.5}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17452, 'member_id': 867, 'title': 'flora借款项目', 'amount': 120000.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-02-17 19:39:17.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-17 19:39:23,220 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 31, title: 竞标天数为空， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyMjU3fQ.X0sVrolZYvhoaZDKyXNpUdnaqiwBNB8nMZA5g_Tqm0KapNLXe1PaNw9lRN_j4cyRtACQERE3Uukt2yqp4LSIqQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 18.0, "loan_term": 30, "loan_date_type": 1, "bidding_days": ""}
+response: {'code': 1, 'msg': '竞标期限为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:43:56,326 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 1, title: 普通会员新增项目成功， 借款期限单位为按月
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTMwfQ._glUlHJLoW9GPJFIJLYGvSLqObGmaIF0QnC-3GKMHTKgzV2WH3aIs2XVTrTy-eOU2D0n_ItCw2D3zk1DFfLvdA'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17453, 'member_id': 867, 'title': 'flora借款项目', 'amount': 120000.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-02-17 19:43:50.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:43:56,590 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 2, title: 普通会员新增项目成功， 借款期限单位为按天
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTMwfQ._glUlHJLoW9GPJFIJLYGvSLqObGmaIF0QnC-3GKMHTKgzV2WH3aIs2XVTrTy-eOU2D0n_ItCw2D3zk1DFfLvdA'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 18.0, "loan_term": 30, "loan_date_type": 1, "bidding_days": 2}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17454, 'member_id': 867, 'title': 'flora借款项目', 'amount': 120000.0, 'loan_rate': 18.0, 'loan_term': 30, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-02-17 19:43:50.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:43:56,893 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 3, title: 普通会员新增项目成功， 年利率为24%
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTMwfQ._glUlHJLoW9GPJFIJLYGvSLqObGmaIF0QnC-3GKMHTKgzV2WH3aIs2XVTrTy-eOU2D0n_ItCw2D3zk1DFfLvdA'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 24.0, "loan_term": 30, "loan_date_type": 2, "bidding_days": 5}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17455, 'member_id': 867, 'title': 'flora借款项目', 'amount': 120000.0, 'loan_rate': 24.0, 'loan_term': 30, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-02-17 19:43:51.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:43:57,210 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 4, title: 普通会员新增项目成功，竞标天数为1天
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTMxfQ.V6FhCZBABomW6xUFCXa0gxBG-baJ0nbI-AiLT-9Tk75nJrHGP7Y_ad8tgMpYLnpidP_gCq6OJLxBDVNleUevxQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 12.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 1}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17456, 'member_id': 867, 'title': 'flora借款项目', 'amount': 120000.0, 'loan_rate': 12.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-02-17 19:43:51.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:43:57,527 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 5, title: 普通会员新增项目成功，竞标天数为10天
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTMxfQ.V6FhCZBABomW6xUFCXa0gxBG-baJ0nbI-AiLT-9Tk75nJrHGP7Y_ad8tgMpYLnpidP_gCq6OJLxBDVNleUevxQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 24.0, "loan_term": 30, "loan_date_type": 2, "bidding_days": 10}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 17457, 'member_id': 867, 'title': 'flora借款项目', 'amount': 120000.0, 'loan_rate': 24.0, 'loan_term': 30, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-02-17 19:43:51.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:43:57,823 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 6, title: 用户id为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTMxfQ.V6FhCZBABomW6xUFCXa0gxBG-baJ0nbI-AiLT-9Tk75nJrHGP7Y_ad8tgMpYLnpidP_gCq6OJLxBDVNleUevxQ'}
+case_data: {"member_id": "", "title": "flora借款项目", "amount": 120000, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 1, 'msg': '用户id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:43:58,078 ---root--- [test_add.py-->line:52] - ERROR: assert 2 == 1005
+2021-02-17 19:43:58,078 ---root--- [test_add.py-->line:56] - INFO: 
+caseid: 7, title: 项目标题长度大于50， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTMyfQ.oUptw-4HeoQW9P6hfNorsMid-TGw1vRu04tsZUMZL_ltjFsGL6WlbPuOVmWdVhGSNKAdpAjAuF4ILgC7IzLLeQ'}
+case_data: {"member_id": 867, "title": "新增项目一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七", "amount": 120000, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 1005, 'msg': "\n### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'title' at row 1\n### The error may involve com.lemon.mapper.LoanMapper.add-Inline\n### The error occurred while setting parameters\n### SQL: insert into loan   ( member_id      ,title      ,amount      ,loan_rate      ,loan_term      ,loan_date_type      ,bidding_days      ,status   )  values   ( ?      ,?      ,?      ,?      ,?      ,?      ,bidding_days      ,?   )\n### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'title' at row 1\n; Data truncation: Data too long for column 'title' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'title' at row 1", 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-17 19:43:58,374 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 8, title: 项目标题为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTMyfQ.oUptw-4HeoQW9P6hfNorsMid-TGw1vRu04tsZUMZL_ltjFsGL6WlbPuOVmWdVhGSNKAdpAjAuF4ILgC7IzLLeQ'}
+case_data: {"member_id": 867, "title": "", "amount": 120000, "loan_rate": 18.0, "loan_term": 30, "loan_date_type": 1, "bidding_days": 2}
+response: {'code': 1, 'msg': '标题为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:43:58,645 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 9, title: 借款金额为负数，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTMyfQ.oUptw-4HeoQW9P6hfNorsMid-TGw1vRu04tsZUMZL_ltjFsGL6WlbPuOVmWdVhGSNKAdpAjAuF4ILgC7IzLLeQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": -100, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款金额范围错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:43:58,908 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 10, title: 借款金额为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTMyfQ.oUptw-4HeoQW9P6hfNorsMid-TGw1vRu04tsZUMZL_ltjFsGL6WlbPuOVmWdVhGSNKAdpAjAuF4ILgC7IzLLeQ'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": "", "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 1, 'msg': '借款金额为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:43:59,210 ---root--- [test_add.py-->line:52] - ERROR: assert 2 == 1005
+2021-02-17 19:43:59,210 ---root--- [test_add.py-->line:56] - INFO: 
+caseid: 11, title: 借款金额大于1000000000000000000， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTMzfQ.euCFOwnnCHwXnKTpR1mfsZCip0MldypYJPdmzBC8m8gBIjJFULP9XS2aTW30-jtHVIYssBq4oz4DsF1HobjTdA'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 1000000000000000000, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 1005, 'msg': "\n### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Out of range value for column 'amount' at row 1\n### The error may involve com.lemon.mapper.LoanMapper.add-Inline\n### The error occurred while setting parameters\n### SQL: insert into loan   ( member_id      ,title      ,amount      ,loan_rate      ,loan_term      ,loan_date_type      ,bidding_days      ,status   )  values   ( ?      ,?      ,?      ,?      ,?      ,?      ,bidding_days      ,?   )\n### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Out of range value for column 'amount' at row 1\n; Data truncation: Out of range value for column 'amount' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Out of range value for column 'amount' at row 1", 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-17 19:43:59,473 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 12, title: 年利率小于0，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTMzfQ.euCFOwnnCHwXnKTpR1mfsZCip0MldypYJPdmzBC8m8gBIjJFULP9XS2aTW30-jtHVIYssBq4oz4DsF1HobjTdA'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": -1.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款利率范围错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:43:59,744 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 13, title: 年利率为0， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTMzfQ.euCFOwnnCHwXnKTpR1mfsZCip0MldypYJPdmzBC8m8gBIjJFULP9XS2aTW30-jtHVIYssBq4oz4DsF1HobjTdA'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 12000, "loan_rate": 0.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款利率范围错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:44:00,039 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 14, title: 年利率大于24%，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTMzfQ.euCFOwnnCHwXnKTpR1mfsZCip0MldypYJPdmzBC8m8gBIjJFULP9XS2aTW30-jtHVIYssBq4oz4DsF1HobjTdA'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 24.1, "loan_term": 30, "loan_date_type": 1, "bidding_days": 2}
+response: {'code': 2, 'msg': '借款利率范围错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:44:00,294 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 15, title: 年利率为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTM0fQ.hUizjBZeUujCBOvAhJbkq_WBj3XbOe2_AH3fLDSucfmssickGFZSPDXcdhxDo13p2uTJdkPx3JhHg4mavhyjxA'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": "", "loan_term": 6, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 1, 'msg': '利率为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:44:00,573 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 16, title: 借款期限类型为非1， 2数字，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTM0fQ.hUizjBZeUujCBOvAhJbkq_WBj3XbOe2_AH3fLDSucfmssickGFZSPDXcdhxDo13p2uTJdkPx3JhHg4mavhyjxA'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 20.0, "loan_term": 30, "loan_date_type": 3, "bidding_days": 2}
+response: {'code': 2, 'msg': '借款类型不存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:44:00,891 ---root--- [test_add.py-->line:52] - ERROR: assert 2 == 1004
+2021-02-17 19:44:00,891 ---root--- [test_add.py-->line:56] - INFO: 
+caseid: 17, title: 借款期限类型为非数字，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTM0fQ.hUizjBZeUujCBOvAhJbkq_WBj3XbOe2_AH3fLDSucfmssickGFZSPDXcdhxDo13p2uTJdkPx3JhHg4mavhyjxA'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 20.0, "loan_term": 30, "loan_date_type": "A", "bidding_days": 2}
+response: {'code': 1004, 'msg': 'JSON parse error: Cannot deserialize value of type `java.lang.Integer` from String "A": not a valid Integer value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.lang.Integer` from String "A": not a valid Integer value\n at [Source: (PushbackInputStream); line: 1, column: 134] (through reference chain: com.lemon.pojo.Loan["loan_date_type"])', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-17 19:44:01,156 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 18, title: 借款期限类型为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTM1fQ.x2v9c-qNKvURVOEK8z5RiRMeI8R9YHL0UlBX7EU0WoU9FXhF9N7N_N7nr-JiukyGe32j23hUEhmeNUY-uy9eIg'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 15, "loan_term": 6, "loan_date_type": "", "bidding_days": 5}
+response: {'code': 1, 'msg': '借款日期类型为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:44:01,411 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 19, title: 借款期限类型为按月，借款期限为负数，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTM1fQ.x2v9c-qNKvURVOEK8z5RiRMeI8R9YHL0UlBX7EU0WoU9FXhF9N7N_N7nr-JiukyGe32j23hUEhmeNUY-uy9eIg'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 15, "loan_term": -1, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款期限单位为月的项目,期限范围为1到36个月(包含1个月和36个月)', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:44:01,658 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 20, title: 借款期限类型为按月，借款期限大于36月，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTM1fQ.x2v9c-qNKvURVOEK8z5RiRMeI8R9YHL0UlBX7EU0WoU9FXhF9N7N_N7nr-JiukyGe32j23hUEhmeNUY-uy9eIg'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 15, "loan_term": 37, "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款期限单位为月的项目,期限范围为1到36个月(包含1个月和36个月)', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:44:01,940 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 21, title: 借款期限类型为按天，借款期限为负数，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTM1fQ.x2v9c-qNKvURVOEK8z5RiRMeI8R9YHL0UlBX7EU0WoU9FXhF9N7N_N7nr-JiukyGe32j23hUEhmeNUY-uy9eIg'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 15, "loan_term": -1, "loan_date_type": 2, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款期限单位为天的项目,期限范围为10到45天(包含10天和45天)', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:44:02,240 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 22, title: 借款期限类型为按天，借款期限大于45天，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTM2fQ.ieqAJH2A6mxVEHFlUMtPr1wkNxf0OuN-6G0u-4iPIidYnGz49VlPwcjwz74b7oAEaTB-cYaXEM8OIEJ_NQxTjA'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 11, "loan_term": 46, "loan_date_type": 2, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款期限单位为天的项目,期限范围为10到45天(包含10天和45天)', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:44:02,488 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 23, title: 借款期限类型为按天，借款期限为小数，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTM2fQ.ieqAJH2A6mxVEHFlUMtPr1wkNxf0OuN-6G0u-4iPIidYnGz49VlPwcjwz74b7oAEaTB-cYaXEM8OIEJ_NQxTjA'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 8, "loan_term": 2.2, "loan_date_type": 2, "bidding_days": 5}
+response: {'code': 2, 'msg': '借款期限单位为天的项目,期限范围为10到45天(包含10天和45天)', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:44:02,759 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 24, title: 借款期限类型为按月，借款期限为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTM2fQ.ieqAJH2A6mxVEHFlUMtPr1wkNxf0OuN-6G0u-4iPIidYnGz49VlPwcjwz74b7oAEaTB-cYaXEM8OIEJ_NQxTjA'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 5, "loan_term": "", "loan_date_type": 1, "bidding_days": 5}
+response: {'code': 1, 'msg': '借款期限为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:44:03,039 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 25, title: 借款期限类型为按天，借款期限为空，新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTM3fQ.RuH9w01pONKYqngLn19xTCVcsf4F70PfeHxARbAFRwnKAWNZIGvjNV6Lz9_1f44Gwyl9qzlGMsqFfMGBtJydlw'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 7, "loan_term": "", "loan_date_type": 2, "bidding_days": 5}
+response: {'code': 1, 'msg': '借款期限为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:44:03,288 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 26, title: 竞标天数小于1， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTM3fQ.RuH9w01pONKYqngLn19xTCVcsf4F70PfeHxARbAFRwnKAWNZIGvjNV6Lz9_1f44Gwyl9qzlGMsqFfMGBtJydlw'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 18.0, "loan_term": 6, "loan_date_type": 1, "bidding_days": 0}
+response: {'code': 2, 'msg': '竞标期限为1-10天', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:44:03,527 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 27, title: 竞标天数大于10， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTM3fQ.RuH9w01pONKYqngLn19xTCVcsf4F70PfeHxARbAFRwnKAWNZIGvjNV6Lz9_1f44Gwyl9qzlGMsqFfMGBtJydlw'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 18.0, "loan_term": 30, "loan_date_type": 1, "bidding_days": 11}
+response: {'code': 2, 'msg': '竞标期限为1-10天', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-17 19:44:03,790 ---root--- [test_add.py-->line:62] - INFO: 
+caseid: 28, title: 竞标天数为空， 新增项目失败
+url: http://api.lemonban.com/futureloan/loan/add
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjEzNTYyNTM3fQ.RuH9w01pONKYqngLn19xTCVcsf4F70PfeHxARbAFRwnKAWNZIGvjNV6Lz9_1f44Gwyl9qzlGMsqFfMGBtJydlw'}
+case_data: {"member_id": 867, "title": "flora借款项目", "amount": 120000, "loan_rate": 18.0, "loan_term": 30, "loan_date_type": 1, "bidding_days": ""}
+response: {'code': 1, 'msg': '竞标期限为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+

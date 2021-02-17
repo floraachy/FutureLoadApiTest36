@@ -26,16 +26,15 @@ class TestAdd:
     test_data = MidHandler.excel.read("add")
 
     @pytest.mark.parametrize("data", test_data)
-    def test_withdraw(self, data, login, db):
+    def test_add(self, data, investor_login, db):
         request_url = MidHandler.conf_data["ENV"]["BASE_URL"] + data["url"]
         request_method = data["method"]
         request_header = MidHandler.conf_data["ENV"]["HEADER"]
-        authorization = jsonpath(login, "$.data.token_info.token_type")[0] + " " + \
-                        jsonpath(login, "$.data.token_info.token")[0]
+        authorization = investor_login["authorization"]
         request_header["Authorization"] = authorization
         request_data = data["data"]
 
-        member_id = jsonpath(login, "$.data.id")[0]
+        member_id =  investor_login["id"]
 
         if "#user_member_id#" in request_data:
             request_data = request_data.replace("#user_member_id#", str(member_id))
@@ -64,4 +63,4 @@ class TestAdd:
 
 
 if __name__ == "__main__":
-    pytest.main(["-m test"])
+    pytest.main(["test_add.py"])

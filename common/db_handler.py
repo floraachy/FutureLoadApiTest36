@@ -7,6 +7,7 @@ Time: 2021/1/20 20:33
 """
 import pymysql
 
+
 class DBHandler:
     """
     数据库操作
@@ -19,7 +20,7 @@ class DBHandler:
                  password=None,
                  database=None,
                  charset="utf8",
-                 cursorclass=pymysql.cursors.DictCursor # 加上这个返回的就是字典
+                 cursorclass=pymysql.cursors.DictCursor  # 加上这个返回的就是字典
                  ):
         """
         初始化方法中， 连接到数据库
@@ -120,12 +121,11 @@ if __name__ == "__main__":
     print(member_id, type(member_id))
     leave_amount = db.query_one("select leave_amount from member where mobile_phone=13504936561;")["leave_amount"]
     print(leave_amount)
-    add_mount = db.update( "update member set leave_amount={} where id={};".format(500, member_id))
+    add_mount = db.update("update member set leave_amount={} where id={};".format(500, member_id))
 
     leave_amount_after = db.query_one("select leave_amount from member where mobile_phone=13504936561;")["leave_amount"]
     print(leave_amount_after)
     db.close()
-
 
 """
 1. 建立连接
