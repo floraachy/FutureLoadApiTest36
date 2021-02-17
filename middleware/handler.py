@@ -5,7 +5,7 @@ Time: 2021/2/1 21:17
 -_- -_- -_- -_- -_- -_- -_- -_-
 =================================
 """
-import os
+import os, re
 from conf.path import LOG_DIR, CONF_DIR, DATA_DIR
 from common.logger_handler import get_logger
 from common.yaml_handler import read_yaml
@@ -34,6 +34,7 @@ class MidDBHandler(DBHandler):
                        cursorclass=cursorclass)
     # 下面的写法跟上面是一样的。
     """
+
     # 下面这种方法， 每次调用的时候不需要传参数了
     def __init__(self):
         # 获取账户信息
@@ -47,7 +48,7 @@ class MidDBHandler(DBHandler):
             database=security_data["MYSQL"]["NAME"],
             charset="utf8",
             cursorclass=pymysql.cursors.DictCursor
-            )
+        )
 
 
 class MidHandler:
@@ -65,7 +66,7 @@ class MidHandler:
     security_data = read_yaml(os.path.join(CONF_DIR, "security.yaml"))
 
     # 初始化log
-    log = get_logger(file=os.path.join(LOG_DIR,conf_data["LOG"]["FILENAME"]),
+    log = get_logger(file=os.path.join(LOG_DIR, conf_data["LOG"]["FILENAME"]),
                      name=conf_data["LOG"]["NAME"],
                      level=conf_data["LOG"]["LEVEL"],
                      handler_level=conf_data["LOG"]["HANDLER_LEVEL"],
@@ -76,7 +77,6 @@ class MidHandler:
     # 获取excel的路径
     excel_file = os.path.join(DATA_DIR, "case.xlsx")
     excel = ExcelHandler(excel_file)
-
 
     """
     # 数据库
@@ -90,21 +90,42 @@ class MidHandler:
     # 数据库  下面这种写法是重命名
     db_class = MidDBHandler
 
+    # --- 需要动态替换的数据 ---
     # 新手机号码
     new_phone = ""
 
     # 投资人信息
     investor_user_id = ""
     investor_user_token = ""
+    investor_phone = security_data["investor"]
+    investor_pwd = security_data["investor_pwd"]
 
     # 借款人信息
     loan_user_id = ""
     loan_user_token = ""
+    loan_phone = security_data["loan"]
+    loan_pwd = security_data["loan_pwd"]
 
     # 管理员信息
     admin_user_id = ""
     admin_user_token = ""
+    admin_phone = security_data["admin"]
+    admin_pwd = security_data["admin_pwd"]
 
+    # --- ---- ---
+
+    @classmethod
+    def replace_data(cls, string, pattern=r"#(.*?)#"):
+        """
+        动态替换数据的方法
+        :param string: 需要替换的字符串
+        :param pattern: 正则表达式匹配规则
+        :return: 替换后的字符串
+        """
+        res = re.finditer(pattern=pattern, string=string)
+        for i in res:
+            string = string.replace(i.group(), str(getattr(cls, i.group(1))))
+        return string
 
     @classmethod
     def generate_new_phone(cls):
@@ -123,8 +144,6 @@ class MidHandler:
 
 
 if __name__ == "__main__":
-    pass
-
-
-
-
+    string =  '{"member_id": #member_id#, "loan_id": #loan_id#, "amount": 50000}'
+    a = MidHandler.replace_data(string)
+    print(a)

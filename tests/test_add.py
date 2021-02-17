@@ -5,13 +5,7 @@ Time: 2021/2/2 21:56
 -_- -_- -_- -_- -_- -_- -_- -_-
 =================================
 """
-"""
-=================================
-Author: Flora Chen
-Time: 2021/1/30 23:06
--_- -_- -_- -_- -_- -_- -_- -_-
-=================================
-"""
+
 from requests import request
 import pytest, json
 from jsonpath import jsonpath
