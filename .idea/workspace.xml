@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="376a8f2e-6169-4f5b-9782-30cb28cf62a2" name="Default" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/conf.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/conf.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/test.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ppp.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ppp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_add.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_add.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +33,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lesson29_api_v8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FutureloanApiTest" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -41,7 +41,7 @@
       <recent name="E:\PycharmProject\FutureLoadApiTest36\datas" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.handler">
+  <component name="RunManager" selected="Python tests.pytest in test_invest.py">
     <configuration name="handler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FutureLoadApiTest36" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -84,36 +84,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="py.test in test_audit.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="FutureLoadApiTest36" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_audit.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="py.test in test_withdraw.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="FutureLoadApiTest36" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_withdraw.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="pytest in test_add.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="FutureLoadApiTest36" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -129,20 +99,50 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in test_invest.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="FutureLoadApiTest36" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_invest.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_withdraw.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="FutureLoadApiTest36" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_withdraw.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.ppp" />
-      <item itemvalue="Python tests.py.test in test_withdraw.py" />
-      <item itemvalue="Python tests.py.test in test_audit.py" />
-      <item itemvalue="Python tests.pytest in test_add.py" />
       <item itemvalue="Python.handler" />
+      <item itemvalue="Python.ppp" />
+      <item itemvalue="Python tests.pytest in test_add.py" />
+      <item itemvalue="Python tests.pytest in test_invest.py" />
+      <item itemvalue="Python tests.pytest in test_withdraw.py" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in test_invest.py" />
         <item itemvalue="Python.handler" />
         <item itemvalue="Python.ppp" />
         <item itemvalue="Python tests.pytest in test_add.py" />
-        <item itemvalue="Python tests.py.test in test_withdraw.py" />
-        <item itemvalue="Python tests.py.test in test_audit.py" />
+        <item itemvalue="Python tests.pytest in test_withdraw.py" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613562572012</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update">
+      <created>1613572998912</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1613572998912</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -193,39 +200,59 @@
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="442" y="6" key="CommitChangelistDialog2" timestamp="1613562569676">
+    <state x="442" y="6" key="CommitChangelistDialog2" timestamp="1613572997318">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="442" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1613562569676" />
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1612879023271">
+    <state x="442" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1613572997318" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1614090284214">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1612879023271" />
-    <state width="1515" height="164" key="GridCell.Tab.0.bottom" timestamp="1613571466732">
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1614090284214" />
+    <state width="1515" height="281" key="GridCell.Tab.0.bottom" timestamp="1614091052071">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="164" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613571466732" />
+    <state width="1515" height="281" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614091052071" />
     <state width="1899" height="335" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612165471969" />
-    <state width="1515" height="164" key="GridCell.Tab.0.center" timestamp="1613571466732">
+    <state width="1515" height="281" key="GridCell.Tab.0.center" timestamp="1614091052071">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="164" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613571466732" />
+    <state width="1515" height="281" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614091052071" />
     <state width="1899" height="335" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612165471969" />
-    <state width="1515" height="164" key="GridCell.Tab.0.left" timestamp="1613571466732">
+    <state width="1515" height="281" key="GridCell.Tab.0.left" timestamp="1614091052071">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="164" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613571466732" />
+    <state width="1515" height="281" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614091052071" />
     <state width="1899" height="335" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612165471969" />
-    <state width="1515" height="164" key="GridCell.Tab.0.right" timestamp="1613571466732">
+    <state width="1515" height="281" key="GridCell.Tab.0.right" timestamp="1614091052071">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="164" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613571466732" />
+    <state width="1515" height="281" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614091052071" />
     <state width="1899" height="335" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612165471969" />
+    <state width="1515" height="281" key="GridCell.Tab.1.bottom" timestamp="1614091052071">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="281" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614091052071" />
+    <state width="1515" height="281" key="GridCell.Tab.1.center" timestamp="1614091052071">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="281" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1614091052071" />
+    <state width="1515" height="281" key="GridCell.Tab.1.left" timestamp="1614091052071">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="281" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1614091052071" />
+    <state width="1515" height="281" key="GridCell.Tab.1.right" timestamp="1614091052071">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="281" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1614091052071" />
     <state x="369" y="110" key="SettingsEditor" timestamp="1612840196071">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="369" y="110" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1612840196071" />
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612164890429" />
+    <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1614088899459">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1614088899459" />
     <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1612165592798">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -95,21 +95,21 @@ class MidHandler:
     new_phone = ""
 
     # 投资人信息
-    investor_user_id = ""
-    investor_user_token = ""
-    investor_phone = security_data["investor"]
+    investor_member_id = ""
+    investor_token = ""
+    investor_phone = security_data["investor_phone"]
     investor_pwd = security_data["investor_pwd"]
 
     # 借款人信息
-    loan_user_id = ""
-    loan_user_token = ""
-    loan_phone = security_data["loan"]
+    loan_member_id = ""
+    loan_token = ""
+    loan_phone = security_data["loan_phone"]
     loan_pwd = security_data["loan_pwd"]
 
     # 管理员信息
-    admin_user_id = ""
-    admin_user_token = ""
-    admin_phone = security_data["admin"]
+    admin_member_id = ""
+    admin_token = ""
+    admin_phone = security_data["admin_phone"]
     admin_pwd = security_data["admin_pwd"]
 
     # --- ---- ---

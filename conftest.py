@@ -42,7 +42,7 @@ def admin_login():
     :return: response 响应数据
     """
     user = {
-        "mobile_phone": MidHandler.security_data["admin"],
+        "mobile_phone": MidHandler.security_data["admin_phone"],
         "pwd": MidHandler.security_data["admin_pwd"]
     }
 
@@ -56,7 +56,7 @@ def investor_login():
     :return: response 响应数据
     """
     user = {
-        "mobile_phone": MidHandler.security_data["investor"],
+        "mobile_phone": MidHandler.security_data["investor_phone"],
         "pwd": MidHandler.security_data["investor_pwd"]
     }
 
@@ -70,7 +70,7 @@ def loan_login():
     :return: response 响应数据
     """
     user = {
-        "mobile_phone": MidHandler.security_data["loan"],
+        "mobile_phone": MidHandler.security_data["loan_phone"],
         "pwd": MidHandler.security_data["loan_pwd"]
     }
 
