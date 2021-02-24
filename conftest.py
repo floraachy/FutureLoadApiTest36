@@ -78,6 +78,11 @@ def loan_login():
 
 @pytest.fixture()
 def add_loan(loan_login):
+    """
+    新增项目
+    :param loan_login: 借款人登录
+    :return: 项目id
+    """
     url = MidHandler.conf_data["ENV"]["BASE_URL"] + MidHandler.conf_data["LOAN"]["URL"]
     method = MidHandler.conf_data["LOAN"]["METHOD"]
     headers = MidHandler.conf_data["ENV"]["HEADER"]

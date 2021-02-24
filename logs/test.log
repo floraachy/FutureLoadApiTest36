@@ -2862,3 +2862,761 @@ case_data: {"member_id": 867, "loan_id": 2002567, "amount": 320}
 response: {'code': 2, 'msg': '充值金额必须大于100，并且可以被100整除', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
 result: Passed
 
+2021-02-24 22:43:16,143 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 9, title: 项目id不存在，审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4MDk1fQ.uLfXLwiTnHK-87rV_Z68rsKnv44T-JmOY3MlIU5R9nKMjwNjy6S39vNQT8L3v3T2X92AYO8p99_kNlQ4-WjUYA'}
+case_data: {'case_id': 9, 'interface': 'audit', 'title': '项目id不存在，审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/loan/audit', 'data': '{"loan_id": 0, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "非法的项目id"}'}
+response: {'code': 2, 'msg': '非法的项目id', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:44:49,378 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 9, title: 项目id不存在，审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4MTg5fQ.-LuBPR0KGZrHHKAVTqewqSpPbHImZ7aRIn4fkqVlBlNB7pGhIMy43vKn8GrcngQA6Oef5v2ACPTmTx0CMcmVTg'}
+case_data: {'case_id': 9, 'interface': 'audit', 'title': '项目id不存在，审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": 0, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "非法的项目id"}'}
+response: {'code': 2, 'msg': '非法的项目id', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:48:12,154 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 9, title: 项目id不存在，审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4MzkxfQ.4XA7tJYnOM7WixLillxEwt7Fd8JDaRDFRn3fyTOp5JUdEhdptnKPeVD-3En3v4jMp_wvLGTuEw7bd6CGVDS5KA'}
+case_data: {'case_id': 9, 'interface': 'audit', 'title': '项目id不存在，审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": 0, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "非法的项目id"}'}
+response: {'code': 2, 'msg': '非法的项目id', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:48:12,470 ---root--- [test_audit.py-->line:39] - ERROR: assert 1 == 2
+2021-02-24 22:48:12,470 ---root--- [test_audit.py-->line:43] - INFO: 
+caseid: 10, title: 项目id为空，审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4MzkyfQ.vvKsGOEPiXhelYoTfi47Wg0OcVR2LMbLY-moNerDE5Ah7uJJHoAWRitDH9bLL6lhcEihlB6I1wIWkG8dHetD8g'}
+case_data: {'case_id': 10, 'interface': 'audit', 'title': '项目id为空，审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": "", "approved_or_not": false}', 'expected': '{"code": 1, "msg": "项目id为空"}'}
+response: {'code': 2, 'msg': '数值格式异常', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:48:32,214 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 1, title: 管理员审核项目为通过， 审核项目成功
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDExfQ.-nabRZjNxtfWWQeJV6qJym7UcBDT52rKb4ZhbaYMV128gRHG6bLkOr234e-PvMtH_2RVz4JOn8zgi6WTdIvw2Q'}
+case_data: {'case_id': 1, 'interface': 'audit', 'title': '管理员审核项目为通过， 审核项目成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:48:32,491 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 2, title: 管理员审核项目为不通过， 审核项目成功
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDEyfQ.N2_7Bw5WjqZQOO8BSxHIX5lI1JQNccdJa6MeIyN6jrcfUpi81Vq0nFADXTZNdq37lr2_xlzm5rB228AOVMzZ9A'}
+case_data: {'case_id': 2, 'interface': 'audit', 'title': '管理员审核项目为不通过， 审核项目成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:48:32,808 ---root--- [test_audit.py-->line:39] - ERROR: assert 2 == 0
+2021-02-24 22:48:32,808 ---root--- [test_audit.py-->line:43] - INFO: 
+caseid: 3, title: 普通会员审核项目为通过， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDEyfQ.N2_7Bw5WjqZQOO8BSxHIX5lI1JQNccdJa6MeIyN6jrcfUpi81Vq0nFADXTZNdq37lr2_xlzm5rB228AOVMzZ9A'}
+case_data: {'case_id': 3, 'interface': 'audit', 'title': '普通会员审核项目为通过， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "普通会员不能审核项目，请使用管理员账号"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:48:33,177 ---root--- [test_audit.py-->line:39] - ERROR: assert 2 == 0
+2021-02-24 22:48:33,177 ---root--- [test_audit.py-->line:43] - INFO: 
+caseid: 4, title: 普通会员审核项目为不通过， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDEyfQ.N2_7Bw5WjqZQOO8BSxHIX5lI1JQNccdJa6MeIyN6jrcfUpi81Vq0nFADXTZNdq37lr2_xlzm5rB228AOVMzZ9A'}
+case_data: {'case_id': 4, 'interface': 'audit', 'title': '普通会员审核项目为不通过， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 2, "msg": "普通会员不能审核项目，请使用管理员账号"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:48:33,461 ---root--- [test_audit.py-->line:39] - ERROR: assert 2 == 0
+2021-02-24 22:48:33,462 ---root--- [test_audit.py-->line:43] - INFO: 
+caseid: 5, title: 项目状态为2（竞标中），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDEzfQ.h_SyS5OHSvtyBPvSpz7x7vRSt8uUgMOZwwewbmn_vJS2dwmq2vs9kao6B0TNC3WwaHWsObKXMUctrFI2YPJgrw'}
+case_data: {'case_id': 5, 'interface': 'audit', 'title': '项目状态为2（竞标中），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:48:33,737 ---root--- [test_audit.py-->line:39] - ERROR: assert 2 == 0
+2021-02-24 22:48:33,738 ---root--- [test_audit.py-->line:43] - INFO: 
+caseid: 6, title: 项目状态为5（审核不通过），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDEzfQ.h_SyS5OHSvtyBPvSpz7x7vRSt8uUgMOZwwewbmn_vJS2dwmq2vs9kao6B0TNC3WwaHWsObKXMUctrFI2YPJgrw'}
+case_data: {'case_id': 6, 'interface': 'audit', 'title': '项目状态为5（审核不通过），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:48:34,028 ---root--- [test_audit.py-->line:39] - ERROR: assert 2 == 0
+2021-02-24 22:48:34,029 ---root--- [test_audit.py-->line:43] - INFO: 
+caseid: 7, title: 项目状态为3（还款中），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDEzfQ.h_SyS5OHSvtyBPvSpz7x7vRSt8uUgMOZwwewbmn_vJS2dwmq2vs9kao6B0TNC3WwaHWsObKXMUctrFI2YPJgrw'}
+case_data: {'case_id': 7, 'interface': 'audit', 'title': '项目状态为3（还款中），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:48:34,353 ---root--- [test_audit.py-->line:39] - ERROR: assert 2 == 0
+2021-02-24 22:48:34,353 ---root--- [test_audit.py-->line:43] - INFO: 
+caseid: 8, title: 项目状态为4（还款完成），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDE0fQ.MyueIlT32wkcnJA8soRZLAw3OKAs0HE7AcD7hLmnEDnmHRbh-QlyyLlweYqCMXqndbuVzvKyayeyoZ3Vo9yIYQ'}
+case_data: {'case_id': 8, 'interface': 'audit', 'title': '项目状态为4（还款完成），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:48:34,655 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 9, title: 项目id不存在，审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDE0fQ.MyueIlT32wkcnJA8soRZLAw3OKAs0HE7AcD7hLmnEDnmHRbh-QlyyLlweYqCMXqndbuVzvKyayeyoZ3Vo9yIYQ'}
+case_data: {'case_id': 9, 'interface': 'audit', 'title': '项目id不存在，审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": 0, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "非法的项目id"}'}
+response: {'code': 2, 'msg': '非法的项目id', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:48:34,926 ---root--- [test_audit.py-->line:39] - ERROR: assert 1 == 2
+2021-02-24 22:48:34,926 ---root--- [test_audit.py-->line:43] - INFO: 
+caseid: 10, title: 项目id为空，审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDE0fQ.MyueIlT32wkcnJA8soRZLAw3OKAs0HE7AcD7hLmnEDnmHRbh-QlyyLlweYqCMXqndbuVzvKyayeyoZ3Vo9yIYQ'}
+case_data: {'case_id': 10, 'interface': 'audit', 'title': '项目id为空，审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": "", "approved_or_not": false}', 'expected': '{"code": 1, "msg": "项目id为空"}'}
+response: {'code': 2, 'msg': '数值格式异常', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:48:35,197 ---root--- [test_audit.py-->line:39] - ERROR: assert 2 == 0
+2021-02-24 22:48:35,197 ---root--- [test_audit.py-->line:43] - INFO: 
+caseid: 11, title: 审核状态为true， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDE0fQ.MyueIlT32wkcnJA8soRZLAw3OKAs0HE7AcD7hLmnEDnmHRbh-QlyyLlweYqCMXqndbuVzvKyayeyoZ3Vo9yIYQ'}
+case_data: {'case_id': 11, 'interface': 'audit', 'title': '审核状态为true， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": "true"}', 'expected': '{"code": 2, "msg": "approved_or_not只能为true或者false"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:48:35,501 ---root--- [test_audit.py-->line:39] - ERROR: assert 2 == 0
+2021-02-24 22:48:35,501 ---root--- [test_audit.py-->line:43] - INFO: 
+caseid: 12, title: 审核状态为false， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDE1fQ.kDLIN9uq07l5kGlUDyyEILIEwC_Khv6mA3j2hVxOpEQnUo5CLYTnKlkZgShs9zmlf4ObDN4mKc-jo19e6_zBMQ'}
+case_data: {'case_id': 12, 'interface': 'audit', 'title': '审核状态为false， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": "false"}', 'expected': '{"code": 2, "msg": "approved_or_not只能为true或者false"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:48:35,788 ---root--- [test_audit.py-->line:39] - ERROR: assert 2 == 1
+2021-02-24 22:48:35,788 ---root--- [test_audit.py-->line:43] - INFO: 
+caseid: 13, title: 审核状态为数字， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDE1fQ.kDLIN9uq07l5kGlUDyyEILIEwC_Khv6mA3j2hVxOpEQnUo5CLYTnKlkZgShs9zmlf4ObDN4mKc-jo19e6_zBMQ'}
+case_data: {'case_id': 13, 'interface': 'audit', 'title': '审核状态为数字， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": 1}', 'expected': '{"code": 2, "msg": "approved_or_not只能为true或者false"}'}
+response: {'code': 1, 'msg': 'approved_or_not只能为true或者false', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:49:47,195 ---root--- [test_audit.py-->line:55] - INFO: 
+caseid: 1, title: 管理员审核项目为通过， 审核项目成功
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDg2fQ.rr-xAXDh-kdyY0njf8m7v5t7WujNg_rq9CvUwfh4Y9MrAZifBgYcjD51GGDdY4wWfv9xv6u_Yf1kKmE4wySmlA'}
+case_data: {'case_id': 1, 'interface': 'audit', 'title': '管理员审核项目为通过， 审核项目成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:49:47,520 ---root--- [test_audit.py-->line:55] - INFO: 
+caseid: 2, title: 管理员审核项目为不通过， 审核项目成功
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDg3fQ.IZwjCv8Bi5FfZJkhXkWVYwSm8quv4eOnBhfM64OIKNlzqzjQC8_hujbsfj1wrzRqQ25CKLSEaZ3dW8hD2jirag'}
+case_data: {'case_id': 2, 'interface': 'audit', 'title': '管理员审核项目为不通过， 审核项目成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:49:47,902 ---root--- [test_audit.py-->line:45] - ERROR: assert 2 == 0
+2021-02-24 22:49:47,903 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 3, title: 普通会员审核项目为通过， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDg3fQ.IZwjCv8Bi5FfZJkhXkWVYwSm8quv4eOnBhfM64OIKNlzqzjQC8_hujbsfj1wrzRqQ25CKLSEaZ3dW8hD2jirag'}
+case_data: {'case_id': 3, 'interface': 'audit', 'title': '普通会员审核项目为通过， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "普通会员不能审核项目，请使用管理员账号"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:49:48,320 ---root--- [test_audit.py-->line:45] - ERROR: assert 2 == 0
+2021-02-24 22:49:48,320 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 4, title: 普通会员审核项目为不通过， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDg4fQ.KvqjXG06BR6g_QxpiPlB9QpcavyABkPIk83JuQObUDNBTWadjV39KWWOxgLw4MBpSuWSVqY8miT3QHXol7bWKQ'}
+case_data: {'case_id': 4, 'interface': 'audit', 'title': '普通会员审核项目为不通过， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 2, "msg": "普通会员不能审核项目，请使用管理员账号"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:49:48,691 ---root--- [test_audit.py-->line:45] - ERROR: assert 2 == 0
+2021-02-24 22:49:48,691 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 5, title: 项目状态为2（竞标中），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDg4fQ.KvqjXG06BR6g_QxpiPlB9QpcavyABkPIk83JuQObUDNBTWadjV39KWWOxgLw4MBpSuWSVqY8miT3QHXol7bWKQ'}
+case_data: {'case_id': 5, 'interface': 'audit', 'title': '项目状态为2（竞标中），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:49:49,025 ---root--- [test_audit.py-->line:45] - ERROR: assert 2 == 0
+2021-02-24 22:49:49,025 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 6, title: 项目状态为5（审核不通过），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDg4fQ.KvqjXG06BR6g_QxpiPlB9QpcavyABkPIk83JuQObUDNBTWadjV39KWWOxgLw4MBpSuWSVqY8miT3QHXol7bWKQ'}
+case_data: {'case_id': 6, 'interface': 'audit', 'title': '项目状态为5（审核不通过），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:49:49,393 ---root--- [test_audit.py-->line:45] - ERROR: assert 2 == 0
+2021-02-24 22:49:49,393 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 7, title: 项目状态为3（还款中），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDg5fQ.mQA9Piqz11aaNdRagI4LmWMrKTsi_1e7c0W5ywZTkKa4zTvifXcXBdsThA-BJHgdJ6vRNnfvsZnN3pCLHWwEyA'}
+case_data: {'case_id': 7, 'interface': 'audit', 'title': '项目状态为3（还款中），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:49:49,804 ---root--- [test_audit.py-->line:45] - ERROR: assert 2 == 0
+2021-02-24 22:49:49,804 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 8, title: 项目状态为4（还款完成），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDg5fQ.mQA9Piqz11aaNdRagI4LmWMrKTsi_1e7c0W5ywZTkKa4zTvifXcXBdsThA-BJHgdJ6vRNnfvsZnN3pCLHWwEyA'}
+case_data: {'case_id': 8, 'interface': 'audit', 'title': '项目状态为4（还款完成），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:49:50,161 ---root--- [test_audit.py-->line:55] - INFO: 
+caseid: 9, title: 项目id不存在，审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDg5fQ.mQA9Piqz11aaNdRagI4LmWMrKTsi_1e7c0W5ywZTkKa4zTvifXcXBdsThA-BJHgdJ6vRNnfvsZnN3pCLHWwEyA'}
+case_data: {'case_id': 9, 'interface': 'audit', 'title': '项目id不存在，审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": 0, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "非法的项目id"}'}
+response: {'code': 2, 'msg': '非法的项目id', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:49:50,509 ---root--- [test_audit.py-->line:45] - ERROR: assert 1 == 2
+2021-02-24 22:49:50,510 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 10, title: 项目id为空，审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDkwfQ.DHfiQkJ-Sv4BCxs8ObcF5uCP0gcjsKXD5qD_QJUOfLgHVvgMYB7AIwz_pnXcqjCxK11f4nIuuSgtiq07u8U5dg'}
+case_data: {'case_id': 10, 'interface': 'audit', 'title': '项目id为空，审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": "", "approved_or_not": false}', 'expected': '{"code": 1, "msg": "项目id为空"}'}
+response: {'code': 2, 'msg': '数值格式异常', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:49:50,912 ---root--- [test_audit.py-->line:45] - ERROR: assert 2 == 0
+2021-02-24 22:49:50,912 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 11, title: 审核状态为true， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDkwfQ.DHfiQkJ-Sv4BCxs8ObcF5uCP0gcjsKXD5qD_QJUOfLgHVvgMYB7AIwz_pnXcqjCxK11f4nIuuSgtiq07u8U5dg'}
+case_data: {'case_id': 11, 'interface': 'audit', 'title': '审核状态为true， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": "true"}', 'expected': '{"code": 2, "msg": "approved_or_not只能为true或者false"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:49:51,298 ---root--- [test_audit.py-->line:45] - ERROR: assert 2 == 0
+2021-02-24 22:49:51,299 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 12, title: 审核状态为false， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDkxfQ.yNNFYgwUHIpDs4ZSZ-gX97OsDP3Rs3X4wLqdUsFfkXSPwjaSbvO8rulgdDYtT1WULB7npgxAqZ2xZROiuvzpTA'}
+case_data: {'case_id': 12, 'interface': 'audit', 'title': '审核状态为false， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": "false"}', 'expected': '{"code": 2, "msg": "approved_or_not只能为true或者false"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:49:51,662 ---root--- [test_audit.py-->line:45] - ERROR: assert 2 == 1
+2021-02-24 22:49:51,662 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 13, title: 审核状态为数字， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NDkxfQ.yNNFYgwUHIpDs4ZSZ-gX97OsDP3Rs3X4wLqdUsFfkXSPwjaSbvO8rulgdDYtT1WULB7npgxAqZ2xZROiuvzpTA'}
+case_data: {'case_id': 13, 'interface': 'audit', 'title': '审核状态为数字， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": 1}', 'expected': '{"code": 2, "msg": "approved_or_not只能为true或者false"}'}
+response: {'code': 1, 'msg': 'approved_or_not只能为true或者false', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:50:52,684 ---root--- [test_audit.py-->line:55] - INFO: 
+caseid: 1, title: 管理员审核项目为通过， 审核项目成功
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NTUyfQ.vgyvbMwlmb8_xA8XpadSXQmdC59nJc4PPSxDaAK3-LZT8MvdstaQvhwceOHj3nLPWVECUSbwqId7seg7lUw70A'}
+case_data: {'case_id': 1, 'interface': 'audit', 'title': '管理员审核项目为通过， 审核项目成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:50:53,038 ---root--- [test_audit.py-->line:55] - INFO: 
+caseid: 2, title: 管理员审核项目为不通过， 审核项目成功
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NTUyfQ.vgyvbMwlmb8_xA8XpadSXQmdC59nJc4PPSxDaAK3-LZT8MvdstaQvhwceOHj3nLPWVECUSbwqId7seg7lUw70A'}
+case_data: {'case_id': 2, 'interface': 'audit', 'title': '管理员审核项目为不通过， 审核项目成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:50:53,376 ---root--- [test_audit.py-->line:55] - INFO: 
+caseid: 3, title: 普通会员审核项目为通过， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MTc4NTUzfQ.a3htVKcXLA4UUZ636F3wS9uNHKAgwxF6cJg4iOzwBRmcHS2SFNCMzxEWkja9Ilt02o_gox8M8naEOPlLOibxFw'}
+case_data: {'case_id': 3, 'interface': 'audit', 'title': '普通会员审核项目为通过， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "普通会员不能审核项目，请使用管理员账号"}'}
+response: {'code': 2, 'msg': '普通会员不能审核项目，请使用管理员账号', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:50:53,713 ---root--- [test_audit.py-->line:55] - INFO: 
+caseid: 4, title: 普通会员审核项目为不通过， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MTc4NTUzfQ.a3htVKcXLA4UUZ636F3wS9uNHKAgwxF6cJg4iOzwBRmcHS2SFNCMzxEWkja9Ilt02o_gox8M8naEOPlLOibxFw'}
+case_data: {'case_id': 4, 'interface': 'audit', 'title': '普通会员审核项目为不通过， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 2, "msg": "普通会员不能审核项目，请使用管理员账号"}'}
+response: {'code': 2, 'msg': '普通会员不能审核项目，请使用管理员账号', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:50:54,128 ---root--- [test_audit.py-->line:45] - ERROR: assert 2 == 0
+2021-02-24 22:50:54,128 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 5, title: 项目状态为2（竞标中），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NTUzfQ.344aWebuS4nbD1yzu9uxpj-SFT2YeeTntN68EmorHZq7So7GMPwbJ9-m4T1FVw5eeFTyd_Lg8bLWApaZFwLb8g'}
+case_data: {'case_id': 5, 'interface': 'audit', 'title': '项目状态为2（竞标中），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:50:54,534 ---root--- [test_audit.py-->line:45] - ERROR: assert 2 == 0
+2021-02-24 22:50:54,534 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 6, title: 项目状态为5（审核不通过），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NTU0fQ.O8kvMsYZlkstH888W2fVpsGS1ciyWgGRveEK1kxm8-bXQKqsSdpMCUiIZowHuVf6DqV0o4IPkxRaBHpccXDMTQ'}
+case_data: {'case_id': 6, 'interface': 'audit', 'title': '项目状态为5（审核不通过），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:50:54,880 ---root--- [test_audit.py-->line:45] - ERROR: assert 2 == 0
+2021-02-24 22:50:54,880 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 7, title: 项目状态为3（还款中），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NTU0fQ.O8kvMsYZlkstH888W2fVpsGS1ciyWgGRveEK1kxm8-bXQKqsSdpMCUiIZowHuVf6DqV0o4IPkxRaBHpccXDMTQ'}
+case_data: {'case_id': 7, 'interface': 'audit', 'title': '项目状态为3（还款中），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:50:55,240 ---root--- [test_audit.py-->line:45] - ERROR: assert 2 == 0
+2021-02-24 22:50:55,240 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 8, title: 项目状态为4（还款完成），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NTU0fQ.O8kvMsYZlkstH888W2fVpsGS1ciyWgGRveEK1kxm8-bXQKqsSdpMCUiIZowHuVf6DqV0o4IPkxRaBHpccXDMTQ'}
+case_data: {'case_id': 8, 'interface': 'audit', 'title': '项目状态为4（还款完成），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:50:55,574 ---root--- [test_audit.py-->line:55] - INFO: 
+caseid: 9, title: 项目id不存在，审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NTU1fQ.Y4CMEzcD5qCvAwbNeXIMHB1cUiPxy2-tu2b4u7caaK_7eEoRAsqEvb6kGZX5274YuWZdbzBEAPrwly0lZ0unxA'}
+case_data: {'case_id': 9, 'interface': 'audit', 'title': '项目id不存在，审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": 0, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "非法的项目id"}'}
+response: {'code': 2, 'msg': '非法的项目id', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:50:55,944 ---root--- [test_audit.py-->line:45] - ERROR: assert 1 == 2
+2021-02-24 22:50:55,945 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 10, title: 项目id为空，审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NTU1fQ.Y4CMEzcD5qCvAwbNeXIMHB1cUiPxy2-tu2b4u7caaK_7eEoRAsqEvb6kGZX5274YuWZdbzBEAPrwly0lZ0unxA'}
+case_data: {'case_id': 10, 'interface': 'audit', 'title': '项目id为空，审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": "", "approved_or_not": false}', 'expected': '{"code": 1, "msg": "项目id为空"}'}
+response: {'code': 2, 'msg': '数值格式异常', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:50:56,306 ---root--- [test_audit.py-->line:45] - ERROR: assert 2 == 0
+2021-02-24 22:50:56,306 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 11, title: 审核状态为true， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NTU2fQ.4ZRJzMfCy_Z7xIgVBwgJucMJe4Q01TaFlddf3PooA-1juoaEK-XBS23NawR7TYRNdEdEEdqOuBQL9HniHmQ2Pg'}
+case_data: {'case_id': 11, 'interface': 'audit', 'title': '审核状态为true， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": "true"}', 'expected': '{"code": 2, "msg": "approved_or_not只能为true或者false"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:50:56,672 ---root--- [test_audit.py-->line:45] - ERROR: assert 2 == 0
+2021-02-24 22:50:56,673 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 12, title: 审核状态为false， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NTU2fQ.4ZRJzMfCy_Z7xIgVBwgJucMJe4Q01TaFlddf3PooA-1juoaEK-XBS23NawR7TYRNdEdEEdqOuBQL9HniHmQ2Pg'}
+case_data: {'case_id': 12, 'interface': 'audit', 'title': '审核状态为false， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": "false"}', 'expected': '{"code": 2, "msg": "approved_or_not只能为true或者false"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:50:57,051 ---root--- [test_audit.py-->line:45] - ERROR: assert 2 == 1
+2021-02-24 22:50:57,051 ---root--- [test_audit.py-->line:49] - INFO: 
+caseid: 13, title: 审核状态为数字， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NTU2fQ.4ZRJzMfCy_Z7xIgVBwgJucMJe4Q01TaFlddf3PooA-1juoaEK-XBS23NawR7TYRNdEdEEdqOuBQL9HniHmQ2Pg'}
+case_data: {'case_id': 13, 'interface': 'audit', 'title': '审核状态为数字， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": 1}', 'expected': '{"code": 2, "msg": "approved_or_not只能为true或者false"}'}
+response: {'code': 1, 'msg': 'approved_or_not只能为true或者false', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:54:18,950 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 1, title: 管理员审核项目为通过， 审核项目成功
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NzU4fQ.HoH8TP3idD8gwN-cR18tr4ghQXfOFtjg43IbnxKj9sOdj_-IoI_0AgaZZmjMK_sVeR-szqbL9mZ3RcKdiRShdQ'}
+case_data: {'case_id': 1, 'interface': 'audit', 'title': '管理员审核项目为通过， 审核项目成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:54:19,436 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 2, title: 管理员审核项目为不通过， 审核项目成功
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NzU5fQ.ykbMASQ7Ox-g_Ami_7NdOWZb9jAxnllbFOGO8diPEbiDv-XcyjXuZ11m-fob6k4xCYNK_ipEgIaAqNi7xqRSYg'}
+case_data: {'case_id': 2, 'interface': 'audit', 'title': '管理员审核项目为不通过， 审核项目成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:54:19,951 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 3, title: 普通会员审核项目为通过， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MTc4NzU5fQ.H57wNtpnTkOU3kPbxSrYt2zzj9AgeVbnCJ3reg8DzmZ4CrXPr1cSl-ss5Cz5IBfeweaMMJOWmjib-vPNtdsG2w'}
+case_data: {'case_id': 3, 'interface': 'audit', 'title': '普通会员审核项目为通过， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "普通会员不能审核项目，请使用管理员账号"}'}
+response: {'code': 2, 'msg': '普通会员不能审核项目，请使用管理员账号', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:54:20,427 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 4, title: 普通会员审核项目为不通过， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MTc4NzYwfQ.gwKKVTn5c9JPXLfQRNV_wYJ6EUgV-artZA5xUhd2K19hYgLU71FP8VzJPhQfMwOGU24Mvo71MWfc0MLX97xKdA'}
+case_data: {'case_id': 4, 'interface': 'audit', 'title': '普通会员审核项目为不通过， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 2, "msg": "普通会员不能审核项目，请使用管理员账号"}'}
+response: {'code': 2, 'msg': '普通会员不能审核项目，请使用管理员账号', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:54:21,083 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 5, title: 项目状态为2（竞标中），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NzYwfQ.dmX3DrmalsUpqFo0d8nwEQ0_bOuRxftMxz_-Di6YnDnfeICrkE5Icbn0yssMIz2qjRtUfUXstN25DFAcdSYQcg'}
+case_data: {'case_id': 5, 'interface': 'audit', 'title': '项目状态为2（竞标中），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 2, 'msg': '项目不在审核中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:54:21,609 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 6, title: 项目状态为5（审核不通过），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NzYxfQ.5D3WQlgLkIqyO5RTKlNj1-CBoYhOysSoMHGiJrr6WXOXtFWDpgoVK_6sPh3nfa6XXsPwaS1rK1sIyf0toz2UCg'}
+case_data: {'case_id': 6, 'interface': 'audit', 'title': '项目状态为5（审核不通过），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 2, 'msg': '项目不在审核中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:54:22,162 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 7, title: 项目状态为3（还款中），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NzYxfQ.5D3WQlgLkIqyO5RTKlNj1-CBoYhOysSoMHGiJrr6WXOXtFWDpgoVK_6sPh3nfa6XXsPwaS1rK1sIyf0toz2UCg'}
+case_data: {'case_id': 7, 'interface': 'audit', 'title': '项目状态为3（还款中），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 2, 'msg': '项目不在审核中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:54:22,754 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 8, title: 项目状态为4（还款完成），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NzYyfQ.o2R8Z7Jhqfh3bJpA0hKc2_8_q_By_LZYQKKlJvg3Zx2AFXR1nrjrbetoeV0oHsDSBoE_9HU9UpHNGeZYS-YtVQ'}
+case_data: {'case_id': 8, 'interface': 'audit', 'title': '项目状态为4（还款完成），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 2, 'msg': '项目不在审核中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:54:23,289 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 9, title: 项目id不存在，审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NzYyfQ.o2R8Z7Jhqfh3bJpA0hKc2_8_q_By_LZYQKKlJvg3Zx2AFXR1nrjrbetoeV0oHsDSBoE_9HU9UpHNGeZYS-YtVQ'}
+case_data: {'case_id': 9, 'interface': 'audit', 'title': '项目id不存在，审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": 0, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "非法的项目id"}'}
+response: {'code': 2, 'msg': '非法的项目id', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:54:23,766 ---root--- [test_audit.py-->line:59] - ERROR: assert 1 == 2
+2021-02-24 22:54:23,766 ---root--- [test_audit.py-->line:63] - INFO: 
+caseid: 10, title: 项目id为空，审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NzYzfQ.n15a6Kj2Z36ItSn3Bz8gEA0_Iq6CYkb14rWXZbuF6-t6M7Bdo7kZwZhci8GRvGZRGqth2IPsWDwzQj277riY2w'}
+case_data: {'case_id': 10, 'interface': 'audit', 'title': '项目id为空，审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": "", "approved_or_not": false}', 'expected': '{"code": 1, "msg": "项目id为空"}'}
+response: {'code': 2, 'msg': '数值格式异常', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:54:24,310 ---root--- [test_audit.py-->line:59] - ERROR: assert 2 == 0
+2021-02-24 22:54:24,310 ---root--- [test_audit.py-->line:63] - INFO: 
+caseid: 11, title: 审核状态为true， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NzYzfQ.n15a6Kj2Z36ItSn3Bz8gEA0_Iq6CYkb14rWXZbuF6-t6M7Bdo7kZwZhci8GRvGZRGqth2IPsWDwzQj277riY2w'}
+case_data: {'case_id': 11, 'interface': 'audit', 'title': '审核状态为true， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": "true"}', 'expected': '{"code": 2, "msg": "approved_or_not只能为true或者false"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:54:24,801 ---root--- [test_audit.py-->line:59] - ERROR: assert 2 == 0
+2021-02-24 22:54:24,801 ---root--- [test_audit.py-->line:63] - INFO: 
+caseid: 12, title: 审核状态为false， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NzY0fQ.oAWTj0ThFJ_Bx_xabgp9QHjdxToxJLh8lXPa-FjtZwgCgTmuuFsarA2SaDOqWJQ_Cy34r8T_ZCccVyd8X4crog'}
+case_data: {'case_id': 12, 'interface': 'audit', 'title': '审核状态为false， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": "false"}', 'expected': '{"code": 2, "msg": "approved_or_not只能为true或者false"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:54:25,292 ---root--- [test_audit.py-->line:59] - ERROR: assert 2 == 1
+2021-02-24 22:54:25,293 ---root--- [test_audit.py-->line:63] - INFO: 
+caseid: 13, title: 审核状态为数字， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4NzY0fQ.oAWTj0ThFJ_Bx_xabgp9QHjdxToxJLh8lXPa-FjtZwgCgTmuuFsarA2SaDOqWJQ_Cy34r8T_ZCccVyd8X4crog'}
+case_data: {'case_id': 13, 'interface': 'audit', 'title': '审核状态为数字， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": 1}', 'expected': '{"code": 2, "msg": "approved_or_not只能为true或者false"}'}
+response: {'code': 1, 'msg': 'approved_or_not只能为true或者false', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:55:40,269 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 1, title: 管理员审核项目为通过， 审核项目成功
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4ODM4fQ.zNuHn-DhzXhD7FJFMT7SjZd0vGJQniYVuWdEXf6w8uDohoCiddDplEtxb2oBegT03k6zU6D7gX1Bf55C9VQQeg'}
+case_data: {'case_id': 1, 'interface': 'audit', 'title': '管理员审核项目为通过， 审核项目成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:55:40,761 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 2, title: 管理员审核项目为不通过， 审核项目成功
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4ODQwfQ.w-BEKOG3OHpW9hSHc8um6mkHlnjG5jfTaDb4DNVhJBKSt6vcsCqHZ-1UhXv0ExT4XLMS5kcP9dsbYru4zJYytw'}
+case_data: {'case_id': 2, 'interface': 'audit', 'title': '管理员审核项目为不通过， 审核项目成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:55:41,244 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 3, title: 普通会员审核项目为通过， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MTc4ODQxfQ.UNWqJ8HCnFPQM2yOqoeXBXBxF0DK2-WOJllldfjpajnjsFwHwdPzP0OwPL9fTKQ04_g9_HCb4-UmRFDcmuLtvA'}
+case_data: {'case_id': 3, 'interface': 'audit', 'title': '普通会员审核项目为通过， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "普通会员不能审核项目，请使用管理员账号"}'}
+response: {'code': 2, 'msg': '普通会员不能审核项目，请使用管理员账号', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:55:41,723 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 4, title: 普通会员审核项目为不通过， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MTc4ODQxfQ.UNWqJ8HCnFPQM2yOqoeXBXBxF0DK2-WOJllldfjpajnjsFwHwdPzP0OwPL9fTKQ04_g9_HCb4-UmRFDcmuLtvA'}
+case_data: {'case_id': 4, 'interface': 'audit', 'title': '普通会员审核项目为不通过， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 2, "msg": "普通会员不能审核项目，请使用管理员账号"}'}
+response: {'code': 2, 'msg': '普通会员不能审核项目，请使用管理员账号', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:55:42,336 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 5, title: 项目状态为2（竞标中），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4ODQxfQ.X8OPg9EN4U4I2OMQhqILZ4mhupKpT5fAcExAQxJfwvqx1YA-bO05BS3b99qKXnhW3nWCI0EOIa3PSiHW-ytiaQ'}
+case_data: {'case_id': 5, 'interface': 'audit', 'title': '项目状态为2（竞标中），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 2, 'msg': '项目不在审核中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:55:42,851 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 6, title: 项目状态为5（审核不通过），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4ODQyfQ.NQJgEXzOdzAT3_YOYsCJtKVHLYOPhXvRc80m6phBljuPkvHjUzi9QpFEvRFA8q81Dq01UI9t10Nzi6VNj4l8Rg'}
+case_data: {'case_id': 6, 'interface': 'audit', 'title': '项目状态为5（审核不通过），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 2, 'msg': '项目不在审核中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:55:43,424 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 7, title: 项目状态为3（还款中），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4ODQyfQ.NQJgEXzOdzAT3_YOYsCJtKVHLYOPhXvRc80m6phBljuPkvHjUzi9QpFEvRFA8q81Dq01UI9t10Nzi6VNj4l8Rg'}
+case_data: {'case_id': 7, 'interface': 'audit', 'title': '项目状态为3（还款中），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 2, 'msg': '项目不在审核中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:55:43,965 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 8, title: 项目状态为4（还款完成），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4ODQzfQ.WTUYpD_G2bVR_lILzDq4huw1k36p5Y_X677-2P3SL7XLt9To_krHM3HshychwpNQycd-iR2u4llU72ae-fpyvg'}
+case_data: {'case_id': 8, 'interface': 'audit', 'title': '项目状态为4（还款完成），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 2, 'msg': '项目不在审核中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:55:44,493 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 9, title: 项目id不存在，审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4ODQ0fQ._HUuPcWchxVaCkdQG_bVAgVSzHm8eiJ4xLW1v7LRjLQwQfERQfhzm7QiqogsI4Z8VAvwsR3Mq1EmAt7n0hLUzg'}
+case_data: {'case_id': 9, 'interface': 'audit', 'title': '项目id不存在，审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": 0, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "非法的项目id"}'}
+response: {'code': 2, 'msg': '非法的项目id', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:55:44,943 ---root--- [test_audit.py-->line:59] - ERROR: assert 1 == 2
+2021-02-24 22:55:44,943 ---root--- [test_audit.py-->line:63] - INFO: 
+caseid: 10, title: 项目id为空，审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4ODQ0fQ._HUuPcWchxVaCkdQG_bVAgVSzHm8eiJ4xLW1v7LRjLQwQfERQfhzm7QiqogsI4Z8VAvwsR3Mq1EmAt7n0hLUzg'}
+case_data: {'case_id': 10, 'interface': 'audit', 'title': '项目id为空，审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": "", "approved_or_not": false}', 'expected': '{"code": 1, "msg": "项目id为空"}'}
+response: {'code': 2, 'msg': '数值格式异常', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:55:45,492 ---root--- [test_audit.py-->line:59] - ERROR: assert 2 == 0
+2021-02-24 22:55:45,492 ---root--- [test_audit.py-->line:63] - INFO: 
+caseid: 11, title: 审核状态为true， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4ODQ1fQ.DxBKhBNjY_jvm6qt7nHptCmUIf0zzVfza4MjnP0nCpo2-x-3pE2Hy08mNyhNoOzFNiD9w0riamSvDaxyCpedhw'}
+case_data: {'case_id': 11, 'interface': 'audit', 'title': '审核状态为true， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": "true"}', 'expected': '{"code": 2, "msg": "approved_or_not只能为true或者false"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:55:45,973 ---root--- [test_audit.py-->line:59] - ERROR: assert 2 == 0
+2021-02-24 22:55:45,973 ---root--- [test_audit.py-->line:63] - INFO: 
+caseid: 12, title: 审核状态为false， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4ODQ1fQ.DxBKhBNjY_jvm6qt7nHptCmUIf0zzVfza4MjnP0nCpo2-x-3pE2Hy08mNyhNoOzFNiD9w0riamSvDaxyCpedhw'}
+case_data: {'case_id': 12, 'interface': 'audit', 'title': '审核状态为false， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": "false"}', 'expected': '{"code": 2, "msg": "approved_or_not只能为true或者false"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:55:46,443 ---root--- [test_audit.py-->line:59] - ERROR: assert 2 == 1
+2021-02-24 22:55:46,443 ---root--- [test_audit.py-->line:63] - INFO: 
+caseid: 13, title: 审核状态为数字， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4ODQ2fQ.arTegq3OJkxr0w9RlOYvAv1ANDYHmCEAiMWfnhEZNj1KRlgL2wY7zHNVzF5ol7cJ-llPdgz9_w8J-qC1-yQtvg'}
+case_data: {'case_id': 13, 'interface': 'audit', 'title': '审核状态为数字， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": 1}', 'expected': '{"code": 2, "msg": "approved_or_not只能为true或者false"}'}
+response: {'code': 1, 'msg': 'approved_or_not只能为true或者false', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:56:34,832 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 1, title: 管理员审核项目为通过， 审核项目成功
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4ODk0fQ.UB-ZIqLaI6Khg8OhZjUeTv-rkED-umKdLOiX_9yylrMpmm6X9eEs2R7b96zaya94uvwucVu0-thqVXLZK0gtPg'}
+case_data: {'case_id': 1, 'interface': 'audit', 'title': '管理员审核项目为通过， 审核项目成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:56:35,364 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 2, title: 管理员审核项目为不通过， 审核项目成功
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4ODk0fQ.UB-ZIqLaI6Khg8OhZjUeTv-rkED-umKdLOiX_9yylrMpmm6X9eEs2R7b96zaya94uvwucVu0-thqVXLZK0gtPg'}
+case_data: {'case_id': 2, 'interface': 'audit', 'title': '管理员审核项目为不通过， 审核项目成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:56:36,050 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 3, title: 普通会员审核项目为通过， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MTc4ODk1fQ.hyRgy_R-9v42XQaupb8HcTEPINDsHNOg-LDAnXTweJRHzuYSwraTcmWbdZaIeey60x9BtQfuX8MRjMFdw6hUyQ'}
+case_data: {'case_id': 3, 'interface': 'audit', 'title': '普通会员审核项目为通过， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "普通会员不能审核项目，请使用管理员账号"}'}
+response: {'code': 2, 'msg': '普通会员不能审核项目，请使用管理员账号', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:56:36,693 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 4, title: 普通会员审核项目为不通过， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MTc4ODk2fQ.Dew-cneRlSE3wYhPW0YIb5ziWoo2QE7TkJQHZ6YT7UO4Mg8SXki6qEt7rO6sggKBeh3fmno1-9W2lD4CbvZjLw'}
+case_data: {'case_id': 4, 'interface': 'audit', 'title': '普通会员审核项目为不通过， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 2, "msg": "普通会员不能审核项目，请使用管理员账号"}'}
+response: {'code': 2, 'msg': '普通会员不能审核项目，请使用管理员账号', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:56:37,434 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 5, title: 项目状态为2（竞标中），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4ODk2fQ.PG6bSbtrzhG-qhI5HepI_A7vKSRPDbAbYoMlI0A5Pkj_2DTPbYNHvpvZA91tCvep6p7C-GQmTOgZIUVYKVosnA'}
+case_data: {'case_id': 5, 'interface': 'audit', 'title': '项目状态为2（竞标中），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 2, 'msg': '项目不在审核中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:56:38,136 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 6, title: 项目状态为5（审核不通过），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4ODk3fQ.YbACGqiuMTU-8_z-NTm61W7SZMRlRfY5BKl_7Wl-4oAgtWj8JuACFYvIaApN3EvegD0r0W5Kpfr3VIBb049u3Q'}
+case_data: {'case_id': 6, 'interface': 'audit', 'title': '项目状态为5（审核不通过），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 2, 'msg': '项目不在审核中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:56:38,761 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 7, title: 项目状态为3（还款中），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4ODk4fQ.QFypeD1UlbcA9yyr62ezoHSRyhxcYT8IX-GTbSJnNZUi7yhKHktpbWkYKPbEHEP5VA7-eD3vQUtWPZIwNGYjKQ'}
+case_data: {'case_id': 7, 'interface': 'audit', 'title': '项目状态为3（还款中），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 2, 'msg': '项目不在审核中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:56:39,292 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 8, title: 项目状态为4（还款完成），审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4ODk4fQ.QFypeD1UlbcA9yyr62ezoHSRyhxcYT8IX-GTbSJnNZUi7yhKHktpbWkYKPbEHEP5VA7-eD3vQUtWPZIwNGYjKQ'}
+case_data: {'case_id': 8, 'interface': 'audit', 'title': '项目状态为4（还款完成），审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": false}', 'expected': '{"code": 2, "msg": "项目不在审核中状态"}'}
+response: {'code': 2, 'msg': '项目不在审核中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:56:39,765 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 9, title: 项目id不存在，审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4ODk5fQ.7_sI0k8AOxRPcD1SIbLfXopyNj291GJV8_HvCAP7Zqb9GGZORyaxqKDJnNJxCOITAFMDnwkVWSB3k4-fwCjV_A'}
+case_data: {'case_id': 9, 'interface': 'audit', 'title': '项目id不存在，审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": 0, "approved_or_not": true}', 'expected': '{"code": 2, "msg": "非法的项目id"}'}
+response: {'code': 2, 'msg': '非法的项目id', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-24 22:56:40,246 ---root--- [test_audit.py-->line:59] - ERROR: assert 1 == 2
+2021-02-24 22:56:40,246 ---root--- [test_audit.py-->line:63] - INFO: 
+caseid: 10, title: 项目id为空，审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4ODk5fQ.7_sI0k8AOxRPcD1SIbLfXopyNj291GJV8_HvCAP7Zqb9GGZORyaxqKDJnNJxCOITAFMDnwkVWSB3k4-fwCjV_A'}
+case_data: {'case_id': 10, 'interface': 'audit', 'title': '项目id为空，审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": "", "approved_or_not": false}', 'expected': '{"code": 1, "msg": "项目id为空"}'}
+response: {'code': 2, 'msg': '数值格式异常', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-24 22:56:40,843 ---root--- [test_audit.py-->line:69] - INFO: 
+caseid: 11, title: 审核状态为数字， 审核项目失败
+url: http://api.lemonban.com/futureloan/loan/audit
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MTc4OTAwfQ.G3nLY5jUoJk_Ah5lic7ekFpj_PCcBEmmXEhlQjz-43ZdqmCvBMCMKWU3en-ObKzuqA_XfwXK4-yNrk7mL5C50g'}
+case_data: {'case_id': 11, 'interface': 'audit', 'title': '审核状态为数字， 审核项目失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loan/audit', 'data': '{"loan_id": #loan_id#, "approved_or_not": 1}', 'expected': '{"code": 1, "msg": "approved_or_not只能为true或者false"}'}
+response: {'code': 1, 'msg': 'approved_or_not只能为true或者false', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
