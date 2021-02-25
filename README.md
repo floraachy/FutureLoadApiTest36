@@ -13,7 +13,7 @@
 
 # 第二版多值断言
             for key, value in expected.items():
-                assert actual_result["key"] == value
+                assert actual_result[key] == value
 
 # 第三版断言
             """

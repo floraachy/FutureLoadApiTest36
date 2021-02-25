@@ -36,11 +36,11 @@ class TestLogin:
         if "#admin_pwd#" in request_data:
             request_data = request_data.replace("#admin_pwd#", MidHandler.security_data["admin_pwd"])
 
-        if "#user_phone#" in request_data:
-            request_data = request_data.replace("#user_phone#", MidHandler.security_data["investor_phone"])
+        if "#investor_phone#" in request_data:
+            request_data = request_data.replace("#investor_phone#", MidHandler.security_data["investor_phone"])
 
-        if "#user_pwd#" in request_data:
-            request_data = request_data.replace("#user_pwd#", MidHandler.security_data["investor_pwd"])
+        if "#investor_pwd#" in request_data:
+            request_data = request_data.replace("#investor_pwd#", MidHandler.security_data["investor_pwd"])
 
         response = request(url=url, method=method, headers=headers, json=json.loads(request_data))
         actual = response.json()
@@ -48,7 +48,7 @@ class TestLogin:
         try:
             for key, value in expected.items():
                 print(key, value)
-                assert actual["key"] == value
+                assert actual[key] == value
         except AssertionError as e:
             test_result = "Failed"
             MidHandler.log.error(e)
