@@ -4138,3 +4138,483 @@ case_data: {'case_id': 4, 'interface': 'info', 'title': '会员id为空，获取
 response: {'code': 1004, 'msg': 'No handler found for GET /futureloan/member//info', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
 result: Passed
 
+2021-02-25 22:12:07,571 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 1, title: 管理员注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "13289929931","pwd": "00025678", "type":  0, "reg_name":  "flora"}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 1000083222, 'reg_name': 'flora', 'mobile_phone': '13289929931'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:08,248 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 2, title: 普通会员注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "18632142417","pwd": "12chyfghkll", "type":  1, "reg_name":  "007"}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 1000083223, 'reg_name': '007', 'mobile_phone': '18632142417'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:10,863 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 7, title: 昵称包含空格注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "13315841278","pwd": "12@$?><@#$*()", "type":  0, "reg_name":  "小柠檬  "}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 1000083224, 'reg_name': '小柠檬  ', 'mobile_phone': '13315841278'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:11,175 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 8, title: 手机号码长度不够，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "130002056","pwd": "00as5678", "type":  0, "reg_name":  "flora01"}
+response: {'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:12,950 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 9, title: 手机号码不合法，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "10002000200","pwd": "zx005678", "type":  0, "reg_name":  "flora02"}
+response: {'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:14,332 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 11, title: 手机号码超过11位，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone":  187749700650, "pwd": "01105678", "type":  1, "reg_name":  "flora002a"}
+response: {'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:15,289 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 12, title: 密码长度小于8位，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "13139872300","pwd": "0002567", "type":  1, "reg_name":  "flora03"}
+response: {'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:15,682 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 13, title: 密码长度大于16位，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "13709204083","pwd": "000256123ASD345677", "type":  1, "reg_name":  "flora04"}
+response: {'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:16,538 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 15, title: 昵称长度大于10，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "13909656486","pwd": "sdfsdfdsfsdf", "type":  10, "reg_name":  "flora0900025678"}
+response: {'code': 2, 'msg': '不支持的用户类型', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:16,918 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 16, title: 已注册管理员重复注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "15152134577","pwd": "00025678", "type":  0, "reg_name":  "flora"}
+response: {'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:17,256 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 17, title: 已注册普通会员重复注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "15152134577","pwd": "12chyfghkll", "type":  1, "reg_name":  "007"}
+response: {'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:40,295 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 1, title: 管理员注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "18226137534","pwd": "00025678", "type":  0, "reg_name":  "flora"}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 1000083225, 'reg_name': 'flora', 'mobile_phone': '18226137534'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:40,772 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 2, title: 普通会员注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "15767064597","pwd": "12chyfghkll", "type":  1, "reg_name":  "007"}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 1000083227, 'reg_name': '007', 'mobile_phone': '15767064597'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:41,174 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 3, title: 默认普通会员注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "18979205912","pwd": "12dfgdfg!##$%",  "type": "", "reg_name":  "花儿"}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 1000083228, 'reg_name': '花儿', 'mobile_phone': '18979205912'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:41,589 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 4, title: 小柠檬普通会员注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "15978774872","pwd": "!@3435fdg", "type": "", "reg_name":  ""}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 1000083229, 'reg_name': '', 'mobile_phone': '15978774872'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:41,961 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 5, title: 小柠檬管理员注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "13823067852","pwd": "@$?><@#$*()", "type":  0, "reg_name":  ""}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 1000083230, 'reg_name': '', 'mobile_phone': '13823067852'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:42,356 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 6, title: 密码包含空格注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "18551384791","pwd": "  @$?><@#$*()", "type":  0, "reg_name":  ""}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 1000083231, 'reg_name': '', 'mobile_phone': '18551384791'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:42,691 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 7, title: 昵称包含空格注册成功
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "15950413164","pwd": "12@$?><@#$*()", "type":  0, "reg_name":  "小柠檬  "}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 1000083232, 'reg_name': '小柠檬  ', 'mobile_phone': '15950413164'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:43,039 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 8, title: 手机号码长度不够，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "130002056","pwd": "00as5678", "type":  0, "reg_name":  "flora01"}
+response: {'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:43,374 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 9, title: 手机号码不合法，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "10002000200","pwd": "zx005678", "type":  0, "reg_name":  "flora02"}
+response: {'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:43,776 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 10, title: 手机号码为空，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone":  "", "pwd": "00025678", "type":  1, "reg_name":  "flora002"}
+response: {'code': 1, 'msg': '手机号为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:44,195 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 11, title: 手机号码超过11位，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone":  187749700650, "pwd": "01105678", "type":  1, "reg_name":  "flora002a"}
+response: {'code': 2, 'msg': '无效的手机格式', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:44,529 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 12, title: 密码长度小于8位，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "18025124127","pwd": "0002567", "type":  1, "reg_name":  "flora03"}
+response: {'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:44,900 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 13, title: 密码长度大于16位，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "18792908650","pwd": "000256123ASD345677", "type":  1, "reg_name":  "flora04"}
+response: {'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:45,288 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 14, title: 密码为空，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "13736056066","pwd": "", "type":  0, "reg_name":  "flora004"}
+response: {'code': 1, 'msg': '密码为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:45,662 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 15, title: 昵称长度大于10，注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "13451073224","pwd": "sdfsdfdsfsdf", "type":  10, "reg_name":  "flora0900025678"}
+response: {'code': 2, 'msg': '不支持的用户类型', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:46,039 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 16, title: 已注册管理员重复注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "15152134577","pwd": "00025678", "type":  0, "reg_name":  "flora"}
+response: {'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:12:46,413 ---root--- [test_register.py-->line:62] - INFO: 
+caseid: 17, title: 已注册普通会员重复注册失败
+url: http://api.lemonban.com/futureloan/member/register
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "15152134577","pwd": "12chyfghkll", "type":  1, "reg_name":  "007"}
+response: {'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 22:19:31,018 ---root--- [test_login.py-->line:65] - INFO: 
+caseid: 1, title: 正确手机号和密码登录成功（管理员登录）
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "15152134577", "pwd": "00025678"}
+response: <Response [200]>
+result: Passed
+
+2021-02-25 22:19:31,142 ---root--- [test_login.py-->line:65] - INFO: 
+caseid: 2, title: 正确手机号和密码登录成功（普通会员登录）
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "#investor_phone#", "pwd": "#investor_pwd#"}
+response: <Response [200]>
+result: Passed
+
+2021-02-25 22:19:31,236 ---root--- [test_login.py-->line:65] - INFO: 
+caseid: 3, title: 手机号为空，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "", "pwd": "12dfgdfg!##$%"}
+response: <Response [200]>
+result: Passed
+
+2021-02-25 22:19:31,334 ---root--- [test_login.py-->line:65] - INFO: 
+caseid: 4, title: 密码为空，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "#investor_phone#", "pwd": ""}
+response: <Response [200]>
+result: Passed
+
+2021-02-25 22:19:31,448 ---root--- [test_login.py-->line:65] - INFO: 
+caseid: 5, title: 手机号码和密码均为空，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "", "pwd": ""}
+response: <Response [200]>
+result: Passed
+
+2021-02-25 22:19:31,575 ---root--- [test_login.py-->line:65] - INFO: 
+caseid: 6, title: 手机号错误，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "15500001234", "pwd": "@$?><@#$*()"}
+response: <Response [200]>
+result: Passed
+
+2021-02-25 22:19:31,697 ---root--- [test_login.py-->line:65] - INFO: 
+caseid: 7, title: 密码错误，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "#investor_phone#", "pwd": "12345678900"}
+response: <Response [200]>
+result: Passed
+
+2021-02-25 22:19:31,821 ---root--- [test_login.py-->line:65] - INFO: 
+caseid: 8, title: 手机号和密码错误，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "15512341234", "pwd": "12@$?>1234"}
+response: <Response [200]>
+result: Passed
+
+2021-02-25 22:19:31,967 ---root--- [test_login.py-->line:65] - INFO: 
+caseid: 9, title: 手机号码正确但是前面有空格，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": " #investor_phone#", "pwd": "#investor_pwd#"}
+response: <Response [200]>
+result: Passed
+
+2021-02-25 22:19:32,119 ---root--- [test_login.py-->line:65] - INFO: 
+caseid: 10, title: 手机号码正确但是后面有空格，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "#investor_phone# ", "pwd": "#investor_pwd#"}
+response: <Response [200]>
+result: Passed
+
+2021-02-25 22:19:32,190 ---root--- [test_login.py-->line:65] - INFO: 
+caseid: 11, title: 密码正确但是前面有空格，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "#investor_phone#", "pwd": " #investor_pwd#"}
+response: <Response [200]>
+result: Passed
+
+2021-02-25 22:19:32,301 ---root--- [test_login.py-->line:65] - INFO: 
+caseid: 12, title: 密码正确但是后面有空格，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "#investor_phone#", "pwd": "#investor_pwd# "}
+response: <Response [200]>
+result: Passed
+
+2021-02-25 22:20:10,350 ---root--- [test_login.py-->line:55] - ERROR: assert 1 == 2
+2021-02-25 22:20:10,350 ---root--- [test_login.py-->line:59] - INFO: 
+caseid: 1, title: 正确手机号和密码登录成功（管理员登录）
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "15152134577", "pwd": "00025678"}
+response: <Response [200]>
+result: Failed
+
+2021-02-25 22:20:10,688 ---root--- [test_login.py-->line:55] - ERROR: assert 1 == 2
+2021-02-25 22:20:10,688 ---root--- [test_login.py-->line:59] - INFO: 
+caseid: 2, title: 正确手机号和密码登录成功（普通会员登录）
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "#investor_phone#", "pwd": "#investor_pwd#"}
+response: <Response [200]>
+result: Failed
+
+2021-02-25 22:20:10,878 ---root--- [test_login.py-->line:55] - ERROR: assert 1 == 2
+2021-02-25 22:20:10,879 ---root--- [test_login.py-->line:59] - INFO: 
+caseid: 3, title: 手机号为空，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "", "pwd": "12dfgdfg!##$%"}
+response: <Response [200]>
+result: Failed
+
+2021-02-25 22:20:11,023 ---root--- [test_login.py-->line:55] - ERROR: assert 1 == 2
+2021-02-25 22:20:11,024 ---root--- [test_login.py-->line:59] - INFO: 
+caseid: 4, title: 密码为空，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "#investor_phone#", "pwd": ""}
+response: <Response [200]>
+result: Failed
+
+2021-02-25 22:20:11,145 ---root--- [test_login.py-->line:55] - ERROR: assert 1 == 2
+2021-02-25 22:20:11,145 ---root--- [test_login.py-->line:59] - INFO: 
+caseid: 5, title: 手机号码和密码均为空，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "", "pwd": ""}
+response: <Response [200]>
+result: Failed
+
+2021-02-25 22:20:11,266 ---root--- [test_login.py-->line:55] - ERROR: assert 1 == 2
+2021-02-25 22:20:11,266 ---root--- [test_login.py-->line:59] - INFO: 
+caseid: 6, title: 手机号错误，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "15500001234", "pwd": "@$?><@#$*()"}
+response: <Response [200]>
+result: Failed
+
+2021-02-25 22:20:11,486 ---root--- [test_login.py-->line:55] - ERROR: assert 1 == 2
+2021-02-25 22:20:11,486 ---root--- [test_login.py-->line:59] - INFO: 
+caseid: 7, title: 密码错误，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "#investor_phone#", "pwd": "12345678900"}
+response: <Response [200]>
+result: Failed
+
+2021-02-25 22:20:11,626 ---root--- [test_login.py-->line:55] - ERROR: assert 1 == 2
+2021-02-25 22:20:11,626 ---root--- [test_login.py-->line:59] - INFO: 
+caseid: 8, title: 手机号和密码错误，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "15512341234", "pwd": "12@$?>1234"}
+response: <Response [200]>
+result: Failed
+
+2021-02-25 22:20:11,743 ---root--- [test_login.py-->line:55] - ERROR: assert 1 == 2
+2021-02-25 22:20:11,743 ---root--- [test_login.py-->line:59] - INFO: 
+caseid: 9, title: 手机号码正确但是前面有空格，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": " #investor_phone#", "pwd": "#investor_pwd#"}
+response: <Response [200]>
+result: Failed
+
+2021-02-25 22:20:11,901 ---root--- [test_login.py-->line:55] - ERROR: assert 1 == 2
+2021-02-25 22:20:11,901 ---root--- [test_login.py-->line:59] - INFO: 
+caseid: 10, title: 手机号码正确但是后面有空格，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "#investor_phone# ", "pwd": "#investor_pwd#"}
+response: <Response [200]>
+result: Failed
+
+2021-02-25 22:20:12,033 ---root--- [test_login.py-->line:55] - ERROR: assert 1 == 2
+2021-02-25 22:20:12,033 ---root--- [test_login.py-->line:59] - INFO: 
+caseid: 11, title: 密码正确但是前面有空格，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "#investor_phone#", "pwd": " #investor_pwd#"}
+response: <Response [200]>
+result: Failed
+
+2021-02-25 22:20:12,139 ---root--- [test_login.py-->line:55] - ERROR: assert 1 == 2
+2021-02-25 22:20:12,139 ---root--- [test_login.py-->line:59] - INFO: 
+caseid: 12, title: 密码正确但是后面有空格，登录失败
+url: http://api.lemonban.com/futureloan/member/login
+method: post
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {"mobile_phone": "#investor_phone#", "pwd": "#investor_pwd# "}
+response: <Response [200]>
+result: Failed
+

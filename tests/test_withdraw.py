@@ -11,8 +11,6 @@ from jsonpath import jsonpath
 from decimal import Decimal
 from middleware.handler import MidHandler
 
-
-@pytest.mark.test
 class TestWithdraw:
     """
     提现接口测试， 查数据库检查是否提现成功

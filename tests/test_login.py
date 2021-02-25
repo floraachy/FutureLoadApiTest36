@@ -5,14 +5,17 @@ Time: 2021/1/27 21:23
 -_- -_- -_- -_- -_- -_- -_- -_-
 =================================
 """
-import pytest
+import pytest,json
 from requests import request
 from middleware.handler import MidHandler
 
 
 class TestLogin:
     """
-    登录的测试用例
+    登录
+    使用第一版多值断言
+    使用了中间件
+    使用正则表达式替换用例数据
     """
     test_data = MidHandler.excel.read("login")
 
@@ -22,31 +25,30 @@ class TestLogin:
         method = data["method"]
         headers = MidHandler.conf_data["ENV"]["HEADER"]
         request_data = data["data"]
-        expected = eval(data["expected"])
+        expected = json.loads(data["expected"])
 
         if "#new_phone#" in request_data:
-            request_data = request_data.replace("#new_phone#", MidHandler.help.generate_new_phone())
-
+            request_data = request_data.replace("#new_phone#", MidHandler.generate_new_phone())
 
         if "#admin_phone#" in request_data:
-            request_data = request_data.replace("#admin_phone#", MidHandler.security_data["admin"])
+            request_data = request_data.replace("#admin_phone#", MidHandler.security_data["admin_phone"])
 
         if "#admin_pwd#" in request_data:
             request_data = request_data.replace("#admin_pwd#", MidHandler.security_data["admin_pwd"])
 
         if "#user_phone#" in request_data:
-            request_data = request_data.replace("#user_phone#", MidHandler.security_data["user"])
+            request_data = request_data.replace("#user_phone#", MidHandler.security_data["investor_phone"])
 
         if "#user_pwd#" in request_data:
-            request_data = request_data.replace("#user_pwd#", MidHandler.security_data["user_pwd"])
+            request_data = request_data.replace("#user_pwd#", MidHandler.security_data["investor_pwd"])
 
-
-        response = request(url=url, method=method, headers=headers, json=eval(request_data)).json()
-
-
+        response = request(url=url, method=method, headers=headers, json=json.loads(request_data))
+        actual = response.json()
 
         try:
-            assert expected["code"] == response["code"]
+            for key, value in expected.items():
+                print(key, value)
+                assert actual["key"] == value
         except AssertionError as e:
             test_result = "Failed"
             MidHandler.log.error(e)
@@ -61,6 +63,7 @@ class TestLogin:
                 "\ncaseid: {}, title: {}\nurl: {}\nmethod: {}\nheader: {}\ncase_data: {}\nresponse: {}\nresult: {}\n".format(
                     data["case_id"], data["title"], url, method, headers, request_data,
                     response, test_result))
+
 
 if __name__ == "__main__":
     pytest.main(["test_login.py"])

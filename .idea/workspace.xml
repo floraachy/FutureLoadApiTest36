@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="376a8f2e-6169-4f5b-9782-30cb28cf62a2" name="Default" comment="update test_audit.py">
+    <list default="true" id="376a8f2e-6169-4f5b-9782-30cb28cf62a2" name="Default" comment="finished all test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/test.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ppp.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_loans.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_loans.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_update.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_update.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_register.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_withdraw.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_withdraw.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,43 +45,7 @@
       <recent name="E:\PycharmProject\FutureLoadApiTest36\datas" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_info.py">
-    <configuration name="ppp" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="FutureLoadApiTest36" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/ppp.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest in test_audit.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="FutureLoadApiTest36" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_audit.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.pytest in test_login.py">
     <configuration name="pytest in test_info.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="FutureLoadApiTest36" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -113,6 +76,36 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in test_login.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="FutureLoadApiTest36" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_login.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_register.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="FutureLoadApiTest36" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_register.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest in test_update.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="FutureLoadApiTest36" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -129,19 +122,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.ppp" />
-      <item itemvalue="Python tests.pytest in test_audit.py" />
       <item itemvalue="Python tests.pytest in test_loans.py" />
       <item itemvalue="Python tests.pytest in test_update.py" />
       <item itemvalue="Python tests.pytest in test_info.py" />
+      <item itemvalue="Python tests.pytest in test_register.py" />
+      <item itemvalue="Python tests.pytest in test_login.py" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in test_login.py" />
+        <item itemvalue="Python tests.pytest in test_register.py" />
         <item itemvalue="Python tests.pytest in test_info.py" />
         <item itemvalue="Python tests.pytest in test_update.py" />
         <item itemvalue="Python tests.pytest in test_loans.py" />
-        <item itemvalue="Python tests.pytest in test_audit.py" />
-        <item itemvalue="Python.ppp" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614178660257</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="finished all test">
+      <created>1614260768235</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1614260768235</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -220,40 +220,41 @@
     <MESSAGE value="update test_invest" />
     <MESSAGE value="update data" />
     <MESSAGE value="update test_audit.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="update test_audit.py" />
+    <MESSAGE value="finished all test" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished all test" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614169627872">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1614169627872" />
-    <state x="442" y="6" key="CommitChangelistDialog2" timestamp="1614178658409">
+    <state x="442" y="6" key="CommitChangelistDialog2" timestamp="1614260766379">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="442" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1614178658409" />
+    <state x="442" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1614260766379" />
     <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1614090284214">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1614090284214" />
-    <state width="1515" height="238" key="GridCell.Tab.0.bottom" timestamp="1614260311490">
+    <state width="1515" height="268" key="GridCell.Tab.0.bottom" timestamp="1614262882948">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="238" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614260311490" />
+    <state width="1515" height="268" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614262882948" />
     <state width="1899" height="335" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612165471969" />
-    <state width="1515" height="238" key="GridCell.Tab.0.center" timestamp="1614260311490">
+    <state width="1515" height="268" key="GridCell.Tab.0.center" timestamp="1614262882947">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="238" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614260311490" />
+    <state width="1515" height="268" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614262882947" />
     <state width="1899" height="335" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612165471969" />
-    <state width="1515" height="238" key="GridCell.Tab.0.left" timestamp="1614260311490">
+    <state width="1515" height="268" key="GridCell.Tab.0.left" timestamp="1614262882947">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="238" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614260311490" />
+    <state width="1515" height="268" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614262882947" />
     <state width="1899" height="335" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612165471969" />
-    <state width="1515" height="238" key="GridCell.Tab.0.right" timestamp="1614260311490">
+    <state width="1515" height="268" key="GridCell.Tab.0.right" timestamp="1614262882948">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="238" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614260311490" />
+    <state width="1515" height="268" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614262882948" />
     <state width="1899" height="335" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612165471969" />
     <state width="1515" height="281" key="GridCell.Tab.1.bottom" timestamp="1614257921361">
       <screen x="0" y="0" width="1536" height="824" />
@@ -288,9 +289,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="307" y="28" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1614260727421" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1613572422928">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1614261354397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1613572422928" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1614261354397" />
   </component>
 </project>
