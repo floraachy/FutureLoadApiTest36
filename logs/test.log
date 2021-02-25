@@ -3620,3 +3620,521 @@ case_data: {'case_id': 11, 'interface': 'audit', 'title': '审核状态为数字
 response: {'code': 1, 'msg': 'approved_or_not只能为true或者false', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
 result: Passed
 
+2021-02-25 20:53:25,225 ---root--- [test_loans.py-->line:42] - INFO: 
+caseid: 1, title: 默认获取项目列表第一页10条数据成功
+url: http://api.lemonban.com/futureloan/loans
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {'case_id': 1, 'interface': 'loans', 'title': '默认获取项目列表第一页10条数据成功', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/loans', 'data': '{"pageIndex": None, "pageSize": None }', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': [{'id': 1, 'member_id': 36, 'title': '购买测试课程_1', 'amount': 49999.0, 'loan_rate': 1.0, 'loan_term': 1, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': '2021-02-09 14:20:47.0', 'full_time': None, 'status': 2}, {'id': 2, 'member_id': 36, 'title': '购买测试课程_2', 'amount': 49999.0, 'loan_rate': 24.0, 'loan_term': 36, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 3, 'member_id': 36, 'title': '购买测试课程_3', 'amount': 49999.0, 'loan_rate': 2.0, 'loan_term': 10, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 4, 'member_id': 36, 'title': '购买测试课程_4', 'amount': 49999.0, 'loan_rate': 23.0, 'loan_term': 45, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:50.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 5, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 6, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 7, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 8, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 9, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 10, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': '2021-01-29 14:50:22.0', 'full_time': None, 'status': 2}], 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 20:53:25,537 ---root--- [test_loans.py-->line:42] - INFO: 
+caseid: 2, title: 传参获取项目列表第一页10条数据成功
+url: http://api.lemonban.com/futureloan/loans
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {'case_id': 2, 'interface': 'loans', 'title': '传参获取项目列表第一页10条数据成功', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/loans', 'data': '{"pageIndex": 1, "pageSize": 10}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': [{'id': 1, 'member_id': 36, 'title': '购买测试课程_1', 'amount': 49999.0, 'loan_rate': 1.0, 'loan_term': 1, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': '2021-02-09 14:20:47.0', 'full_time': None, 'status': 2}, {'id': 2, 'member_id': 36, 'title': '购买测试课程_2', 'amount': 49999.0, 'loan_rate': 24.0, 'loan_term': 36, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 3, 'member_id': 36, 'title': '购买测试课程_3', 'amount': 49999.0, 'loan_rate': 2.0, 'loan_term': 10, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 4, 'member_id': 36, 'title': '购买测试课程_4', 'amount': 49999.0, 'loan_rate': 23.0, 'loan_term': 45, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:50.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 5, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 6, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 7, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 8, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 9, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 10, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': '2021-01-29 14:50:22.0', 'full_time': None, 'status': 2}], 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 20:53:26,725 ---root--- [test_loans.py-->line:42] - INFO: 
+caseid: 3, title: 传参获取项目列表第二页10条数据成功
+url: http://api.lemonban.com/futureloan/loans
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {'case_id': 3, 'interface': 'loans', 'title': '传参获取项目列表第二页10条数据成功', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/loans', 'data': '{"pageIndex": 2, "pageSize": 10}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': [{'id': 1, 'member_id': 36, 'title': '购买测试课程_1', 'amount': 49999.0, 'loan_rate': 1.0, 'loan_term': 1, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': '2021-02-09 14:20:47.0', 'full_time': None, 'status': 2}, {'id': 2, 'member_id': 36, 'title': '购买测试课程_2', 'amount': 49999.0, 'loan_rate': 24.0, 'loan_term': 36, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 3, 'member_id': 36, 'title': '购买测试课程_3', 'amount': 49999.0, 'loan_rate': 2.0, 'loan_term': 10, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 4, 'member_id': 36, 'title': '购买测试课程_4', 'amount': 49999.0, 'loan_rate': 23.0, 'loan_term': 45, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:50.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 5, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 6, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 7, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 8, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 9, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 10, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': '2021-01-29 14:50:22.0', 'full_time': None, 'status': 2}], 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 20:53:26,990 ---root--- [test_loans.py-->line:42] - INFO: 
+caseid: 4, title: 传参获取项目列表第一页20条数据成功
+url: http://api.lemonban.com/futureloan/loans
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {'case_id': 4, 'interface': 'loans', 'title': '传参获取项目列表第一页20条数据成功', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/loans', 'data': '{"pageIndex": 1, "pageSize": 20}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': [{'id': 1, 'member_id': 36, 'title': '购买测试课程_1', 'amount': 49999.0, 'loan_rate': 1.0, 'loan_term': 1, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': '2021-02-09 14:20:47.0', 'full_time': None, 'status': 2}, {'id': 2, 'member_id': 36, 'title': '购买测试课程_2', 'amount': 49999.0, 'loan_rate': 24.0, 'loan_term': 36, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 3, 'member_id': 36, 'title': '购买测试课程_3', 'amount': 49999.0, 'loan_rate': 2.0, 'loan_term': 10, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 4, 'member_id': 36, 'title': '购买测试课程_4', 'amount': 49999.0, 'loan_rate': 23.0, 'loan_term': 45, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:50.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 5, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 6, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 7, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 8, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 9, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 10, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': '2021-01-29 14:50:22.0', 'full_time': None, 'status': 2}], 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 20:53:27,209 ---root--- [test_loans.py-->line:32] - ERROR: assert 2 == 0
+2021-02-25 20:53:27,209 ---root--- [test_loans.py-->line:36] - INFO: 
+caseid: 5, title: 页数为非数字，获取项目列表失败
+url: http://api.lemonban.com/futureloan/loans
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {'case_id': 5, 'interface': 'loans', 'title': '页数为非数字，获取项目列表失败', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/loans', 'data': '{"pageIndex": "A", "pageSize": 21}', 'expected': '{"code": 2, "msg": "参数错误"}'}
+response: {'code': 0, 'msg': 'OK', 'data': [{'id': 1, 'member_id': 36, 'title': '购买测试课程_1', 'amount': 49999.0, 'loan_rate': 1.0, 'loan_term': 1, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': '2021-02-09 14:20:47.0', 'full_time': None, 'status': 2}, {'id': 2, 'member_id': 36, 'title': '购买测试课程_2', 'amount': 49999.0, 'loan_rate': 24.0, 'loan_term': 36, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 3, 'member_id': 36, 'title': '购买测试课程_3', 'amount': 49999.0, 'loan_rate': 2.0, 'loan_term': 10, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 4, 'member_id': 36, 'title': '购买测试课程_4', 'amount': 49999.0, 'loan_rate': 23.0, 'loan_term': 45, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:50.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 5, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 6, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 7, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 8, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 9, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 10, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': '2021-01-29 14:50:22.0', 'full_time': None, 'status': 2}], 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-25 20:53:27,474 ---root--- [test_loans.py-->line:32] - ERROR: assert 2 == 0
+2021-02-25 20:53:27,474 ---root--- [test_loans.py-->line:36] - INFO: 
+caseid: 6, title: 条数为非数字，获取项目列表失败
+url: http://api.lemonban.com/futureloan/loans
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {'case_id': 6, 'interface': 'loans', 'title': '条数为非数字，获取项目列表失败', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/loans', 'data': '{"pageIndex": 1, "pageSize": "A"}', 'expected': '{"code": 2, "msg": "参数错误"}'}
+response: {'code': 0, 'msg': 'OK', 'data': [{'id': 1, 'member_id': 36, 'title': '购买测试课程_1', 'amount': 49999.0, 'loan_rate': 1.0, 'loan_term': 1, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': '2021-02-09 14:20:47.0', 'full_time': None, 'status': 2}, {'id': 2, 'member_id': 36, 'title': '购买测试课程_2', 'amount': 49999.0, 'loan_rate': 24.0, 'loan_term': 36, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 3, 'member_id': 36, 'title': '购买测试课程_3', 'amount': 49999.0, 'loan_rate': 2.0, 'loan_term': 10, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 4, 'member_id': 36, 'title': '购买测试课程_4', 'amount': 49999.0, 'loan_rate': 23.0, 'loan_term': 45, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:50.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 5, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 6, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 7, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 8, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 9, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 10, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': '2021-01-29 14:50:22.0', 'full_time': None, 'status': 2}], 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-25 20:57:09,761 ---root--- [test_loans.py-->line:42] - INFO: 
+caseid: 1, title: 默认获取项目列表第一页10条数据成功
+url: http://api.lemonban.com/futureloan/loans
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json'}
+case_data: {'case_id': 1, 'interface': 'loans', 'title': '默认获取项目列表第一页10条数据成功', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loans', 'data': '{"pageIndex": None, "pageSize": None }', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': [{'id': 1, 'member_id': 36, 'title': '购买测试课程_1', 'amount': 49999.0, 'loan_rate': 1.0, 'loan_term': 1, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': '2021-02-09 14:20:47.0', 'full_time': None, 'status': 2}, {'id': 2, 'member_id': 36, 'title': '购买测试课程_2', 'amount': 49999.0, 'loan_rate': 24.0, 'loan_term': 36, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 3, 'member_id': 36, 'title': '购买测试课程_3', 'amount': 49999.0, 'loan_rate': 2.0, 'loan_term': 10, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 4, 'member_id': 36, 'title': '购买测试课程_4', 'amount': 49999.0, 'loan_rate': 23.0, 'loan_term': 45, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:50.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 5, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 6, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 7, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 8, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 9, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 10, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': '2021-01-29 14:50:22.0', 'full_time': None, 'status': 2}], 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 20:57:09,996 ---root--- [test_loans.py-->line:42] - INFO: 
+caseid: 2, title: 传参获取项目列表第一页10条数据成功
+url: http://api.lemonban.com/futureloan/loans
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json'}
+case_data: {'case_id': 2, 'interface': 'loans', 'title': '传参获取项目列表第一页10条数据成功', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loans', 'data': '{"pageIndex": 1, "pageSize": 10}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': [{'id': 1, 'member_id': 36, 'title': '购买测试课程_1', 'amount': 49999.0, 'loan_rate': 1.0, 'loan_term': 1, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': '2021-02-09 14:20:47.0', 'full_time': None, 'status': 2}, {'id': 2, 'member_id': 36, 'title': '购买测试课程_2', 'amount': 49999.0, 'loan_rate': 24.0, 'loan_term': 36, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 3, 'member_id': 36, 'title': '购买测试课程_3', 'amount': 49999.0, 'loan_rate': 2.0, 'loan_term': 10, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 4, 'member_id': 36, 'title': '购买测试课程_4', 'amount': 49999.0, 'loan_rate': 23.0, 'loan_term': 45, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:50.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 5, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 6, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 7, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 8, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 9, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 10, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': '2021-01-29 14:50:22.0', 'full_time': None, 'status': 2}], 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 20:57:10,246 ---root--- [test_loans.py-->line:42] - INFO: 
+caseid: 3, title: 传参获取项目列表第二页10条数据成功
+url: http://api.lemonban.com/futureloan/loans
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json'}
+case_data: {'case_id': 3, 'interface': 'loans', 'title': '传参获取项目列表第二页10条数据成功', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loans', 'data': '{"pageIndex": 2, "pageSize": 10}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': [{'id': 1, 'member_id': 36, 'title': '购买测试课程_1', 'amount': 49999.0, 'loan_rate': 1.0, 'loan_term': 1, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': '2021-02-09 14:20:47.0', 'full_time': None, 'status': 2}, {'id': 2, 'member_id': 36, 'title': '购买测试课程_2', 'amount': 49999.0, 'loan_rate': 24.0, 'loan_term': 36, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 3, 'member_id': 36, 'title': '购买测试课程_3', 'amount': 49999.0, 'loan_rate': 2.0, 'loan_term': 10, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 4, 'member_id': 36, 'title': '购买测试课程_4', 'amount': 49999.0, 'loan_rate': 23.0, 'loan_term': 45, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:50.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 5, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 6, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 7, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 8, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 9, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 10, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': '2021-01-29 14:50:22.0', 'full_time': None, 'status': 2}], 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 20:57:10,449 ---root--- [test_loans.py-->line:42] - INFO: 
+caseid: 4, title: 传参获取项目列表第一页20条数据成功
+url: http://api.lemonban.com/futureloan/loans
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json'}
+case_data: {'case_id': 4, 'interface': 'loans', 'title': '传参获取项目列表第一页20条数据成功', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/loans', 'data': '{"pageIndex": 1, "pageSize": 20}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': [{'id': 1, 'member_id': 36, 'title': '购买测试课程_1', 'amount': 49999.0, 'loan_rate': 1.0, 'loan_term': 1, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': '2021-02-09 14:20:47.0', 'full_time': None, 'status': 2}, {'id': 2, 'member_id': 36, 'title': '购买测试课程_2', 'amount': 49999.0, 'loan_rate': 24.0, 'loan_term': 36, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 3, 'member_id': 36, 'title': '购买测试课程_3', 'amount': 49999.0, 'loan_rate': 2.0, 'loan_term': 10, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:49.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 4, 'member_id': 36, 'title': '购买测试课程_4', 'amount': 49999.0, 'loan_rate': 23.0, 'loan_term': 45, 'loan_date_type': 2, 'bidding_days': 5, 'create_time': '2021-01-28 15:27:50.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 5, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 6, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 7, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:53:59.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 8, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 5}, {'id': 9, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, {'id': 10, 'member_id': 118, 'title': '柠檬班基金', 'amount': 49999.0, 'loan_rate': 18.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2021-01-28 15:54:00.0', 'bidding_start_time': '2021-01-29 14:50:22.0', 'full_time': None, 'status': 2}], 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:14:00,925 ---root--- [test_update.py-->line:56] - INFO: 
+caseid: 1, title: 普通会员修改昵称， 昵称长度为1， 修改昵称成功
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjU5MTQwfQ.LJHIq8zK64ejIr8toaBFB_CqwPs72eXqr-bArjp-zj1TdU37DPBvyUZGNbdl-b2ZRERGrt2IFrZB1GM6UbMhHQ'}
+case_data: {'case_id': 1, 'interface': 'update', 'title': '普通会员修改昵称， 昵称长度为1， 修改昵称成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "A"}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 301.0, 'mobile_phone': '13504936561', 'reg_name': 'A', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:14:01,425 ---root--- [test_update.py-->line:46] - ERROR: assert 0 == 2
+2021-02-25 21:14:01,425 ---root--- [test_update.py-->line:50] - INFO: 
+caseid: 2, title: 普通会员修改昵称， 昵称长度为10，修改昵称成功
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjU5MTQxfQ.bM-yYLCsc2jejwGakUT_ualXJQxtu8RuYt5ZUnrEqRLnuUw9AAmRou9RQCjzpAnFQGp98AmCd8D-A3nPf_6lQg'}
+case_data: {'case_id': 2, 'interface': 'update', 'title': '普通会员修改昵称， 昵称长度为10，修改昵称成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "我是一只小小鸟飞不高"}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 2, 'msg': '用户昵称长度超过10位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-25 21:14:02,206 ---root--- [test_update.py-->line:46] - ERROR: assert 1 == 2
+2021-02-25 21:14:02,206 ---root--- [test_update.py-->line:50] - INFO: 
+caseid: 4, title: 会员id为空，修改昵称失败
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjU5MTQyfQ.sJcmNbVXP4l5OVWnVYkObqg6Tk4G5GaoU-bBf2pdVZpk9bFVAaW5slOPxslVB00zPfbTgqM7rK5YRethkx27nw'}
+case_data: {'case_id': 4, 'interface': 'update', 'title': '会员id为空，修改昵称失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": "", "reg_name": "A" }', 'expected': '{"code": 1, "msg": "用户id为空"}'}
+response: {'code': 2, 'msg': '数值参数格式错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-25 21:14:02,799 ---root--- [test_update.py-->line:56] - INFO: 
+caseid: 6, title: 修改昵称长度大于10， 修改昵称失败
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjU5MTQyfQ.sJcmNbVXP4l5OVWnVYkObqg6Tk4G5GaoU-bBf2pdVZpk9bFVAaW5slOPxslVB00zPfbTgqM7rK5YRethkx27nw'}
+case_data: {'case_id': 6, 'interface': 'update', 'title': '修改昵称长度大于10， 修改昵称失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "我是一只小小鸟飞也飞！" }', 'expected': '{"code": 2, "msg": "用户昵称长度超过10位"}'}
+response: {'code': 2, 'msg': '用户昵称长度超过10位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:26:51,914 ---root--- [test_update.py-->line:56] - INFO: 
+caseid: 1, title: 普通会员修改昵称， 昵称长度为1， 修改昵称成功
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjU5OTExfQ.wAD2eEeiclI5CFOfWE7XVra4azHzaNjNjK7q7JaSAdwUEPPEUNSCLCkE9vvfEfUl9xGTZWRjujZwNOaCIHfPAQ'}
+case_data: {'case_id': 1, 'interface': 'update', 'title': '普通会员修改昵称， 昵称长度为1， 修改昵称成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "A"}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 301.0, 'mobile_phone': '13504936561', 'reg_name': 'A', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:26:52,211 ---root--- [test_update.py-->line:46] - ERROR: assert 0 == 2
+2021-02-25 21:26:52,211 ---root--- [test_update.py-->line:50] - INFO: 
+caseid: 2, title: 普通会员修改昵称， 昵称长度为10，修改昵称成功
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjU5OTEyfQ.Y21f-zA3bTYZQ-zQ0AsXCRHsTKjJRSNIqZwukhstNASjV9hX_FS6hvKqzSRTtsciHTiL6ucRl0QCuBQLksDk-Q'}
+case_data: {'case_id': 2, 'interface': 'update', 'title': '普通会员修改昵称， 昵称长度为10，修改昵称成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "我是一只小小鸟飞不高"}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 2, 'msg': '用户昵称长度超过10位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-25 21:26:52,820 ---root--- [test_update.py-->line:46] - ERROR: assert 1 == 2
+2021-02-25 21:26:52,820 ---root--- [test_update.py-->line:50] - INFO: 
+caseid: 4, title: 会员id为空，修改昵称失败
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjU5OTEyfQ.Y21f-zA3bTYZQ-zQ0AsXCRHsTKjJRSNIqZwukhstNASjV9hX_FS6hvKqzSRTtsciHTiL6ucRl0QCuBQLksDk-Q'}
+case_data: {'case_id': 4, 'interface': 'update', 'title': '会员id为空，修改昵称失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": "", "reg_name": "A" }', 'expected': '{"code": 1, "msg": "用户id为空"}'}
+response: {'code': 2, 'msg': '数值参数格式错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-25 21:26:53,397 ---root--- [test_update.py-->line:56] - INFO: 
+caseid: 6, title: 修改昵称长度大于10， 修改昵称失败
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjU5OTEzfQ.8ZF7DKAmBEoepc0pDNIj35slG1raVUpN02glvNlFmx7Um1qk63o8K805KuZTB09eabAp9fr3EvwyNkLswotHuw'}
+case_data: {'case_id': 6, 'interface': 'update', 'title': '修改昵称长度大于10， 修改昵称失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "我是一只小小鸟飞也飞！" }', 'expected': '{"code": 2, "msg": "用户昵称长度超过10位"}'}
+response: {'code': 2, 'msg': '用户昵称长度超过10位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:28:55,666 ---root--- [test_update.py-->line:56] - INFO: 
+caseid: 1, title: 普通会员修改昵称， 昵称长度为1， 修改昵称成功
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMDM1fQ.B2g7DZv-X_VCd0h1eQGKZqRnORt8Md0qYXrlQjsJ1Eckf4oC1ZjXa6ShEvJepYZmry1qeVfRyxITMgM3-A1ySg'}
+case_data: {'case_id': 1, 'interface': 'update', 'title': '普通会员修改昵称， 昵称长度为1， 修改昵称成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "A"}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 301.0, 'mobile_phone': '13504936561', 'reg_name': 'A', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:28:55,978 ---root--- [test_update.py-->line:46] - ERROR: assert 0 == 2
+2021-02-25 21:28:55,978 ---root--- [test_update.py-->line:50] - INFO: 
+caseid: 2, title: 普通会员修改昵称， 昵称长度为10，修改昵称成功
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMDM1fQ.B2g7DZv-X_VCd0h1eQGKZqRnORt8Md0qYXrlQjsJ1Eckf4oC1ZjXa6ShEvJepYZmry1qeVfRyxITMgM3-A1ySg'}
+case_data: {'case_id': 2, 'interface': 'update', 'title': '普通会员修改昵称， 昵称长度为10，修改昵称成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "我是一只小小鸟飞不高"}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 2, 'msg': '用户昵称长度超过10位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-25 21:28:56,619 ---root--- [test_update.py-->line:46] - ERROR: assert 1 == 2
+2021-02-25 21:28:56,619 ---root--- [test_update.py-->line:50] - INFO: 
+caseid: 4, title: 会员id为空，修改昵称失败
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMDM2fQ.53zyUXYr_Fo7OOhvTosrMv0N9hRryToZ_JpP88OYSUNvdmJX3ypPgCNhnaxre3xJRRV2tiyr29qewJ87isE3Mw'}
+case_data: {'case_id': 4, 'interface': 'update', 'title': '会员id为空，修改昵称失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": "", "reg_name": "A" }', 'expected': '{"code": 1, "msg": "用户id为空"}'}
+response: {'code': 2, 'msg': '数值参数格式错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-25 21:28:56,994 ---root--- [test_update.py-->line:56] - INFO: 
+caseid: 5, title: 修改昵称为空，修改昵称失败
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMDM2fQ.53zyUXYr_Fo7OOhvTosrMv0N9hRryToZ_JpP88OYSUNvdmJX3ypPgCNhnaxre3xJRRV2tiyr29qewJ87isE3Mw'}
+case_data: {'case_id': 5, 'interface': 'update', 'title': '修改昵称为空，修改昵称失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "" }', 'expected': '{"code": 1, "msg": "用户名为空"}'}
+response: {'code': 1, 'msg': '用户名不能为空字符串，也不能全部是空格', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:28:57,447 ---root--- [test_update.py-->line:56] - INFO: 
+caseid: 6, title: 修改昵称长度大于10， 修改昵称失败
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMDM3fQ.3b0qrgi4PVHcsJPWf4jcbKr-h3w95P3lsf1utCu9mAtYkYflOi55cntDlK79L9BgQczxbGeQ9_RYSZW3RRtP_g'}
+case_data: {'case_id': 6, 'interface': 'update', 'title': '修改昵称长度大于10， 修改昵称失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "我是一只小小鸟飞也飞！" }', 'expected': '{"code": 2, "msg": "用户昵称长度超过10位"}'}
+response: {'code': 2, 'msg': '用户昵称长度超过10位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:29:45,933 ---root--- [test_update.py-->line:56] - INFO: 
+caseid: 1, title: 普通会员修改昵称， 昵称长度为1， 修改昵称成功
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMDg1fQ.7YsQIGfOausAYZuhNuw1fSo2__lYmRbgxa1HG_ZLPmgq9Q2CX-dSz0TBVLXB73JAvqBV-7YpyMsPGp2ACzA-mw'}
+case_data: {'case_id': 1, 'interface': 'update', 'title': '普通会员修改昵称， 昵称长度为1， 修改昵称成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "A"}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 301.0, 'mobile_phone': '13504936561', 'reg_name': 'A', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:29:46,339 ---root--- [test_update.py-->line:46] - ERROR: assert 0 == 2
+2021-02-25 21:29:46,339 ---root--- [test_update.py-->line:50] - INFO: 
+caseid: 2, title: 普通会员修改昵称， 昵称长度为10，修改昵称成功
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMDg2fQ.WhEb7AUdvUTVQxUxLqZac7Bf4s5vztl_l396a9D_3hMh3WnRzTFmTEjf75bJk1T_x2rU6BQkOgL2LWfHysqNJw'}
+case_data: {'case_id': 2, 'interface': 'update', 'title': '普通会员修改昵称， 昵称长度为10，修改昵称成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "我是一只小小鸟飞不高"}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 2, 'msg': '用户昵称长度超过10位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-25 21:29:46,979 ---root--- [test_update.py-->line:46] - ERROR: assert 1 == 2
+2021-02-25 21:29:46,995 ---root--- [test_update.py-->line:50] - INFO: 
+caseid: 4, title: 会员id为空，修改昵称失败
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMDg2fQ.WhEb7AUdvUTVQxUxLqZac7Bf4s5vztl_l396a9D_3hMh3WnRzTFmTEjf75bJk1T_x2rU6BQkOgL2LWfHysqNJw'}
+case_data: {'case_id': 4, 'interface': 'update', 'title': '会员id为空，修改昵称失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": "", "reg_name": "A" }', 'expected': '{"code": 1, "msg": "用户id为空"}'}
+response: {'code': 2, 'msg': '数值参数格式错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-25 21:29:47,354 ---root--- [test_update.py-->line:56] - INFO: 
+caseid: 5, title: 修改昵称为空，修改昵称失败
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMDg3fQ.IPq0KzVR3pKtZE_Ll4Ok9FdMeHR0MGjOgq8nU-3ggUgny9GEGAX8fjR59Gi9LwWeAFp9sbd9yKtjjccfyyNdxA'}
+case_data: {'case_id': 5, 'interface': 'update', 'title': '修改昵称为空，修改昵称失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "" }', 'expected': '{"code": 1, "msg": "用户名为空"}'}
+response: {'code': 1, 'msg': '用户名不能为空字符串，也不能全部是空格', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:29:47,682 ---root--- [test_update.py-->line:56] - INFO: 
+caseid: 6, title: 修改昵称长度大于10， 修改昵称失败
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMDg3fQ.IPq0KzVR3pKtZE_Ll4Ok9FdMeHR0MGjOgq8nU-3ggUgny9GEGAX8fjR59Gi9LwWeAFp9sbd9yKtjjccfyyNdxA'}
+case_data: {'case_id': 6, 'interface': 'update', 'title': '修改昵称长度大于10， 修改昵称失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "我是一只小小鸟飞也飞！" }', 'expected': '{"code": 2, "msg": "用户昵称长度超过10位"}'}
+response: {'code': 2, 'msg': '用户昵称长度超过10位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:31:02,655 ---root--- [test_update.py-->line:56] - INFO: 
+caseid: 1, title: 普通会员修改昵称， 昵称长度为1， 修改昵称成功
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMTYyfQ.xhSS91hIYblm9XZ8oFYO6AkEX5eDQshJBNvRvQf7H42N4PesanMhpeHzTe-w7XUE2fdcgA75dcBb-jZHEHblsQ'}
+case_data: {'case_id': 1, 'interface': 'update', 'title': '普通会员修改昵称， 昵称长度为1， 修改昵称成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "A"}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 301.0, 'mobile_phone': '13504936561', 'reg_name': 'A', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:31:02,920 ---root--- [test_update.py-->line:46] - ERROR: assert 0 == 2
+2021-02-25 21:31:02,920 ---root--- [test_update.py-->line:50] - INFO: 
+caseid: 2, title: 普通会员修改昵称， 昵称长度为10，修改昵称成功
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMTYyfQ.xhSS91hIYblm9XZ8oFYO6AkEX5eDQshJBNvRvQf7H42N4PesanMhpeHzTe-w7XUE2fdcgA75dcBb-jZHEHblsQ'}
+case_data: {'case_id': 2, 'interface': 'update', 'title': '普通会员修改昵称， 昵称长度为10，修改昵称成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "我是一只小小鸟飞不高"}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 2, 'msg': '用户昵称长度超过10位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-25 21:31:03,701 ---root--- [test_update.py-->line:46] - ERROR: assert 1 == 2
+2021-02-25 21:31:03,701 ---root--- [test_update.py-->line:50] - INFO: 
+caseid: 4, title: 会员id为空，修改昵称失败
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMTYzfQ.GRROkqjlMhFnCigRybQ8DyhmI4UPbb4PT9CHwZhiFiLsCMK7TrbGbvnbyOu_n8YB3uLBrB-6Ca54WVGP0YdvuQ'}
+case_data: {'case_id': 4, 'interface': 'update', 'title': '会员id为空，修改昵称失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": "", "reg_name": "A" }', 'expected': '{"code": 1, "msg": "用户id为空"}'}
+response: {'code': 2, 'msg': '数值参数格式错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-25 21:31:04,185 ---root--- [test_update.py-->line:56] - INFO: 
+caseid: 5, title: 修改昵称为空，修改昵称失败
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMTYzfQ.GRROkqjlMhFnCigRybQ8DyhmI4UPbb4PT9CHwZhiFiLsCMK7TrbGbvnbyOu_n8YB3uLBrB-6Ca54WVGP0YdvuQ'}
+case_data: {'case_id': 5, 'interface': 'update', 'title': '修改昵称为空，修改昵称失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "" }', 'expected': '{"code": 1, "msg": "用户名为空"}'}
+response: {'code': 1, 'msg': '用户名不能为空字符串，也不能全部是空格', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:31:04,623 ---root--- [test_update.py-->line:56] - INFO: 
+caseid: 6, title: 修改昵称长度大于10， 修改昵称失败
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMTY0fQ.kszPaltRiyK80PzR1BLcU5ABw5ldnNLSlvhfs_jDJPzME6FuplCoE2YGHJ6ahAGIUXkGsq7pqRp6tJFDkb6ONA'}
+case_data: {'case_id': 6, 'interface': 'update', 'title': '修改昵称长度大于10， 修改昵称失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "我是一只小小鸟飞也飞！" }', 'expected': '{"code": 2, "msg": "用户昵称长度超过10位"}'}
+response: {'code': 2, 'msg': '用户昵称长度超过10位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:31:54,539 ---root--- [test_update.py-->line:56] - INFO: 
+caseid: 1, title: 普通会员修改昵称， 昵称长度为1， 修改昵称成功
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMjE0fQ.L6XwyTTUo43yUJL0gnfvJvXCWicf1Ow0tWzsScu3bhZNUuEIXiX-BulOEOxfs43WTi_-nesj2Jy5ZwNG-l7Npw'}
+case_data: {'case_id': 1, 'interface': 'update', 'title': '普通会员修改昵称， 昵称长度为1， 修改昵称成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "A"}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 301.0, 'mobile_phone': '13504936561', 'reg_name': 'A', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:31:54,820 ---root--- [test_update.py-->line:46] - ERROR: assert 0 == 2
+2021-02-25 21:31:54,820 ---root--- [test_update.py-->line:50] - INFO: 
+caseid: 2, title: 普通会员修改昵称， 昵称长度为10，修改昵称成功
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMjE0fQ.L6XwyTTUo43yUJL0gnfvJvXCWicf1Ow0tWzsScu3bhZNUuEIXiX-BulOEOxfs43WTi_-nesj2Jy5ZwNG-l7Npw'}
+case_data: {'case_id': 2, 'interface': 'update', 'title': '普通会员修改昵称， 昵称长度为10，修改昵称成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "我是一只小小鸟飞不高"}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 2, 'msg': '用户昵称长度超过10位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-25 21:31:55,352 ---root--- [test_update.py-->line:56] - INFO: 
+caseid: 3, title: 管理员修改昵称， 昵称长度为5，修改昵称成功
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MjYwMjE1fQ.xvaml49Ry6e9Xtr8mCv77ZhgG9Nr6r8kN0KjYet0Hko9mhIbpgENk3xmpFaWHvwT252a2Cs-Byoh-4_ilmpFzw'}
+case_data: {'case_id': 3, 'interface': 'update', 'title': '管理员修改昵称， 昵称长度为5，修改昵称成功', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #admin_member_id#, "reg_name": "Abnmd"}', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 866, 'leave_amount': 301.0, 'mobile_phone': '15152134577', 'reg_name': 'Abnmd', 'reg_time': '2021-01-28 21:59:59.0', 'type': 0}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:31:55,711 ---root--- [test_update.py-->line:46] - ERROR: assert 1 == 2
+2021-02-25 21:31:55,711 ---root--- [test_update.py-->line:50] - INFO: 
+caseid: 4, title: 会员id为空，修改昵称失败
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMjE1fQ.MaQ8c4UGulu57r2F03N-OUPFvqJhj6KhQGXqvvx4WLcEcAph9-fjTehOESlEU5Ca8PqDwsN06xwhHF5nMYO3Yw'}
+case_data: {'case_id': 4, 'interface': 'update', 'title': '会员id为空，修改昵称失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": "", "reg_name": "A" }', 'expected': '{"code": 1, "msg": "用户id为空"}'}
+response: {'code': 2, 'msg': '数值参数格式错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-25 21:31:56,133 ---root--- [test_update.py-->line:56] - INFO: 
+caseid: 5, title: 修改昵称为空，修改昵称失败
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMjE1fQ.MaQ8c4UGulu57r2F03N-OUPFvqJhj6KhQGXqvvx4WLcEcAph9-fjTehOESlEU5Ca8PqDwsN06xwhHF5nMYO3Yw'}
+case_data: {'case_id': 5, 'interface': 'update', 'title': '修改昵称为空，修改昵称失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "" }', 'expected': '{"code": 1, "msg": "用户名为空"}'}
+response: {'code': 1, 'msg': '用户名不能为空字符串，也不能全部是空格', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:31:56,476 ---root--- [test_update.py-->line:56] - INFO: 
+caseid: 6, title: 修改昵称长度大于10， 修改昵称失败
+url: http://api.lemonban.com/futureloan/member/update
+method: patch
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwMjE2fQ.oywP4xM7wDyr-F5F0W3-wmNH5BaVTT4Vgc8X5acXRY0pr5QHXjYYk8P_y1Az8939zG-ZZP0z_dRVk0UaJdeLtQ'}
+case_data: {'case_id': 6, 'interface': 'update', 'title': '修改昵称长度大于10， 修改昵称失败', 'method': 'patch', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application/json"}', 'url': '/member/update', 'data': '{"member_id": #investor_member_id#, "reg_name": "我是一只小小鸟飞也飞！" }', 'expected': '{"code": 2, "msg": "用户昵称长度超过10位"}'}
+response: {'code': 2, 'msg': '用户昵称长度超过10位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:35:15,248 ---root--- [test_info.py-->line:38] - ERROR: assert 0 == 1003
+2021-02-25 21:35:15,248 ---root--- [test_info.py-->line:42] - INFO: 
+caseid: 1, title: 管理员获取用户信息成功
+url: http://api.lemonban.com/futureloan/member/866/info
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {'case_id': 1, 'interface': 'info', 'title': '管理员获取用户信息成功', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/member/#admin_member_id#/info', 'data': '/', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '未授权或token已过期'}
+result: Failed
+
+2021-02-25 21:35:15,530 ---root--- [test_info.py-->line:38] - ERROR: assert 0 == 1003
+2021-02-25 21:35:15,530 ---root--- [test_info.py-->line:42] - INFO: 
+caseid: 2, title: 普通会员获取用户信息成功
+url: http://api.lemonban.com/futureloan/member/866/info
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {'case_id': 2, 'interface': 'info', 'title': '普通会员获取用户信息成功', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/member/#investor_member_id#/info', 'data': '/', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '未授权或token已过期'}
+result: Failed
+
+2021-02-25 21:35:15,780 ---root--- [test_info.py-->line:38] - ERROR: assert 1004 == 1003
+2021-02-25 21:35:15,780 ---root--- [test_info.py-->line:42] - INFO: 
+caseid: 3, title: 会员id不存在，获取用户信息失败
+url: http://api.lemonban.com/futureloan/member/A/info
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {'case_id': 3, 'interface': 'info', 'title': '会员id不存在，获取用户信息失败', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/member/A/info', 'data': '/', 'expected': '{"code": 1004, "msg": "URL错误"}'}
+response: {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '未授权或token已过期'}
+result: Failed
+
+2021-02-25 21:35:15,998 ---root--- [test_info.py-->line:38] - ERROR: assert 1004 == 1003
+2021-02-25 21:35:15,998 ---root--- [test_info.py-->line:42] - INFO: 
+caseid: 4, title: 会员id为空，获取用户信息失败
+url: http://api.lemonban.com/futureloan/member//info
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json'}
+case_data: {'case_id': 4, 'interface': 'info', 'title': '会员id为空，获取用户信息失败', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/member//info', 'data': '/', 'expected': '{"code": 1004, "msg": "URL错误"}'}
+response: {'code': 1003, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved', 'msg': '未授权或token已过期'}
+result: Failed
+
+2021-02-25 21:36:21,952 ---root--- [test_info.py-->line:53] - INFO: 
+caseid: 1, title: 管理员获取用户信息成功
+url: http://api.lemonban.com/futureloan/member/866/info
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MjYwNDgxfQ.mY0UhVoW0dHioVFoxxk2HO92qGlbk1h3-A81gfoaXJ0xBDfxQSIAieLRNLKgzYO9GBXTK3bMbX6TnTFDKIdglQ'}
+case_data: {'case_id': 1, 'interface': 'info', 'title': '管理员获取用户信息成功', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/member/#admin_member_id#/info', 'data': '/', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 866, 'leave_amount': 301.0, 'mobile_phone': '15152134577', 'reg_name': 'Abnmd', 'reg_time': '2021-01-28 21:59:59.0', 'type': 0}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:36:22,186 ---root--- [test_info.py-->line:43] - ERROR: assert 0 == 1007
+2021-02-25 21:36:22,186 ---root--- [test_info.py-->line:47] - INFO: 
+caseid: 2, title: 普通会员获取用户信息成功
+url: http://api.lemonban.com/futureloan/member/866/info
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwNDgyfQ.FqECh4IXBkEnotInUqSgaxwN2VrGc9kqSRXFO1OHP34FQ_8IU4HH883xfUXnpHVMdkzBvZx53KkZFNCN2ValMQ'}
+case_data: {'case_id': 2, 'interface': 'info', 'title': '普通会员获取用户信息成功', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/member/#investor_member_id#/info', 'data': '/', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 1007, 'msg': '无权限访问，请检查参数', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-25 21:36:22,514 ---root--- [test_info.py-->line:43] - ERROR: assert 1004 == 1005
+2021-02-25 21:36:22,514 ---root--- [test_info.py-->line:47] - INFO: 
+caseid: 3, title: 会员id不存在，获取用户信息失败
+url: http://api.lemonban.com/futureloan/member/A/info
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwNDgyfQ.FqECh4IXBkEnotInUqSgaxwN2VrGc9kqSRXFO1OHP34FQ_8IU4HH883xfUXnpHVMdkzBvZx53KkZFNCN2ValMQ'}
+case_data: {'case_id': 3, 'interface': 'info', 'title': '会员id不存在，获取用户信息失败', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/member/A/info', 'data': '/', 'expected': '{"code": 1004, "msg": "URL错误"}'}
+response: {'code': 1005, 'msg': 'Failed to convert value of type \'java.lang.String\' to required type \'java.lang.Long\'; nested exception is java.lang.NumberFormatException: For input string: "A"', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-25 21:36:22,764 ---root--- [test_info.py-->line:53] - INFO: 
+caseid: 4, title: 会员id为空，获取用户信息失败
+url: http://api.lemonban.com/futureloan/member//info
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwNDgyfQ.FqECh4IXBkEnotInUqSgaxwN2VrGc9kqSRXFO1OHP34FQ_8IU4HH883xfUXnpHVMdkzBvZx53KkZFNCN2ValMQ'}
+case_data: {'case_id': 4, 'interface': 'info', 'title': '会员id为空，获取用户信息失败', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/member//info', 'data': '/', 'expected': '{"code": 1004, "msg": "URL错误"}'}
+response: {'code': 1004, 'msg': 'No handler found for GET /futureloan/member//info', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:37:02,543 ---root--- [test_info.py-->line:53] - INFO: 
+caseid: 1, title: 管理员获取用户信息成功
+url: http://api.lemonban.com/futureloan/member/866/info
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MjYwNTIyfQ.SLCSm91OGSgMaH19UrPbAKm9h2_5h1oRlHMRNx-gm7nxm224xbfIJBxhkHq-k6LV6mYxVN4EwQlXAKD1QiGCZw'}
+case_data: {'case_id': 1, 'interface': 'info', 'title': '管理员获取用户信息成功', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/member/#admin_member_id#/info', 'data': '/', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 866, 'leave_amount': 301.0, 'mobile_phone': '15152134577', 'reg_name': 'Abnmd', 'reg_time': '2021-01-28 21:59:59.0', 'type': 0}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:37:02,746 ---root--- [test_info.py-->line:43] - ERROR: assert 0 == 1007
+2021-02-25 21:37:02,746 ---root--- [test_info.py-->line:47] - INFO: 
+caseid: 2, title: 普通会员获取用户信息成功
+url: http://api.lemonban.com/futureloan/member/866/info
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwNTIyfQ.irznXiRa7l3wehZEeonvaYMs_hg5-DmaMgyHfYlJC_2LKZQyHL-2JboqOpzdnw7n0ipcjUuMC5NOsNqkjfjMnA'}
+case_data: {'case_id': 2, 'interface': 'info', 'title': '普通会员获取用户信息成功', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/member/#investor_member_id#/info', 'data': '/', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 1007, 'msg': '无权限访问，请检查参数', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-25 21:37:02,996 ---root--- [test_info.py-->line:43] - ERROR: assert 1004 == 1005
+2021-02-25 21:37:02,996 ---root--- [test_info.py-->line:47] - INFO: 
+caseid: 3, title: 会员id不存在，获取用户信息失败
+url: http://api.lemonban.com/futureloan/member/A/info
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwNTIyfQ.irznXiRa7l3wehZEeonvaYMs_hg5-DmaMgyHfYlJC_2LKZQyHL-2JboqOpzdnw7n0ipcjUuMC5NOsNqkjfjMnA'}
+case_data: {'case_id': 3, 'interface': 'info', 'title': '会员id不存在，获取用户信息失败', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/member/A/info', 'data': '/', 'expected': '{"code": 1004, "msg": "URL错误"}'}
+response: {'code': 1005, 'msg': 'Failed to convert value of type \'java.lang.String\' to required type \'java.lang.Long\'; nested exception is java.lang.NumberFormatException: For input string: "A"', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-25 21:37:03,230 ---root--- [test_info.py-->line:53] - INFO: 
+caseid: 4, title: 会员id为空，获取用户信息失败
+url: http://api.lemonban.com/futureloan/member//info
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwNTIzfQ.h8-lXc72tzARvjizh3wQWfvCdt2usc2aEXHKG-bvvcx01UbviQYLRm0WMilBxH2BvflHRbqCmTOzELdvDpiGXw'}
+case_data: {'case_id': 4, 'interface': 'info', 'title': '会员id为空，获取用户信息失败', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/member//info', 'data': '/', 'expected': '{"code": 1004, "msg": "URL错误"}'}
+response: {'code': 1004, 'msg': 'No handler found for GET /futureloan/member//info', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:38:33,209 ---root--- [test_info.py-->line:53] - INFO: 
+caseid: 1, title: 管理员获取用户信息成功
+url: http://api.lemonban.com/futureloan/member/866/info
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NiwiZXhwIjoxNjE0MjYwNjEzfQ.ve_yj8Hd9jn8Fuhrs6P6ozdUHxCvN5EFnZBj2DJTEsMf4_BMcSxlmQRnXvVJ2mroohs3dUvavpKZRJqCpXxqbA'}
+case_data: {'case_id': 1, 'interface': 'info', 'title': '管理员获取用户信息成功', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/member/#admin_member_id#/info', 'data': '/', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 866, 'leave_amount': 301.0, 'mobile_phone': '15152134577', 'reg_name': 'Abnmd', 'reg_time': '2021-01-28 21:59:59.0', 'type': 0}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:38:33,427 ---root--- [test_info.py-->line:53] - INFO: 
+caseid: 2, title: 普通会员获取用户信息成功
+url: http://api.lemonban.com/futureloan/member/867/info
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwNjEzfQ.phP-DCGbr1Bt1e5xOSbo7DEg4KqNKPNPzkLyIB2oaE4pfPGsVeCPp700Oo6OeCMsFmKD4IELMC-hZLxIDauG4Q'}
+case_data: {'case_id': 2, 'interface': 'info', 'title': '普通会员获取用户信息成功', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/member/#investor_member_id#/info', 'data': '/', 'expected': '{"code": 0, "msg": "OK"}'}
+response: {'code': 0, 'msg': 'OK', 'data': {'id': 867, 'leave_amount': 301.0, 'mobile_phone': '13504936561', 'reg_name': 'A', 'reg_time': '2021-01-28 21:59:59.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
+2021-02-25 21:38:33,709 ---root--- [test_info.py-->line:43] - ERROR: assert 1004 == 1005
+2021-02-25 21:38:33,709 ---root--- [test_info.py-->line:47] - INFO: 
+caseid: 3, title: 会员id不存在，获取用户信息失败
+url: http://api.lemonban.com/futureloan/member/A/info
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwNjEzfQ.phP-DCGbr1Bt1e5xOSbo7DEg4KqNKPNPzkLyIB2oaE4pfPGsVeCPp700Oo6OeCMsFmKD4IELMC-hZLxIDauG4Q'}
+case_data: {'case_id': 3, 'interface': 'info', 'title': '会员id不存在，获取用户信息失败', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/member/A/info', 'data': '/', 'expected': '{"code": 1004, "msg": "URL错误"}'}
+response: {'code': 1005, 'msg': 'Failed to convert value of type \'java.lang.String\' to required type \'java.lang.Long\'; nested exception is java.lang.NumberFormatException: For input string: "A"', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Failed
+
+2021-02-25 21:38:33,959 ---root--- [test_info.py-->line:53] - INFO: 
+caseid: 4, title: 会员id为空，获取用户信息失败
+url: http://api.lemonban.com/futureloan/member//info
+method: get
+header: {'X-Lemonban-Media-Type': 'lemonban.v2', 'Content - Type': 'application / json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjg2NywiZXhwIjoxNjE0MjYwNjEzfQ.phP-DCGbr1Bt1e5xOSbo7DEg4KqNKPNPzkLyIB2oaE4pfPGsVeCPp700Oo6OeCMsFmKD4IELMC-hZLxIDauG4Q'}
+case_data: {'case_id': 4, 'interface': 'info', 'title': '会员id为空，获取用户信息失败', 'method': 'get', 'header': '{ "X-Lemonban-Media-Type": "lemonban.v2","Content - Type": "application / json"}', 'url': '/member//info', 'data': '/', 'expected': '{"code": 1004, "msg": "URL错误"}'}
+response: {'code': 1004, 'msg': 'No handler found for GET /futureloan/member//info', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+result: Passed
+
