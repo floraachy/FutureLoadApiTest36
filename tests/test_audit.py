@@ -8,6 +8,7 @@ Time: 2021/2/3 20:42
 import pytest, json
 from middleware.handler import MidHandler
 from requests import request
+from jsonpath import jsonpath
 
 
 class TestAudit:
@@ -19,42 +20,43 @@ class TestAudit:
     test_data = MidHandler.excel.read("audit")
 
     @pytest.mark.parametrize("data", test_data)
-    def test_audit(self, data, admin_login, add_loan, investor_login,db):
+    def test_audit(self, data, admin_login, add_loan, loan_login, db):
+        # 动态设置类属性中需要的数据
+        setattr(MidHandler, "admin_token", admin_login["authorization"])
+        setattr(MidHandler, "loan_token", loan_login["authorization"])
+        setattr(MidHandler, "loan_id", str(add_loan["id"]))
+
+        # 使用正则表达式替换数据
+        data = MidHandler.replace_data(json.dumps(data))
+        data = json.loads(data)
+
         url = MidHandler.conf_data["ENV"]["BASE_URL"] + data["url"]
         method = data["method"]
         header = json.loads(data["header"])
-        if "普通会员" in data["title"]:
-            header["Authorization"] = investor_login["authorization"]
-        else:
-            header["Authorization"] = admin_login["authorization"]
+
         case = data["data"]
         expected = json.loads(data["expected"])
 
-        load_id = add_loan["id"]
-
-        if "#loan_id#" in case:
-            case = case.replace("#loan_id#", str(load_id))
-
-            # 修改项目的状态，不符合要求的项目状态，无法审核成功
-            if '项目状态为2' in data['title']:
-                sql = 'update loan set status=2 where id={}'.format(load_id)
-                db.update(sql)
-            elif '项目状态为5' in data['title']:
-                sql = 'update loan set status=5 where id={}'.format(load_id)
-                db.update(sql)
-            elif '项目状态为3' in data['title']:
-                sql = 'update loan set status=3 where id={}'.format(load_id)
-                db.update(sql)
-            elif '项目状态为4' in data['title']:
-                sql = 'update loan set status=4 where id={}'.format(load_id)
-                db.update(sql)
-
+        # 修改项目的状态，不符合要求的项目状态，无法审核成功
+        if '项目状态为2' in data['title']:
+            sql = 'update loan set status=2 where id={}'.format(getattr(MidHandler, "loan_id"))
+            db.update(sql)
+        elif '项目状态为5' in data['title']:
+            sql = 'update loan set status=5 where id={}'.format(getattr(MidHandler, "loan_id"))
+            db.update(sql)
+        elif '项目状态为3' in data['title']:
+            sql = 'update loan set status=3 where id={}'.format(getattr(MidHandler, "loan_id"))
+            db.update(sql)
+        elif '项目状态为4' in data['title']:
+            sql = 'update loan set status=4 where id={}'.format(getattr(MidHandler, "loan_id"))
+            db.update(sql)
 
         response = request(url=url, method=method, json=json.loads(case), headers=header)
         response_data = response.json()
 
         try:
-            assert expected["code"] == response_data["code"]
+            for key, value in expected.items():
+                assert jsonpath(response_data, key)[0] == value
         except AssertionError as e:
             MidHandler.log.error(e)
             MidHandler.log.info(

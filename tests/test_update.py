@@ -8,6 +8,7 @@ Time: 2021/2/24 22:23
 import pytest, json
 from middleware.handler import MidHandler
 from requests import request
+from jsonpath import jsonpath
 
 
 class TestUpdate:
@@ -18,6 +19,16 @@ class TestUpdate:
 
     @pytest.mark.parametrize("data", test_data)
     def test_update(self, data, admin_login, investor_login):
+        # 动态设置类属性中需要的用户id
+        setattr(MidHandler, "admin_member_id", str(admin_login["id"]))
+        setattr(MidHandler, "investor_member_id", str(investor_login["id"]))
+        setattr(MidHandler, "admin_token", admin_login["authorization"])
+        setattr(MidHandler, "investor_token", investor_login["authorization"])
+
+        # 使用正则表达式替换数据
+        data = MidHandler.replace_data(json.dumps(data))
+        data = json.loads(data)
+
         url = MidHandler.conf_data["ENV"]["BASE_URL"] + data["url"]
         method = data["method"]
         header = json.loads(data["header"])
@@ -25,23 +36,13 @@ class TestUpdate:
         case = data["data"]
         expected = json.loads(data["expected"])
 
-        if "管理员修改昵称" in data["title"]:
-            header["Authorization"] = admin_login["authorization"]
-        else:
-            header["Authorization"] = investor_login["authorization"]
-
-        if "#investor_member_id#" in case:
-            case = case.replace("#investor_member_id#", str(investor_login["id"]))
-
-        if "#admin_member_id#" in case:
-            case = case.replace("#admin_member_id#", str(admin_login["id"]))
-
         response = request(method=method, url=url, headers=header, json=json.loads(case))
 
         response_data = response.json()
 
         try:
-            assert expected["code"] == response_data["code"]
+            for key, value in expected.items():
+                assert jsonpath(response_data, key)[0] == value
         except AssertionError as e:
             MidHandler.log.error(e)
             MidHandler.log.info(

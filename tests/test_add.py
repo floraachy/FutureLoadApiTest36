@@ -8,8 +8,8 @@ Time: 2021/2/2 21:56
 
 from requests import request
 import pytest, json
-from jsonpath import jsonpath
 from middleware.handler import MidHandler
+from jsonpath import jsonpath
 
 
 @pytest.mark.test
@@ -21,27 +21,28 @@ class TestAdd:
 
     @pytest.mark.parametrize("data", test_data)
     def test_add(self, data, investor_login, db):
+        # 动态设置类属性中需要的数据
+        setattr(MidHandler, "investor_member_id", str(investor_login["id"]))
+        setattr(MidHandler, "investor_token", investor_login["authorization"])
+
+        # 使用正则表达式替换数据
+        data = MidHandler.replace_data(json.dumps(data))
+        data = json.loads(data)
+
         request_url = MidHandler.conf_data["ENV"]["BASE_URL"] + data["url"]
         request_method = data["method"]
-        request_header = MidHandler.conf_data["ENV"]["HEADER"]
-        authorization = investor_login["authorization"]
-        request_header["Authorization"] = authorization
         request_data = data["data"]
-
-        member_id =  investor_login["id"]
-
-        if "#user_member_id#" in request_data:
-            request_data = request_data.replace("#user_member_id#", str(member_id))
+        request_header = json.loads(data["header"])
 
         response = request(url=request_url, method=request_method, headers=request_header,
                            json=json.loads(request_data))
         response_data = response.json()
 
-
         expected = json.loads(data["expected"])
 
         try:
-            assert expected["code"] == response_data["code"]
+            for key, value in expected.items():
+                assert jsonpath(response_data, key)[0] == value
         except AssertionError as e:
             MidHandler.log.error(e)
             MidHandler.log.info(

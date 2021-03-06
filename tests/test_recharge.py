@@ -24,6 +24,8 @@ from requests import request
 from middleware.handler import MidHandler
 import pytest, json
 from jsonpath import jsonpath
+from decimal import Decimal
+
 
 # @pytest.mark.test
 class TestRecharge:
@@ -34,36 +36,32 @@ class TestRecharge:
 
     @pytest.mark.parametrize("data", test_data)
     def test_recharge(self, data, investor_login, db):
+        # 动态替换用例数据
+        setattr(MidHandler, "investor_token", investor_login["authorization"])
+        setattr(MidHandler, "investor_member_id", investor_login["id"])
+        data = MidHandler.replace_data(json.dumps(data))
+        data = json.loads(data)
+
         request_url = MidHandler.conf_data["ENV"]["BASE_URL"] + data["url"]
         request_method = data["method"]
-        request_header = MidHandler.conf_data["ENV"]["HEADER"]
-        authorization = investor_login["authorization"]
-        request_header["Authorization"] = authorization
+        request_header = json.loads(data["header"])
         request_data = data["data"]
 
-        leave_amount_before = investor_login["leave_amount"]
+        leave_amount_before = Decimal(investor_login["leave_amount"]).quantize(Decimal('0.00'))
 
-        if "#user_member_id#" in request_data:
-            member_id = db.query_one("select id from member where mobile_phone={};".format(MidHandler.security_data["user"]))["id"]
-            request_data = request_data.replace("#user_member_id#", str(member_id))
+        response = request(url=request_url, method=request_method, headers=request_header,
+                           json=json.loads(request_data)).json()
 
-        if "#wrong_member_id#" in request_data:
-            request_data = request_data.replace("#wrong_member_id#", "0012")
-
-        response = request(url=request_url, method=request_method, headers=request_header, json=json.loads(request_data)).json()
-
-
-
-        expected = eval(data["expected"])
+        expected = json.loads(data["expected"])
 
         if response["code"] == 0:
-            leave_amount_after = jsonpath(response, "$.data.leave_amount")[0]
-
+            leave_amount_after = Decimal(jsonpath(response, "$.data.leave_amount")[0]).quantize(Decimal('0.00'))
 
         try:
-            assert expected["code"] == response["code"]
+            for key, value in expected.items():
+                assert jsonpath(response, key)[0] == value
             if "充值成功" in data["title"]:
-                assert leave_amount_after - leave_amount_before == json.loads(request_data)["amount"]
+                assert leave_amount_after - leave_amount_before == Decimal(json.loads(request_data)["amount"]).quantize(Decimal("0.00"))
         except AssertionError as e:
             MidHandler.log.error(e)
             MidHandler.log.info(
@@ -79,8 +77,7 @@ class TestRecharge:
 
 
 if __name__ == "__main__":
-    pytest.main(["-m test"])
-
+    pytest.main(["test_recharge.py"])
 
 """jsonpath: 帮助我们快速找到json数据的某个字段
 """

@@ -21,33 +21,36 @@ class TestLogin:
 
     @pytest.mark.parametrize("data", test_data)
     def test_login(self, data):
+        data = MidHandler.replace_data(json.dumps(data))
+        data = json.loads(data)
         url = MidHandler.conf_data["ENV"]["BASE_URL"] + data["url"]
         method = data["method"]
         headers = MidHandler.conf_data["ENV"]["HEADER"]
         request_data = data["data"]
         expected = json.loads(data["expected"])
 
-        if "#new_phone#" in request_data:
-            request_data = request_data.replace("#new_phone#", MidHandler.generate_new_phone())
-
-        if "#admin_phone#" in request_data:
-            request_data = request_data.replace("#admin_phone#", MidHandler.security_data["admin_phone"])
-
-        if "#admin_pwd#" in request_data:
-            request_data = request_data.replace("#admin_pwd#", MidHandler.security_data["admin_pwd"])
-
-        if "#investor_phone#" in request_data:
-            request_data = request_data.replace("#investor_phone#", MidHandler.security_data["investor_phone"])
-
-        if "#investor_pwd#" in request_data:
-            request_data = request_data.replace("#investor_pwd#", MidHandler.security_data["investor_pwd"])
+        # -----  使用了正则表达式替换用例数据后，以下代码都可以省略了--------------
+        # if "#new_phone#" in request_data:
+        #     request_data = request_data.replace("#new_phone#", MidHandler.generate_new_phone())
+        #
+        # if "#admin_phone#" in request_data:
+        #     request_data = request_data.replace("#admin_phone#", MidHandler.security_data["admin_phone"])
+        #
+        # if "#admin_pwd#" in request_data:
+        #     request_data = request_data.replace("#admin_pwd#", MidHandler.security_data["admin_pwd"])
+        #
+        # if "#investor_phone#" in request_data:
+        #     request_data = request_data.replace("#investor_phone#", MidHandler.security_data["investor_phone"])
+        #
+        # if "#investor_pwd#" in request_data:
+        #     request_data = request_data.replace("#investor_pwd#", MidHandler.security_data["investor_pwd"])
+        # -----  使用了正则表达式替换用例数据后，以下代码都可以省略了--------------
 
         response = request(url=url, method=method, headers=headers, json=json.loads(request_data))
         actual = response.json()
 
         try:
             for key, value in expected.items():
-                print(key, value)
                 assert actual[key] == value
         except AssertionError as e:
             test_result = "Failed"

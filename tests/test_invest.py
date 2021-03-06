@@ -53,7 +53,6 @@ class TestInvest:
             sql = 'update loan set status=4 where id={}'.format(getattr(MidHandler, 'loan_id'))
             db.update(sql)
 
-
         response = request(url=request_url, method=request_method, headers=request_header,
                            json=json.loads(request_data))
         response_data = response.json()

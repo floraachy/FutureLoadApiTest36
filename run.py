@@ -10,9 +10,6 @@ import os, pytest
 from datetime import datetime
 from conf import path
 
-
 current_time = datetime.now().strftime("%Y-%m-%d %H_%M_%S")
-
 report_file = os.path.join(path.REPORT_DIR, "test_report_{}.html".format(current_time))
-
-pytest.main(["--html={}".format(report_file)])
+pytest.main([r"D:\PythonProject\FutureLoadApiTest36\tests\test_register01.py", "--html={}".format(report_file)])
