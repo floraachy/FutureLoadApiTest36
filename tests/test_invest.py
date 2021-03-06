@@ -12,7 +12,7 @@ from jsonpath import jsonpath
 from middleware.handler import MidHandler
 
 
-@pytest.mark.test
+
 class TestInvest:
     """
     投资项目的测试用例
