@@ -1,11 +1,5 @@
 ENV:
   BASE_URL: "http://api.lemonban.com/futureloan"
-  HEADER:
-    {
-      "X-Lemonban-Media-Type": "lemonban.v2",
-      "Content - Type": "application / json"
-    }
-
 
 LOGIN:
   URL: "/member/login"

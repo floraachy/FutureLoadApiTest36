@@ -20,7 +20,8 @@ def read_yaml(file):
         return yaml.load(f, Loader=yaml.SafeLoader)  #解析更安全
 
 # # 获取配置文件中的数据
-# conf_data = read_yaml(os.path.join(CONF_DIR, "conf.yaml"))
+conf_data = read_yaml("D:\PythonProject\FutureLoadApiTest36\conf\conf.yaml")
+print(conf_data)
 #
 # # 获取账户信息
 # user_data = read_yaml(os.path.join(CONF_DIR, "security.yaml"))
